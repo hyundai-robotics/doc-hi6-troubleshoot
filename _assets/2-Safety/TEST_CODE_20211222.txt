@@ -1,0 +1,322 @@
+// https://e2e.ti.com/support/microcontrollers/c2000-microcontrollers-group/c2000/f/c2000-microcontrollers-forum/773723/ccs-tms320f28379d-c2000-microcontrollers-forum
+// IIS328DQ TEST Project
+//
+// Included Files
+//
+#include "F28x_Project.h"
+#include "driverlib.h"
+#include "device.h"
+
+//
+// Defines
+//
+
+#define MAX_BUF_SIZE                6
+#define ERROR_STOP_NOT_READY        0x5555
+#define ERROR_BUS_BUSY              0x1000
+
+//
+// Globals
+//
+
+volatile int data_ready_flag = 0;
+volatile int data_count;
+volatile uint16_t reg_ready;
+volatile I2C_InterruptSource intSource;
+
+// buffer to store data read
+//uint16_t data_temp;
+uint16_t buffer[MAX_BUF_SIZE];
+uint16_t status = 0;
+
+//
+// Function Prototypes
+//
+void I2Cinit(void);
+void I2C_GPIO_init(void);
+int16_t I2CRead(uint32_t base, uint16_t slaveAddr, uint16_t regAddr,uint16_t *data, uint16_t data_length, uint16_t read_count);
+int16_t i2cRead(uint32_t base, uint16_t slaveAddr, uint16_t regAddr, uint16_t *data, uint16_t data_length);
+int16_t I2CRead_T(uint32_t base, uint16_t slaveAddr, uint16_t regAddr,uint16_t *data, uint16_t data_length);
+int16_t i2cRead_T(uint32_t base, uint16_t slaveAddr, uint16_t regAddr, uint16_t *data, uint16_t data_length);
+int16_t i2cWriteMulti(uint32_t base,uint16_t slaveAddr, uint16_t regAddr, uint16_t *data,uint16_t data_length);
+int16_t i2cWrite(uint32_t base,uint16_t slaveAddr, uint16_t regAddr, uint16_t data);
+__interrupt void i2cISR();
+
+//
+// Main
+//
+void main(void)
+{
+    //
+    // Initialize device clock and peripherals
+    //
+    Device_init();
+
+    //
+    // Disable pin locks and enable internal pullups.
+    //
+    Device_initGPIO();
+
+    //
+    // Initialize I2C pins
+    //
+    I2C_GPIO_init();
+
+    //
+    // Initialize PIE and clear PIE registers. Disable CPU interrupts.
+    //
+    Interrupt_initModule();
+
+    //
+    // Initialize the PIE vector table with pointers to the shell Interrupt
+    // Service Routines (ISR).
+    //
+    Interrupt_initVectorTable();
+
+    I2Cinit();
+
+    //
+    // Interrupts that are used in this example are re-mapped to ISR functions
+    // found within this file.
+    //
+    Interrupt_register(INT_I2CB, &i2cISR);
+    Interrupt_enable(INT_I2CB);
+
+    //
+    // Enable Global Interrupt (INTM) and realtime interrupt (DBGM)
+    //
+    EINT;
+    ERTM;
+
+    //i2cWrite(I2CB_BASE,24,32,7);
+    i2cWrite(I2CB_BASE,24,36,3);
+    DELAY_US(400);
+    i2cWrite(I2CB_BASE,24,33,35);
+    DELAY_US(400);
+
+
+    while (1)
+    {
+        //status = I2CRead(I2CB_BASE, 24, 32, buffer, 1, 5);    // READ CTRL_REG1 TO CTRL_REG5 registers
+        status = I2CRead_T(I2CB_BASE, 24, 32, buffer, 5);       // READ CTRL_REG1 TO CTRL_REG5 registers
+
+        DELAY_US(400);                                          // Trigger Monitoring delay(No meaning)
+    }
+
+}
+
+void I2C_GPIO_init(void)
+{
+    // I2CB pins (SDAA / SCLA)
+    GPIO_setDirectionMode(35, GPIO_DIR_MODE_IN);
+    GpioCtrlRegs.GPBPUD.bit.GPIO35 = 1;
+    GPIO_setMasterCore(35, GPIO_CORE_CPU1);
+    GPIO_setQualificationMode(35, GPIO_QUAL_ASYNC);
+
+    GPIO_setDirectionMode(40, GPIO_DIR_MODE_IN);
+    GpioCtrlRegs.GPBPUD.bit.GPIO40 = 1;
+    GPIO_setMasterCore(40, GPIO_CORE_CPU1);
+    GPIO_setQualificationMode(40, GPIO_QUAL_ASYNC);
+
+    GPIO_setPinConfig(GPIO_35_I2CB_SCL);
+    GPIO_setPinConfig(GPIO_40_I2CB_SDA);
+}
+
+void I2Cinit(void)
+{
+    I2C_disableModule (I2CB_BASE);
+    I2C_disableLoopback(I2CB_BASE);
+
+    // I2C configuration. Use a 100KHz I2C clock with a 50% duty cycle
+    I2C_initMaster(I2CB_BASE, DEVICE_SYSCLK_FREQ, 100000, I2C_DUTYCYCLE_50);
+
+    I2C_setBitCount(I2CB_BASE, I2C_BITCOUNT_8);
+
+    I2C_setEmulationMode(I2CB_BASE, I2C_EMULATION_FREE_RUN);
+
+    // enable stop condition and register-access-ready interrupts
+    I2C_enableInterrupt(I2CB_BASE, I2C_INT_STOP_CONDITION | I2C_INT_REG_ACCESS_RDY);
+
+    // FIFO configuration
+    I2C_enableFIFO(I2CB_BASE);
+    I2C_clearInterruptStatus(I2CB_BASE, I2C_INT_RXFF | I2C_INT_TXFF);
+
+    I2C_enableModule(I2CB_BASE);
+}
+
+int16_t i2cRead(uint32_t base, uint16_t slaveAddr, uint16_t regAddr, uint16_t *data, uint16_t data_length)
+{
+    //  uint16_t count;
+    if (I2C_getStopConditionStatus(base))
+    {
+        return ERROR_STOP_NOT_READY;
+    }
+    if (data_ready_flag == 0)
+    {
+        I2C_setSlaveAddress(base, slaveAddr);
+        I2C_setDataCount(base, 1);
+        I2C_putData(base, regAddr);
+        I2C_setConfig(base, I2C_MASTER_SEND_MODE);
+        I2C_sendStartCondition(base);
+        reg_ready = 1;
+    }
+
+    if (data_ready_flag == 1)
+    {
+        I2C_setDataCount(base, data_length);
+        I2C_setConfig(base, I2C_MASTER_RECEIVE_MODE);
+        I2C_sendStartCondition(base);
+        I2C_sendStopCondition(base);
+        while (data_ready_flag == 1);
+    }
+
+    return SUCCESS;
+}
+int16_t I2CRead(uint32_t base, uint16_t slaveAddr, uint16_t regAddr,uint16_t *data, uint16_t data_length, uint16_t read_count)
+{
+    for (data_count = 0; data_count < read_count; data_count++)
+    {
+        while (i2cRead(base, slaveAddr, regAddr, data, data_length) != SUCCESS);
+        while (data_ready_flag != 1);
+        i2cRead(base, slaveAddr, regAddr, data, data_length);
+        *(data + data_count) = I2C_getData(base);
+        regAddr++;
+    }
+    return 1;
+}
+
+int16_t i2cRead_T(uint32_t base, uint16_t slaveAddr, uint16_t regAddr, uint16_t *data, uint16_t data_length)
+{
+    //  uint16_t count;
+    if (I2C_getStopConditionStatus(base))
+    {
+        return ERROR_STOP_NOT_READY;
+    }
+    if (data_ready_flag == 0)
+    {
+        I2C_setSlaveAddress(base, slaveAddr);
+        I2C_setDataCount(base, 1);
+        I2C_putData(base, regAddr);
+        I2C_setConfig(base, I2C_MASTER_SEND_MODE);
+        I2C_sendStartCondition(base);
+        reg_ready = 1;
+    }
+
+    if (data_ready_flag == 1)
+    {
+        I2C_setDataCount(base, data_length);
+        I2C_setConfig(base, I2C_MASTER_RECEIVE_MODE);
+        I2C_sendStartCondition(base);
+        I2C_sendStopCondition(base);
+        while (data_ready_flag == 1)
+            ;
+        for (data_count = 0; data_count < data_length; data_count++)
+        {
+            *(data + data_count) = I2C_getData(base);
+        }
+    }
+
+    return SUCCESS;
+}
+int16_t I2CRead_T(uint32_t base, uint16_t slaveAddr, uint16_t regAddr,uint16_t *data, uint16_t data_length)
+{
+    while (i2cRead_T(base, slaveAddr, regAddr, data, data_length) != SUCCESS)
+        ;
+    while (data_ready_flag != 1)
+        ;
+    i2cRead_T(base, slaveAddr, regAddr, data, data_length);
+    return 1;
+}
+
+__interrupt void i2cISR()
+{
+    intSource = I2C_getInterruptSource(I2CB_BASE);
+    switch(intSource)
+    {
+    case I2C_INTSRC_STOP_CONDITION:
+    {
+
+        if(data_ready_flag == 1)
+        {
+            data_ready_flag = 0;
+        }
+
+    }
+    break;
+    case I2C_INTSRC_REG_ACCESS_RDY:
+    {
+
+        if((I2C_getStatus(I2CB_BASE)&I2C_STS_NO_ACK)!=0)
+        {
+            I2C_sendStopCondition(I2CB_BASE);
+            I2C_clearStatus(I2CB_BASE, I2C_STS_NO_ACK);
+        }
+        data_ready_flag = 1;
+
+    }
+    break;
+    }
+    Interrupt_clearACKGroup(INTERRUPT_ACK_GROUP8);
+}
+
+int16_t i2cWrite(uint32_t base,uint16_t slaveAddr, uint16_t regAddr, uint16_t data)
+{
+    if(I2C_getStopConditionStatus(base))
+    {
+        return ERROR_STOP_NOT_READY;
+    }
+    I2C_setSlaveAddress(base, slaveAddr);
+    if(I2C_isBusBusy(I2CB_BASE))
+        {
+            return(ERROR_BUS_BUSY);
+        }
+    I2C_setDataCount(base,2);
+    I2C_putData(base,regAddr);
+    I2C_putData(base, data);
+    I2C_setConfig(base,I2C_MASTER_SEND_MODE);
+    I2C_sendStartCondition(base);
+    I2C_sendStopCondition(base);
+    return SUCCESS;
+}
+int16_t i2cWriteMulti(uint32_t base,uint16_t slaveAddr, uint16_t regAddr, uint16_t *data,uint16_t data_length)
+{
+    uint16_t i;
+    if(I2C_getStopConditionStatus(base))
+    {
+        return ERROR_STOP_NOT_READY;
+    }
+    I2C_setSlaveAddress(base, slaveAddr);
+    if(I2C_isBusBusy(I2CB_BASE))
+        {
+            return(ERROR_BUS_BUSY);
+        }
+    I2C_setDataCount(base,data_length+1);
+    I2C_putData(base,regAddr);
+    for(i=0; i<data_length;i++)
+    {
+        I2C_putData(base, *(data+i));
+    }
+    I2C_setConfig(base,I2C_MASTER_SEND_MODE);
+    I2C_sendStartCondition(base);
+    I2C_sendStopCondition(base);
+    return SUCCESS;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
