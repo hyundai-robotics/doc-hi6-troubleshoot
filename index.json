@@ -161,227 +161,227 @@
 	},
 	{
 		"link": "3-safety-board-part/E02261.md",
-		"char_ofs": 43506,
-		"byte_ofs": 90526
+		"char_ofs": 43876,
+		"byte_ofs": 91186
 	},
 	{
 		"link": "3-safety-board-part/E02280.md",
-		"char_ofs": 43834,
-		"byte_ofs": 91139
+		"char_ofs": 44204,
+		"byte_ofs": 91799
 	},
 	{
 		"link": "3-safety-board-part/E02281.md",
-		"char_ofs": 45110,
-		"byte_ofs": 93609
+		"char_ofs": 45480,
+		"byte_ofs": 94269
 	},
 	{
 		"link": "3-safety-board-part/E02301.md",
-		"char_ofs": 45440,
-		"byte_ofs": 94226
+		"char_ofs": 45810,
+		"byte_ofs": 94886
 	},
 	{
 		"link": "3-safety-board-part/E64002.md",
-		"char_ofs": 47164,
-		"byte_ofs": 97390
+		"char_ofs": 47534,
+		"byte_ofs": 98050
 	},
 	{
 		"link": "3-safety-board-part/E64003.md",
-		"char_ofs": 49893,
-		"byte_ofs": 102398
+		"char_ofs": 50263,
+		"byte_ofs": 103058
 	},
 	{
 		"link": "3-safety-board-part/E64035.md",
-		"char_ofs": 51378,
-		"byte_ofs": 105167
+		"char_ofs": 51748,
+		"byte_ofs": 105827
 	},
 	{
 		"link": "4-servo-board-part/README.md",
-		"char_ofs": 52071,
-		"byte_ofs": 106464
+		"char_ofs": 52441,
+		"byte_ofs": 107124
 	},
 	{
 		"link": "4-servo-board-part/E02450.md",
-		"char_ofs": 52080,
-		"byte_ofs": 106481
+		"char_ofs": 52450,
+		"byte_ofs": 107141
 	},
 	{
 		"link": "4-servo-board-part/E02451.md",
-		"char_ofs": 54824,
-		"byte_ofs": 111936
+		"char_ofs": 55194,
+		"byte_ofs": 112596
 	},
 	{
 		"link": "4-servo-board-part/E02452.md",
-		"char_ofs": 57194,
-		"byte_ofs": 116600
+		"char_ofs": 57564,
+		"byte_ofs": 117260
 	},
 	{
 		"link": "4-servo-board-part/E02453.md",
-		"char_ofs": 57670,
-		"byte_ofs": 117636
+		"char_ofs": 58040,
+		"byte_ofs": 118296
 	},
 	{
 		"link": "4-servo-board-part/E02454.md",
-		"char_ofs": 58138,
-		"byte_ofs": 118654
+		"char_ofs": 58508,
+		"byte_ofs": 119314
 	},
 	{
 		"link": "4-servo-board-part/E02455.md",
-		"char_ofs": 58614,
-		"byte_ofs": 119701
+		"char_ofs": 58984,
+		"byte_ofs": 120361
 	},
 	{
 		"link": "4-servo-board-part/E02459.md",
-		"char_ofs": 59074,
-		"byte_ofs": 120720
+		"char_ofs": 59444,
+		"byte_ofs": 121380
 	},
 	{
 		"link": "4-servo-board-part/E02460.md",
-		"char_ofs": 59549,
-		"byte_ofs": 121766
+		"char_ofs": 59919,
+		"byte_ofs": 122426
 	},
 	{
 		"link": "4-servo-board-part/E02461.md",
-		"char_ofs": 61002,
-		"byte_ofs": 124705
+		"char_ofs": 61372,
+		"byte_ofs": 125365
 	},
 	{
 		"link": "4-servo-board-part/E02462.md",
-		"char_ofs": 61521,
-		"byte_ofs": 125823
+		"char_ofs": 61891,
+		"byte_ofs": 126483
 	},
 	{
 		"link": "4-servo-board-part/E02463.md",
-		"char_ofs": 62167,
-		"byte_ofs": 127218
+		"char_ofs": 62537,
+		"byte_ofs": 127878
 	},
 	{
 		"link": "4-servo-board-part/E02464.md",
-		"char_ofs": 62678,
-		"byte_ofs": 128333
+		"char_ofs": 63048,
+		"byte_ofs": 128993
 	},
 	{
 		"link": "4-servo-board-part/E02470.md",
-		"char_ofs": 64508,
-		"byte_ofs": 132157
+		"char_ofs": 64878,
+		"byte_ofs": 132817
 	},
 	{
 		"link": "4-servo-board-part/E02630.md",
-		"char_ofs": 65910,
-		"byte_ofs": 135251
+		"char_ofs": 66280,
+		"byte_ofs": 135911
 	},
 	{
 		"link": "4-servo-board-part/E02631.md",
-		"char_ofs": 69177,
-		"byte_ofs": 141898
+		"char_ofs": 69547,
+		"byte_ofs": 142558
 	},
 	{
 		"link": "4-servo-board-part/E02632.md",
-		"char_ofs": 69678,
-		"byte_ofs": 142973
+		"char_ofs": 70048,
+		"byte_ofs": 143633
 	},
 	{
 		"link": "4-servo-board-part/E02633.md",
-		"char_ofs": 71468,
-		"byte_ofs": 146600
+		"char_ofs": 71838,
+		"byte_ofs": 147260
 	},
 	{
 		"link": "4-servo-board-part/E02634.md",
-		"char_ofs": 72783,
-		"byte_ofs": 149158
+		"char_ofs": 73153,
+		"byte_ofs": 149818
 	},
 	{
 		"link": "4-servo-board-part/E02650.md",
-		"char_ofs": 73534,
-		"byte_ofs": 150723
+		"char_ofs": 73904,
+		"byte_ofs": 151383
 	},
 	{
 		"link": "4-servo-board-part/E02651.md",
-		"char_ofs": 76992,
-		"byte_ofs": 157718
+		"char_ofs": 77362,
+		"byte_ofs": 158378
 	},
 	{
 		"link": "4-servo-board-part/E02652.md",
-		"char_ofs": 78774,
-		"byte_ofs": 161321
+		"char_ofs": 79144,
+		"byte_ofs": 161981
 	},
 	{
 		"link": "4-servo-board-part/E02653.md",
-		"char_ofs": 79893,
-		"byte_ofs": 163479
+		"char_ofs": 80263,
+		"byte_ofs": 164139
 	},
 	{
 		"link": "4-servo-board-part/E02670.md",
-		"char_ofs": 80445,
-		"byte_ofs": 164639
+		"char_ofs": 80815,
+		"byte_ofs": 165299
 	},
 	{
 		"link": "4-servo-board-part/E02680.md",
-		"char_ofs": 82403,
-		"byte_ofs": 168539
+		"char_ofs": 82773,
+		"byte_ofs": 169199
 	},
 	{
 		"link": "4-servo-board-part/E02780.md",
-		"char_ofs": 85041,
-		"byte_ofs": 173792
+		"char_ofs": 85411,
+		"byte_ofs": 174452
 	},
 	{
 		"link": "4-servo-board-part/E02781.md",
-		"char_ofs": 87957,
-		"byte_ofs": 179478
+		"char_ofs": 88327,
+		"byte_ofs": 180138
 	},
 	{
 		"link": "4-servo-board-part/E02472.md",
-		"char_ofs": 90400,
-		"byte_ofs": 184266
+		"char_ofs": 90770,
+		"byte_ofs": 184926
 	},
 	{
 		"link": "4-servo-board-part/E02554.md",
-		"char_ofs": 91634,
-		"byte_ofs": 186802
+		"char_ofs": 92004,
+		"byte_ofs": 187462
 	},
 	{
 		"link": "4-servo-board-part/E02560.md",
-		"char_ofs": 92729,
-		"byte_ofs": 188999
+		"char_ofs": 93099,
+		"byte_ofs": 189659
 	},
 	{
 		"link": "4-servo-board-part/E02570.md",
-		"char_ofs": 94039,
-		"byte_ofs": 191631
+		"char_ofs": 94409,
+		"byte_ofs": 192291
 	},
 	{
 		"link": "4-servo-board-part/E02564.md",
-		"char_ofs": 95492,
-		"byte_ofs": 194491
+		"char_ofs": 95862,
+		"byte_ofs": 195151
 	},
 	{
 		"link": "5-communication/README.md",
-		"char_ofs": 96979,
-		"byte_ofs": 197422
+		"char_ofs": 97349,
+		"byte_ofs": 198082
 	},
 	{
 		"link": "5-communication/E29003.md",
-		"char_ofs": 96986,
-		"byte_ofs": 197433
+		"char_ofs": 97356,
+		"byte_ofs": 198093
 	},
 	{
 		"link": "5-communication/E29016.md",
-		"char_ofs": 99163,
-		"byte_ofs": 201437
+		"char_ofs": 99533,
+		"byte_ofs": 202097
 	},
 	{
 		"link": "appendices/README.md",
-		"char_ofs": 100457,
-		"byte_ofs": 203808
+		"char_ofs": 100827,
+		"byte_ofs": 204468
 	},
 	{
 		"link": "appendices/rules-occupational-safety.md",
-		"char_ofs": 100468,
-		"byte_ofs": 203831
+		"char_ofs": 100838,
+		"byte_ofs": 204491
 	},
 	{
 		"link": "quality-assurance.md",
-		"char_ofs": 100688,
-		"byte_ofs": 204229
+		"char_ofs": 101058,
+		"byte_ofs": 204889
 	}
 ]
