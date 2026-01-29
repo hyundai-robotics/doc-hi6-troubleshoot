@@ -29,7 +29,7 @@
   * [3.2. E00014 Momentary Contact of Safety Switch (EM, OTR, TS, etc.)](3-safety-board-part/E00014.md)
   * [3.3. E00043 Auto Mode Safety Guard (Auto Guard) Switch Connection Abnormality](3-safety-board-part/E00043.md)
   * [3.4. E02200 Main Unit Limit Switch Activated](3-safety-board-part/E02200.md)
-  * [3.5. E02201–E02208 Hardware Limit Switch Inspection Procedure](3-safety-board-part/E02201~E2208.md)
+  * [3.5. E02201–E02208 Hardware Limit Switch Inspection Procedure](3-safety-board-part/E02201_E2208.md)
   * [3.6. E02201 Main Unit Limit Switch Input Mismatch (Safety Chain 1 OFF)](3-safety-board-part/E02201.md)
   * [3.7. E02202 Main Unit Limit Switch Input Mismatch (Safety Chain 2 OFF)](3-safety-board-part/E02202.md)
   * [3.8. E02206 Main Unit Limit Switch Open Circuit or Not Connected](3-safety-board-part/E02206.md)
