@@ -3,9 +3,9 @@
 * [Hi6 제어기 보수설명서 - 트러블슈팅](README.md)
 
 * [1. 전장](1-elec/README.md)
-  * [1.1 전압점검1 – Hi6-N 제어기 내부 3상 전압 점검절차](1-elec/VOLTAGE_1.md)
-  * [1.2 전압점검2 – Hi6-N 제어기 입력 3상 전압 점검절차](1-elec/VOLTAGE_2.md)
-  * [1.3 전압점검3 – Hi6-T 제어기 입력 단상 전압 점검 절차](1-elec/VOLTAGE_3.md)
+  * [1.1 전압점검1 - Hi6-N 제어기 내부 3상 전압 점검절차](1-elec/VOLTAGE_1.md)
+  * [1.2 전압점검2 - Hi6-N 제어기 입력 3상 전압 점검절차](1-elec/VOLTAGE_2.md)
+  * [1.3 전압점검3 - Hi6-T 제어기 입력 단상 전압 점검 절차](1-elec/VOLTAGE_3.md)
   * [1.4 부품 교환 요령](1-elec/Parts_replacement_tips.md)
   * [1.5 조정 요령](1-elec/Adjustment_tips.md)
 
@@ -19,9 +19,9 @@
   * [2.7  E02506 AMP PN 저전압 발생](2-servo-control-board-part/E02506.md)
   * [2.8  E02507 AMP 다이오드모듈 이상 또는 교류 입력전압 부족](2-servo-control-board-part/E02507.md)
   * [2.9  E02508 AMP PN 저전압 검지경로 이상 또는 방전 이상](2-servo-control-board-part/E02508.md)
-  * [2.10 E02520 (○축) IPM 폴트](2-servo-control-board-part/E02520.md)
+  * [2.10 E02520 (o축) IPM 폴트](2-servo-control-board-part/E02520.md)
   * [2.11 E02521 (O축) IPM 폴트 - Gate 구동전원 저전압](2-servo-control-board-part/E02521.md)
-  * [2.12 E02522 (○축) IPM 폴트 – 특정스텝](2-servo-control-board-part/E02522.md)
+  * [2.12 E02522 (o축) IPM 폴트 - 특정스텝](2-servo-control-board-part/E02522.md)
   * [2.13 E02541 구동장치 제어전압 저하](2-servo-control-board-part/E02541.md)
 
 * [3. 안전신호 보드](3-safety-board-part/README.md)
