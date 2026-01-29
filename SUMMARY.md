@@ -29,7 +29,7 @@
   * [3.2  E00014 안전스위치(EM, OTR, TS 등) 순간접촉](3-safety-board-part/E00014.md)
   * [3.3  E00043 자동모드 안전가드(Auto Guard) 스위치 접속 이상](3-safety-board-part/E00043.md)
   * [3.4  E02200 본체 리밋SW 동작중](3-safety-board-part/E02200.md)
-  * [3.5  E02201 ~ E02208 하드웨어 리밋SW 점검 방법](3-safety-board-part/E02201~E2208.md)
+  * [3.5  E02201 - E02208 하드웨어 리밋SW 점검 방법](3-safety-board-part/E02201_E2208.md)
   * [3.6  E02201 본체 리밋SW 입력불일치 (안전체인 1 OFF)](3-safety-board-part/E02201.md)
   * [3.7  E02202 본체 리밋SW 입력불일치 (안전체인 2 OFF)](3-safety-board-part/E02202.md)
   * [3.8  E02206 본체 리밋SW 단선 또는 미접속](3-safety-board-part/E02206.md)
