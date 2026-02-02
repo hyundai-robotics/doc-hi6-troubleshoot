@@ -2,7 +2,7 @@
 
 * [Hi6 Controller Maintenance Manual – Troubleshooting](README.md)
 
-* [1. Electrical System](1-elec/README.md)
+* [1. Electrical Components](1-elec/README.md)
   * [1.1. Voltage Inspection 1 – Procedure for Checking Internal Three-Phase Voltage of the Hi6-N Controller](1-elec/VOLTAGE_1.md)
   * [1.2. Voltage Inspection 2 – Procedure for Checking Input Three-Phase Voltage of the Hi6-N Controller](1-elec/VOLTAGE_2.md)
   * [1.3. Voltage Inspection 3 – Procedure for Checking Input Single-Phase Voltage of the Hi6-T Controller](1-elec/VOLTAGE_3.md)

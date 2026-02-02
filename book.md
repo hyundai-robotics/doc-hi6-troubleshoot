@@ -1,192 +1,180 @@
 ﻿
 [__SOURCE](README.md)
-# 보수설명서 - 트러블슈팅
+# Maintenance Manual – Troubleshooting
+The controller is designed with a primary focus on high precision and high-speed performance. In the event of a malfunction, the system is structured to allow easy identification of the cause and rapid recovery. Please ensure that you fully understand this manual and use it effectively for smooth and efficient troubleshooting.
 
-제어기는 고정밀도, 고신속성을 가장 중점으로 구성되어 있습니다. 만일 문제가 발생한 경우 원인 발견 및 복귀가 용이하도록 배려되어 있습니다. 이 설명서를 충분히 이해하여 원활한 고장수리(Troubleshooting)에 활용되도록 바랍니다.
-
-## 고장수리 방법
-
-Hi6-N과 T제어기에서 발생하는 에러코드에 대하여 각각의 고장수리 방법에 대해서 설명합니다.
+## Troubleshooting Procedure
+This section describes the troubleshooting methods for each error code that may occur in the Hi6-N and Hi6-T controllers.
 
 
 [__SOURCE](1-elec/README.md)
-# 1. 전장
+# 1. Electrical Components
 [__SOURCE](1-elec/VOLTAGE_1.md)
-# 1.1. 전압점검1 – Hi6-N 제어기 내부 3상 전압 점검절차
+# 1.1. Voltage Check1 - Hi6-N Controller Internal 3-Phase Voltage Check Procedure
 
+(1) Check the 3-phase power voltage inside the controller.
 
-(1) 제어기 내부의 3상 전원 전압을 확인하십시오.
+The power supply module(PSM) attached to the front of the controller is responsible for distributing and relaying various power sources. The 3-phase power is turned on and off via a magnetic switch within the power module. With the motor off, check that the voltage input to the power module is within a 10% tolerance of 220 V AC. If the measured voltage is outside the acceptable range, perform the following checks.
 
-제어기 전면에 부착된 전장모듈(PSM)은 각종 전원의 분배 및 중계를 담당하고 있으며, 3상 전원은 전장모듈 내 마그네트 스위치를 통하여 온/오프 됩니다. 모터 오프 상태에서 전장모듈에 입력되는 전압이 AC 220V 기준으로 오차범위가 10%이내인지 점검합니다. 만약 측정된 전압이 허용 범위를 벗어나는 경우에는 아래와 같이 점검하십시오.
-
-![](../_assets/1.전장/전압점검/전압점검1.PNG)
-그림 1.1 전장모듈에 입력되는 3상 전원
+![](../_assets/1.전장/전압점검/전압점검1.PNG)<br>
+Figure 1.1. 3-Phase Power Input to the Power Supply Module(PSM)
 
 {% hint style="warning" %}
-고전압 측정 시 주변 부품 및 상간 단락 가능성이 있으므로 주의하십시오.
+Be careful when measuring high voltages as there is a possibility of short circuiting between surrounding components and phases.
 {% endhint %}
 
-1)	제어기 명판의 전압이 220V 인 경우
-제어기 입력 전압이 AC 220V인 경우에는 외부에서 전원 스위치 또는 터미널 블록으로 입력되는 전압과 내부의 전장모듈에 측정된 전압이 동일해야 합니다. 만약 차이가 있다면 3상 전원 배선을 점검하시기 바랍니다.
+1) If the voltage on the controller nameplate is AC 220V<br>
+If the controller input voltage is AC 220V, the voltage input from the external power switch or terminal block and the voltage measured at the internal control module must be the same. If there is a difference, check the three-phase power wiring.
 
-2)	제어기 명판의 전압이 220V가 아닌 경우
-제어기 입력전원이 AC 220V 사양이 아닌 경우에는 내장된 트랜스포머를 사용하여 3상 전원을 AC220V로 변환하여 전장모듈에 연결됩니다. 전장모듈 측에서 측정된 전압이 AC 220V 기준으로 오차범위가 10%이내인지 점검합니다. 만약 측정된 전압이 허용 범위를 벗어나는 경우에는 내장된 트랜스포머의 입력과 출력 단자의 연결 상태를 점검하십시오. 내장된 트랜스포머의 1차단은 제어기 명판에 표기된 전압으로 연결되어야 합니다. 트랜스포머의 2차단은 항상 AC 3상 220V로 설정되어 있습니다. 입력단자와 출력단자가 올바르게 연결된 상태에서도 출력단자에서 AC 3상 220V가 정상적으로 출력되지 않으면 트랜스포머 불량입니다. 이때의 트랜스포머의 출력전압 오차는 5% 이내이어야 합니다.
+2) If the voltage on the controller nameplate is not AC 220V<br>
+If the controller input power is not AC 220V, the built-in transformer converts the three-phase power to AC 220V and connects it to the control module. Check that the voltage measured at the control module is within a 10% tolerance of AC 220V. If the measured voltage is outside the tolerance range, check the connection between the input and output terminals of the built-in transformer. The primary terminal of the built-in transformer must be connected to the voltage indicated on the controller nameplate.
 
 [__SOURCE](1-elec/VOLTAGE_2.md)
-# 1.2. 전압점검2 – Hi6-N 제어기 입력 3상 전압 점검절차
+# 1.2. Voltage Check2 – Hi6-N Controller 3-Phase Voltage Check Procedure
 
+(1)	Check the voltage on the nameplate attached to the controller against the actual input voltage.
 
-(1)	제어기에 부착된 명판의 전압과 실제 입력전압을 확인하십시오.
+Check that the voltage actually supplied to the controller is within the allowable range of the voltage printed on the nameplate. The allowable input voltage range is within 10% of the value printed on the nameplate and must be at least AC 198 V for AC 220 V. The figure below illustrates how to measure the controller's input voltage. If the measured voltage is outside the allowable range, inspect the power system.
 
-제어기에 실제로 공급되는 전압이 명판에 표기된 전압의 허용 범위 이내인지를 확인하십시오. 입력전압의 허용 범위는 명판에 표기된 값의 10% 이내이고, AC 220V 기준으로 AC 198V 이상이어야 합니다. 아래의 그림은 제어기의 입력전압의 측정방법을 나타낸 것입니다. 측정된 전압이 허용 범위를 벗어나는 경우에는 전원 설비를 점검하여 주십시오.
+* Measurement on the power line side of the front switch
 
-*	전면 스위치의 전원라인 측 측정
-
-![](../_assets/1.전장/전압점검/전압점검2.PNG)
+![](../_assets/1.전장/전압점검/전압점검2.PNG)<br>
 (a) Hi6-N 제어기
 
-그림 1.2 전원 스위치의 전원라인 측 측정
+Figure 1.2. Measurement on the power line side of the power switch
 
 {% hint style="warning" %}
-고전압 측정 시 주변 부품 및 상간 단락 가능성이 있으므로 주의하십시오.
+Be careful when measuring high voltages, as there is a risk of short circuits in surrounding components and between phases.
 {% endhint %}
 
 
 [__SOURCE](1-elec/VOLTAGE_3.md)
-# 1.3. 전압점검3 – Hi6-T 제어기 입력 단상 전압 점검 절차
+# 1.3. Voltage Check3 – Hi6-T Controller Input Single-Phase Voltage Check Procedure
 
-
-(1)	제어기에 부착된 명판의 전압과 실제 입력전압을 확인하십시오.
-
-제어기에 실제로 공급되는 전압이 명판에 표기된 전압의 허용 범위 이내인지를 확인하십시오. 입력전압의 허용 범위는 명판에 표기된 값의 10% 이내이고, AC 220V 기준으로 AC 198V 이상이어야 합니다. 아래의 그림은 제어기의 입력전압의 측정방법을 나타낸 것입니다. 측정된 전압이 허용 범위를 벗어나는 경우에는 전원 설비를 점검하여 주십시오.
+(1) Check the voltage on the nameplate attached to the controller against the actual input voltage.<br>
+Check that the voltage actually supplied to the controller is within the allowable range of the voltage indicated on the nameplate. The allowable input voltage range is within 10% of the value indicated on the nameplate and must be at least AC 198V for AC 220V. The figure below illustrates how to measure the controller's input voltage. If the measured voltage is outside the allowable range, inspect the power system.
 
 {% hint style="warning" %}
-고전압 측정 시 주변 부품 및 상간 단락 가능성이 있으므로 주의하십시오.
+Be careful when measuring high voltages, as there is a risk of short circuits between nearby components and phases.
 {% endhint %}
 
-![](../_assets/1.전장/전압점검/전압점검3.PNG)
-
-그림 1.3 H6-T15 제어기의 단상 전원입력 SMPS 터미널 블록
+![](../_assets/1.전장/전압점검/전압점검3.PNG)<br>
+Figure 1.3. H6-T15 Controller Single-Phase Power Input SMPS Terminal Block
 
 [__SOURCE](1-elec/Parts_replacement_tips.md)
-# 1.4. 부품 교환 요령
+# 1.4. Component Replacement Guidelines
+This section describes the guidelines for replacing individual components and circuit boards during troubleshooting.
 
-고장수리(troubleshooting)시 각 부품 및 기판의 교환요령을 설명합니다.
-
-### 1. 모듈 교환 요령
-
-{% hint style="warning" %}
-모듈 교환시 작업자는 다음의 주의 사항을 유념하여 주십시오.
-{% endhint %}
-
-①	작업전에 반드시 전원장치의 전원을 꺼 주십시오.
-②	작업자의 손을 청결하게 하여 기름이나 수분이 기판에 묻지 않도록 주의하십시오. 기판을 잡아야 할 경우에는 그 주위를 잡도록 하십시오. 전자 부품이나 패턴, 그리고 특히 커넥터의 접촉부분에는 손이 닿지 않도록 주의하여 주십시오.
-③	작업자의 몸(손)과 제어기와는 동전위(同電位)가 되도록 하여 주십시오.
-④	각 기판에는 다수의 커넥터가 있습니다. 교환시에 오삽입, 누락 또는 헐렁한 상태가 되지 않도록 정확히 삽입하여 주십시오. 커넥터의 명판과 기판상에 인쇄된 이름을 맞추어 삽입하십시오.
-
-### 1.1. 메인모듈 교환 요령
+### 1. Module Replacement Guidelines
 
 {% hint style="warning" %}
-메인모듈을 빼기 전에 반드시 먼저 다음 사항을 조치하여 주십시오.
+When replacing a module, the operator should observe the following precautions.
 {% endhint %}
 
-①	메인모듈를 교환하고자 할 때는 먼저 필요한 프로그램 / 정수 데이터를 (Notebook) PC의 HR-VIEW S/W 또는 USB Memory를 이용하여 백업한 후에 교체하여 주십시오.
-②	티칭한 프로그램 / 정수 데이터는 메인모듈의 RAM상에 저장되어 있으므로, 새로운 기판으로 교체하였을 때는 원하는 기존의 프로그램 / 정수 데이터가 없습니다.  
-③	교체한 후에는 앞서 백업(backup)받은 내용을 새로운 기판에 로드(load)하여 사용하시면 됩니다.
+① Before starting any work, be sure to turn off the power supply.<br>
+② Ensure that the operator’s hands are clean to prevent oil or moisture from contaminating the circuit board. If it is necessary to handle the board, hold it by the edges. Avoid touching electronic components, circuit patterns, and especially connector contact areas.<br>
+③ Ensure that the operator’s body(hands) and the controller are at the same electrical potential to prevent electrostatic discharge(ESD).<br>
+④ Each circuit board is equipped with multiple connectors. When replacing a board, insert all connectors accurately and securely to prevent incorrect insertion, omission, or loose connections. Ensure that the connector nameplates match the corresponding names printed on the circuit board before insertion.
 
-이상의 주의사항을 지키고, 다음의 순서에 따라 기판을 교환하여 주십시오. 
-
-#### 1.1.1 메인모듈의 분리
-①	먼저 전원 장치의 입력 전원을 제거해 주십시오.
-②	모듈에 연결된 각종 커넥터를 빼십시오. 이때 나사로 체결되어 있는 커넥터의 경우에는 알맞은 드라이버를 이용하여 풀며, 커넥터에 무리가 가지 않도록 하여 빼십시오.
-③	상하에 있는 고정 나사를 약간만 풀고, 모듈을 위로 이동시킨 후 당겨 빼냅니다.
-
-#### 1.1.1 메인모듈의 결합
-①	먼저 제어기 입력전원이 OFF 상태임을 확인해 주십시오.
-②	상하에 있는 고정 나사에 교체할 모듈을 걸어서 장착한 후 고정나사를 체결합니다.
-③	모듈에 연결된 각종 커넥터를 연결하십시오. 이때 나사로 체결되어 있는 커넥터의 경우에는 알맞은 드라이버를 이용하여 연결하고, 커넥터에 무리가 가지 않도록 연결하십시오.
-④	통신선이 잘못 연결되진 않았는지, 빠트린 작업이 없는지 한번 더 확인하십시오.
-
-### 1.2. 구동장치(Drive Module) 교환 요령
+### 1.1. Main Module Replacement Guidelines
 
 {% hint style="warning" %}
-서보 구동장치 교환 시 작업자는 다음의 주의 사항을 유념하여 주십시오.
+Before removing the main module, be sure to complete the following preparations.
 {% endhint %}
 
-다른 기종의 서보 구동장치와 호환성이 없는 경우가 있으므로, 앞면 패널의 명판을 반드시 확인 하십시오.
+① Before replacing the main module, back up all required programs and integer data using the HR-VIEW software on a notebook PC or a USB memory device.<br>
+② Taught programs and integer data are stored in the RAM of the main module.
+Therefore, when the module is replaced with a new board, the previously used programs and integer data will not be available.<br>
+③ After replacement, load the previously backed-up data onto the new board and continue operation.<br>
 
-#### 1.2.1 서보 구동장치(Drive Unit)의 분리
-①	먼저 전원 장치의 입력 전원을 꺼 주십시오.
-②	서보 구동장치의 보호 커버의 고정볼트를 풀어서 떼어 냅니다.
-③	단자대에 나사로 고정된 배선을 떼어 냅니다.
-④	접속되어 있는 커넥터를 모두 떼어 냅니다.
-⑤	서보 구동장치를 고정하고 있는 나사를 떼어 냅니다.
-⑥	서보 구동장치를 꺼냅니다. 서보 구동장치는 무거우므로 꺼낼 때 다치지 않도록 주의하십시오. 또한 옆의 배선들도 손상되지 않도록 주의하십시오.
+After observing the above precautions, replace the circuit board by following the procedure described below.
 
-#### 1.2.2 서보 구동장치(Drive Unit)의 결합
-①	먼저 전원 장치의 입력 전원을 꺼 주십시오.
-②	서보 구동장치를 잘 들어서 밀어 넣습니다. 서보 구동장치는 무거우므로 밀어 넣을 때 다치지 않도록 주의하십시오. 또한 옆의 배선들도 손상되지 않도록 주의하십시오.
-③	서보 구동장치를 나사로 고정시키십시오.
-④	배선들을 단자대에 나사로 조이십시오.
-⑤	커넥터를 모두 접속시키십시오.
-⑥	서보 구동장치 보호 커버을 볼트로 체결합니다.
-⑤	빠트린 작업이 없는지 한번 더 확인하십시오.
+#### 1.1.1. Removal of the Main Module
+① First, disconnect the input power supply to the controller.<br>
+② Disconnect all connectors connected to the module. For connectors secured with screws, loosen them using an appropriate screwdriver and remove the connectors carefully to avoid applying excessive force.<br>
+③ Loosen the upper and lower mounting screws slightly, move the module upward, and then pull it out.<br>
 
-### 1.3. 1.1.4. PSM(Power Supply Module)의 교환 요령 
+#### 1.1.2. Installation of the Main Module
+① First, verify that the controller input power is turned OFF.<br>
+② Hang the replacement module onto the upper and lower mounting screws, then secure it by tightening the mounting screws.<br>
+③ Reconnect all connectors to the module.
+For connectors secured with screws, use an appropriate screwdriver and tighten them carefully to avoid stressing the connectors.<br>
+④ Double-check that the communication cables are connected correctly and that no steps have been missed.<br>
+
+### 1.2. Drive Module Replacement Guidelines
+
 {% hint style="warning" %}
-PSM는 주 제어전원으로 이용되는 복합전원장치로서 정밀장치이므로 취급에 특별한 주의를 바랍니다.
+When replacing the servo drive module, the operator must observe the following precautions.
 {% endhint %}
 
-#### 1.2.1 PSM(Power Supply Module)의 분리
-①	먼저 전원 장치의 입력 전원을 꺼 주십시오.
-②	모듈에 연결된 각종 커넥터를 빼십시오.
-③	상하에 있는 고정 나사를 약간만 풀고, 모듈을 위로 이동시킨 후 당겨 빼냅니다. PSM은 무거우므로 꺼낼 때 다치지 않도록 주의하십시오. 또한 옆의 배선들도 손상되지 않도록 주의하십시오. 이때 너무 갑자기 세게 잡아당기면 다칠 수도 있으니 주의하십시오.
+Since compatibility may not be guaranteed with servo drive modules of different models, be sure to verify the nameplate on the front panel before replacement.
 
-#### 1.2.2 PSM(Power Supply Module)의 결합
-①	먼저 제어기 입력전원이 OFF 상태임을 확인해 주십시오.
-②	상하에 있는 고정 나사에 교체할 모듈을 걸어서 장착한 후 고정나사를 체결합니다. PSM은 무거우므로 장착할 때 다치지 않도록 주의하십시오. 또한 옆의 배선들도 손상되지 않도록 주의하십시오. 이때 너무 갑자기 세게 집어넣으면 다칠 수도 있으니 주의하십시오.
-③	모듈에 연결된 각종 커넥터를 연결하십시오. 이때 나사로 체결되어 있는 커넥터의 경우에는 알맞은 드라이버를 이용하여 연결하고, 커넥터에 무리가 가지 않도록 연결하십시오.
-④	커넥터가 잘못 연결되진 않았는지, 빠트린 작업이 없는지 한번 더 확인하십시오.
+#### 1.2.1. Removal of the Servo Drive Unit
+① First, turn off the input power supply.<br>
+② Loosen the fixing bolts of the protective cover on the servo drive unit and remove the cover.<br>
+③ Disconnect the wiring secured to the terminal block by screws.<br>
+④ Disconnect all connected connectors.<br>
+⑤ Remove the screws securing the servo drive unit.<br>
+⑥ Remove the servo drive unit. The servo drive unit is heavy; use caution to avoid injury when removing it. Also, take care not to damage the adjacent wiring.<br>
+
+#### 1.2.2. Installation of the Servo Drive Unit
+① First, ensure that the input power supply is turned OFF.<br>
+② Carefully lift and slide the servo drive unit into position. The servo drive unit is heavy; use caution to avoid injury while installing it. Also, take care not to damage adjacent wiring.<br>
+③ Secure the servo drive unit with screws.<br>
+④ Tighten the wiring to the terminal block using screws.<br>
+⑤ Connect all connectors.<br>
+⑥ Fasten the protective cover of the servo drive unit with bolts.<br>
+⑦ Double-check that no steps have been missed.<br>
+
+### 1.3. PSM(Power Supply Module) Replacement Guidelines 
+{% hint style="warning" %}
+The PSM is a composite power supply unit used as the main control power source.
+As it is a precision device, special care must be taken during handling.
+{% endhint %}
+
+#### 1.3.1. Removal of the PSM(Power Supply Module)
+① First, turn off the input power supply.<br>
+② Disconnect all connectors connected to the module.<br>
+③ Loosen the upper and lower mounting screws slightly, move the module upward, and then pull it out. The PSM is heavy; use caution to avoid injury when removing it. Also, take care not to damage adjacent wiring. Do not pull the module out suddenly or with excessive force, as this may result in injury.<br>
+
+#### 1.3.2. Installation of the PSM(Power Supply Module)
+① First, verify that the controller input power is turned OFF.<br>
+② Hang the replacement module onto the upper and lower mounting screws, then secure it by tightening the mounting screws. The PSM is heavy; use caution to avoid injury during installation. Also, take care not to damage adjacent wiring.
+Do not insert the module suddenly or with excessive force, as this may result in injury.<br>
+③ Reconnect all connectors to the module. For connectors secured with screws, use an appropriate screwdriver and tighten them carefully to avoid stressing the connectors.<br>
+④ Double-check that all connectors are connected correctly and that no steps have been missed.<br>
 
 [__SOURCE](1-elec/Adjustment_tips.md)
-# 1.5. 조정 요령
+# 1.5. Adjustment Guidelines
 
-본 제어기는 출하시에 기본적으로 모든 것이 조정이 되어 있으므로 별도로 조정할 필요 없습니다. 그러나 부품을 교환할 경우에는 일부 조정이 필요하며 그 조정위치와 요령을 설명합니다. 필요한 경우를 제외하고는 조정하지 말고 문제가 발생하였더라도 그 원인이 밝혀지지 않은 경우에는 절대로 건드리지 않도록 하십시오. 
+This controller is fully adjusted at the factory prior to shipment and normally requires no additional adjustment. However, if components are replaced, certain adjustments may be required. This section explains the locations and procedures for those adjustments. Do not perform any adjustments unless absolutely necessary. Even if a problem occurs, do not make any adjustments unless the cause has been clearly identified, as improper adjustment may result in malfunction or damage.
 
-### 1. 전원계통의 조정 
+### 1. Adjustment of Power System 
+If a fault occurs in the power system, or if the power supply configuration has been changed, measure each power supply voltage and adjust any values that deviate from the specified reference levels(Measurements must be taken using a digital voltmeter).
 
-전원계통에 고장이 발생한 경우, 혹은 전원을 변경한 경우는 각 전원 전압을 측정하여 기준치를 벗어나는 것은 조정해 주십시오(디지털 전압계를 사용하여 측정하십시오). 
+### 1.1. Adjustment of the Hi6-N Controller Power System
+![](../_assets/1.전장/조정요령/Hi6-N제어기%20전원%20기준치.PNG)<br>
+Figure 1. Reference Power Supply Voltage Levels of the Hi6-N Controller
 
-### 1.1. Hi6-N 제어기 전원계통의 조정
+(Note 1) If the measured value is outside the specified reference range, replace the PSM.<br>
+(Note 2) First, verify the reference value at the specified measurement point.
+Then, if possible, measure the voltage between the pins of the terminal block or connector closest to the robot encoder. At this point, the reference value must be DC 5.1V ± 0.1V.
 
+### 1.2. Adjustment of the Hi6-T Controller Power System
 
-![](../_assets/1.전장/조정요령/Hi6-N제어기%20전원%20기준치.PNG)
+![](../_assets/1.전장/조정요령/Hi6-T제어기%20전원%20기준치.PNG)<br>
+Figure 2. Reference Power Supply Voltage Levels of the Hi6-T Controller
 
-그림 1. Hi6-N 제어기 전원 기준치
+(Note 1) If the measured value is outside the specified reference range, replace the PSM.
+(Note 2) First, verify the reference value at the specified measurement point.
+Then, if possible, measure the voltage between the pins of the terminal block or connector closest to the robot encoder. At this point, the reference value must be DC 5.1V ± 0.1V.
 
-
-(주1) 기준치에 들어있지 않은 경우는 PSM을 교환하십시오. 
-
-(주2) 일단 측정장소에서의 기준치를 확인하고, 가능한 로봇의 엔코더에 가장 가까운 단자대, 커넥터의 핀 사이에서 측정하여 주십시오. 이때 기준치는 DC5.1V±0.1V이어야 합니다. 
-
-### 1.2. Hi6-T 제어기 전원계통의 조정
-
-![](../_assets/1.전장/조정요령/Hi6-T제어기%20전원%20기준치.PNG)
-
-그림 2. Hi6-T 제어기 전원 기준치
-
-(주1) 기준치에 들어있지 않은 경우는 PSM을 교환하십시오. 
-
-(주2) 일단 측정장소에서의 기준치를 확인하고, 가능한 로봇의 엔코더에 가장 가까운 단자대, 커넥터의 핀 사이에서 측정하여 주십시오. 이때 기준치는 DC5.1V±0.1V이어야 합니다. 
-
-### 2. 변압기 (TR2)
-
+### 2. Transformer(TR2)
 {% hint style="warning" %}
-Hi6-N제어기 : 변압기(TR2)의 출력 전원은 반드시 AC220V 로 이용하여야 합니다.
-2차측 단자는 내부 부품들의 사양에 맞는 전원으로 연결되어 있으니, 절대로 손대지마십시오.
+For the Hi6-N controller, the output voltage of the transformer(TR2) must be AC 220V. The secondary-side terminals are connected according to the power specifications of the internal components; do not touch or modify them under any circumstances.
 {% endhint %}
 
-본 제어기내 입력전원은 반드시 AC220V 3상을 사용해야 합니다. 그외 전압 사양의 제어기는 출하 시 조정 완료된 상태이오니, 당사 요원의 허락 없이 절대로 탭을 변경할 수 없습니다.
+The input power supply for this controller must be AC 220V, 3-phases. Controllers with other voltage specifications are factory-adjusted prior to shipment; therefore, the transformer taps must not be changed without authorization from the manufacturer’s service personnel.
 
 
 [__SOURCE](2-servo-control-board-part/README.md)
@@ -1336,7 +1324,7 @@ D)	조그키를 사용하여 로봇을 동작영역 안으로 이동시킵니다
 
 이와 같은 경우는 리밋스위치와 관계된 구성품들에서 원인을 찾을 수 있습니다. 리밋스위치는 다음 그림과 같이 본체로부터 Hi6-N 경우, “CEC1 – CER1” Hi6-T 경우, “CMEC1 – CMER1” 케이블을 통하여 제어기의 시스템 보드에 연결됩니다.
 
-![](../_assets/3-Safety-io/E00002/그림4.png)<br>
+![](../_assets/3-Safety-io/E00002/그림4_en.png)<br>
 그림 4 하드웨어 리밋SW 배선 구조
 
 
@@ -1366,10 +1354,10 @@ D)	리밋스위치 및 본체배선<br>
 ①	백색으로 바뀌었다면, 시스템보드의 고장입니다. 보드를 교체하십시오.<br>
 ②	황색으로 여전히 에러상태라면, 시스템보드 이후 본체 리밋스위치까지의 영역에서 고장을 체크하십시오.<br>
 
-![](../_assets/3-Safety-io/E00002/그림5.png)<br>
+![](../_assets/3-Safety-io/E00002/그림5_en.png)<br>
 그림 5 Hi6-N 시스템 보드
 
-![](../_assets/3-Safety-io/E00002/그림6.png)<br>
+![](../_assets/3-Safety-io/E00002/그림6_en.png)<br>
 그림 6 Hi6-T 시스템 보드
 
 
@@ -1398,7 +1386,7 @@ C(M)ER1커넥터-C(M)EC1 커넥터 간 와이어하니스 케이블 또는 커�
 ②	황색으로 여전히 에러상태라면,<br>
 본체 쪽 C(M)ER1 커넥터 이후 리밋SW까지의 영역에서 고장을 체크하십시오.
 
-![](../_assets/3-Safety-io/E00002/그림7.png)<br>
+![](../_assets/3-Safety-io/E00002/그림7_en.png)<br>
 그림 7 하드웨어 리밋SW 하네스 C(M)EC 구조
 
 ### [리밋SW 및 본체 내부 배선을 점검하는 방법]
@@ -1419,12 +1407,12 @@ C(M)ER1커넥터-C(M)EC1 커넥터 간 와이어하니스 케이블 또는 커�
 ②	저항이 쇼트상태로 측정되었다면,<br>
 다른 부분의 고장을 체크하여야 합니다. 당사에 문의하십시오.
 
-![](../_assets/3-Safety-io/E00002/그림8.jpg)<br>
+![](../_assets/3-Safety-io/E00002/그림8_en.png)<br>
 그림 8 하드웨어 리밋SW 하네스 C(M)ER 구조
 
 ### [안전보드(BD632)를 점검하는 방법]
 
-![](../_assets/3-Safety-io/E00002/그림9.png)<br>
+![](../_assets/3-Safety-io/E00002/그림9_en.png)<br>
 그림 9 안전보드(BD632)
 
 1)	IO 전원 상태를 확인하는 방법<br>
@@ -1473,12 +1461,12 @@ C.	안전보드(BD632) 접지 상태 점검 (접지 케이블, 접지 단자 체
 
 Hi6-N 제어기의 경우, 전장모듈의 CN24VB3, CN24VB4 커넥터 - 시스템보드 CNSMPS1, CNSMPS2 커넥터를 통하여 전원이 공급됩니다. 전원이 변동하고 있거나 케이블에 이상 부분이 있는지 확인하십시오.
 
-![](../_assets/3-Safety-io/E00014/그림2.png)<br>
+![](../_assets/3-Safety-io/E00014/그림2_en.png)<br>
 그림 2 Hi6-N 시스템보드(BD632)의 DC24V 전원연결 및 전압확인 방법
 
 Hi6-T 제어기의 경우, SMPS & BUFFER 커넥터 – Back Plane 보드 CN24VB1 커넥터, Back Plane 보드와 시스템 보드 간 보드-TO-보드를 통하여 전원이 공급됩니다. 전원이 변동하고 있거나 케이블에 이상 부분이 있는지 확인하십시오.
 
-![](../_assets/3-Safety-io/E00014/그림3.png)<br>
+![](../_assets/3-Safety-io/E00014/그림3_en.png)<br>
 그림 3 Hi6-N 시스템보드(BD632)의 DC24V 전원연결 및 전압확인 방법
 
 ### (2)	안전스위치 및 신호배선을 확인하십시오.
@@ -1498,9 +1486,9 @@ Hi6-T 제어기의 경우, SMPS & BUFFER 커넥터 – Back Plane 보드 CN24VB1
 
 사용할 수 있는 안전스위치는 다음과 같은 것이 있으며 시스템보드를 통하여 연결하도록 되어 있습니다. 사용하고 있는 안전스위치류에 대하여 상기 내용을 점검하십시오.
 
-![](../_assets/3-Safety-io/E00014/그림4.png)<br>
-![](../_assets/3-Safety-io/E00014/그림5.png)<br>
-![](../_assets/3-Safety-io/E00014/그림6.png)<br>
+![](../_assets/3-Safety-io/E00014/그림4_en.png)<br>
+![](../_assets/3-Safety-io/E00014/그림5_en.png)<br>
+![](../_assets/3-Safety-io/E00014/그림6_en.png)<br>
 
 
 {% hint style="warning" %}
@@ -1511,9 +1499,9 @@ Hi6-T 제어기의 경우, SMPS & BUFFER 커넥터 – Back Plane 보드 CN24VB1
 
 기타 이 에러에 영향을 주는 안전 및 시스템 운용과 관련된 스위치에는 다음과 같은 것들이 있습니다
 
-![](../_assets/3-Safety-io/E00014/그림7.png)<br>
-![](../_assets/3-Safety-io/E00014/그림8.png)<br>
-![](../_assets/3-Safety-io/E00014/그림9.png)<br>
+![](../_assets/3-Safety-io/E00014/그림7_en.png)<br>
+![](../_assets/3-Safety-io/E00014/그림8_en.png)<br>
+![](../_assets/3-Safety-io/E00014/그림9_en.png)<br>
 
 ### (3)	시스템보드, 전장모듈을 확인하십시오.
 
@@ -1526,7 +1514,7 @@ Hi6-N 제어기의 경우, 전자접촉기가 설치되어 있는 전장모듈(P
 
 Hi6-T 제어기의 경우, 전자접촉기가 PCB 보드에 설치되어 있고 모니터링 신호를 수집하는 스스템보드 간에 보드-TO-보드로 연결되어 있습니다. 보드-TO-보드 접속상태를 점검하십시오.
 
-![](../_assets/3-Safety-io/E00014/그림15.png)<br>
+![](../_assets/3-Safety-io/E00014/그림15_en.png)<br>
 그림 5 전장모듈과 시스템보드 간 CNMC 케이블
 
 * 시스템보드 고장
@@ -1537,7 +1525,7 @@ Hi6-T 제어기의 경우, 전자접촉기가 PCB 보드에 설치되어 있고 
 
 전장모듈 내부의 고장은 전장보드(BD6C2), 전자접촉기(MC1, MC2), 전장보드와 전자접촉기 간의 배선으로 크게 구분할 수 있습니다. 그러나 이미 로봇이 설치된 현장에서 전장모듈 내부를 점검하는 것은 어려우므로 전장모듈 전체를 교체하여 주십시오.
 
-![](../_assets/3-Safety-io/E00014/그림16.png)<br>
+![](../_assets/3-Safety-io/E00014/그림16_en.png)<br>
 그림 6 Hi6-N 제어기 
 전장모듈 구조 및 명칭
 
@@ -1573,7 +1561,7 @@ Hi6-T 제어기의 경우, 전자접촉기가 PCB 보드에 설치되어 있고 
 (2)	자동 모드 안전가드 스위치 (SGA1, SGA2)가 입력과 상관 없이 에러가 발생하는 경우
 
 * 안전보드(BD632)를 점검하는 방법
-![](../_assets/3-Safety-io/E00043/그림3.png)<br>
+![](../_assets/3-Safety-io/E00043/그림3_en.png)<br>
 
 1)	IO 전원 상태를 확인하는 방법
 A.	위 그림의 두개의 LED가 녹색 점등 상태 인지를 확인
@@ -1644,6 +1632,115 @@ B)	티치펜던트에서 인에이블링스위치를 잡습니다.<br>
 
 C)	이 상태에서 모터 ON 시킵니다.<br>
 D)	조그키를 사용하여 로봇을 동작영역 안으로 이동시킵니다.<br>
+
+
+[__SOURCE](3-safety-board-part/E02201_E2208.md)
+# 3.5. E02001 ~ E02208 하드웨어 리밋SW 점검 방법
+
+### 1. 원인 및 점검 방법
+
+하드웨어 리밋이 비정상적으로 작동했을 경우 점검하기 위한 방법은 다음을 참조하십시오.
+
+### (1)	스위치 상태 모니터링
+
+하드웨어 리밋 입력상태는 티칭펜던트의 전용 입력신호 창을 통해 확인할 수 있습니다.
+이 창은 “『창조정』→『선택』→『시스템입력』”를 선택하면 볼 수 있습니다. 리밋(Over-Travel) 항목이 황색표시가 되어 있으면 하드웨어 리밋 SW가 작동(open), 즉 로봇이 하드웨어 동작영역을 이탈한 것입니다.
+
+* 주의:
+수동모드에서는 티칭펜던트의 인에이블링 스위치를 ON 시켜야 모니터링이 됩니다. 자동모드에서는 인에이블링 스위치 상태와 관계없이 모니터링 됩니다.
+ 
+ ![](../_assets/3-Safety-io/E02201_2208/그림1.png)<br>
+그림 1 하드웨어 리밋SW 입력상태 표시(티치펜던트 화면)
+ 
+### (2)	하드웨어 리밋 스위치 배선구조
+
+리밋SW와 관련된 구성품에서 원인을 찾기 위해서는 배선구조를 알아야 합니다. 리밋SW는 다음 그림과 같이 기구본체 내부의 리밋SW로 부터 시작하여 케이블을 통해 제어기 내부의 시스템 보드에 연력됩니다.
+
+* 리밋SW 및 기구본체 배선
+* 와이어하니스 및 커넥터(Hi6-N경우, CER1 – CEC1, Hi6-T경우, CMER1 – CMEC1)
+* 제어기 내부 배선 및 커넥터(Hi6-N경우, CEC1 – CNLS, Hi6-T경우, CMEC1 – CNLS1) 
+* 시스템 보드(Hi6-N경우, BD632, Hi6-T경우, BD632T)
+
+ 
+ ![](../_assets/3-Safety-io/E02201_2208/그림2_en.png)<br>
+(a) Hi6-N 제어기
+
+ ![](../_assets/3-Safety-io/E02201_2208/그림3_en.png)<br>
+(b) Hi6-T 제어기
+
+그림 2 하드웨어 리밋SW 배선 구조
+
+
+ 
+### (3)	하드웨어 리밋 스위치 점검방법
+
+#### [시스템보드 커넥터(CNLS)에서 점검하는 방법]
+
+{% hint style="warning" %}
+
+경고(Warning)<br>
+케이블의 연결 및 제거 시에는 반드시 제어기의 전원이 꺼진 상태에서 실행하십시오. 전기적 위험은 인명사고 및 재산사고를 일으킬 수 있습니다.
+
+{% endhint %}
+
+
+시스템보드의 CNLS 커넥터를 통해서 보드의 고장인지를 판단하는 것입니다. 아래의 그림과 같이 CNLS 커넥터에서 리밋SW입력과 관련된 핀을 점퍼쇼트 하십시오. 이 상태에서 전용입력신호 모니터링 창을 통하여 리밋(Over-Travel) 항목을 확인하십시오.
+
+①	백색으로 바뀌었다면, 시스템보드의 고장입니다. 보드를 교체하십시오.<br>
+②	황색으로 여전히 에러상태라면, 시스템보드 이후 본체 리밋스위치까지의 영역에서 고장을 체크하십시오.<br>
+
+![](../_assets/3-Safety-io/E02201_2208/그림4_en.png)<br>
+(a)	Hi6-N 시스템 보드
+
+  ![](../_assets/3-Safety-io/E02201_2208/그림5_en.png)<br>
+(b)	Hi6-T 시스템 보드
+
+그림 3 시스템 보드
+
+#### [와이어 하니스(C(M)ER1 또는 C(M)EC1)에서 점검하는 방법]
+
+
+{% hint style="warning" %}
+케이블의 연결 및 제거 시에는 반드시 제어기의 전원이 꺼진 상태에서 실행하십시오. 전기적 위험은 인명사고 및 재산사고를 일으킬 수 있습니다.
+{% endhint %}
+ 
+
+와이어하니스 커넥터 C(M)ER1 또는 C(M)EC1을 통해서 케이블 고장인지를 판단하는 것입니다. 우선 제어기로부터 C(M)EC1 와이어하니스 제거한 후, 제어기에 부착되어 있는 C(M)EC1 커넥터에서 리밋SW 관련 핀을 점퍼 쇼트하십시오. 이 상태에서 전용입력신호 모니터링 창을 통하여 리밋Over-Travel) 항목을 확인하십시오.
+
+①	백색으로 바뀌었다면,<br>
+제어기 내부의 C(M)EC1 커넥터 – 시스템보드 간 케이블 또는 커넥터의 고장입니다. 이를 점검하거나 교체 하십시오.
+
+②	황색으로 여전히 에러상태라면,<br>
+C(M)EC1 커넥터 이후 본체 리밋스위치까지의 영역에서 고장을 체크하십시오.
+
+![](../_assets/3-Safety-io/E02201_2208/그림6_en.png)<br>
+(a)	Hi6-N 제어기
+![](../_assets/3-Safety-io/E02201_2208/그림7_en.png)<br>
+(b)	Hi6-T 제어기
+
+그림 4 하드웨어 리밋SW 하네스 C(M)EC1 구조
+
+ 
+#### [리밋SW 및 본체 내부 배선을 점검하는 방법]
+
+본체로부터 C(M)ER1 와이어하니스를 제거한 후, 본체의 C(M)ER1 커넥터에서 리밋SW관련 라인에 이상이 있는지 멀티미터를 사용하여 쇼트 테스트하십시오.
+
+①	저항이 오픈상태로 측정되었다면,<br>
+리밋SW 또는 리밋SW-CER1 간 커넥터 또는 커넥터의 고장입니다.
+이를 점검하거나 교체하십시오.
+
+②	저항이 쇼트상태로 측정되었다면,<br>
+다른 부분의 고장을 체크하여야 합니다. 당사에 문의하십시오.
+
+![](../_assets/3-Safety-io/E02201_2208/그림8_en.png)<br>
+(a)	Hi6-N 제어기
+
+![](../_assets/3-Safety-io/E02201_2208/그림9_en.png)<br>
+(b)	Hi6-T 제어기
+
+그림 5 하드웨어 리밋SW 하네스 C(M)ER1 구조
+
+
 
 
 [__SOURCE](3-safety-board-part/E02201.md)
@@ -1852,7 +1949,7 @@ Hi6-N 제어기의 경우, 전자접촉기가 설치되어 있는 전장모듈(P
 
 Hi6-T 제어기의 경우, 전자접촉기가 PCB 보드에 설치되어 있고 모니터링 신호를 수집하는 스스템보드 간에 보드-TO-보드로 연결되어 있습니다. 보드-TO-보드 접속상태를 점검하십시오.
 
-![](../_assets/3-Safety-io/E02260/picture2.png)<br>
+![](../_assets/3-Safety-io/E02260/picture2_en.png)<br>
 그림 2 Hi6-T 제어기
 
 ### (2)	마그네트 MC2를 점검하십시오.
@@ -1871,7 +1968,7 @@ Hi6-T 제어기의 경우, Back Plane 보드에 있는 마그네트 MC2가 정�
 
 Hi6-N 제어기의 경우, 전장모듈의 CNT1 케이블의 연결 상태 및 CP의 개/폐 상태를 확인하십시오.
 
-![](../_assets/3-Safety-io/E02260/picture7.png)<br>
+![](../_assets/3-Safety-io/E02260/picture7_en.png)<br>
 그림 5 Hi6-N 제어기 CNT1 케이블 및 CP
 
 ### (4)	전장보드를 점검하십시오.
@@ -1944,7 +2041,7 @@ Hi6-N 제어기의 경우, 전자접촉기가 설치되어 있는 전장모듈(P
 
 Hi6-T 제어기의 경우, 전자접촉기가 PCB 보드에 설치되어 있고 모니터링 신호를 수집하는 스스템보드 간에 보드-TO-보드로 연결되어 있습니다. 보드-TO-보드 접속상태를 점검하십시오.
 
- ![](../_assets/3-Safety-io/E02280/그림2.png)<br>
+ ![](../_assets/3-Safety-io/E02280/그림2_en.png)<br>
 그림 2 Hi6-T 제어기
 
  
@@ -2052,7 +2149,7 @@ TP화면에서 서비스 -> 시스템 진단 -> 시스템 버전 으로 이동�
 
 #### [ 안전보드(BD632)를 점검하는 방법]
 
- ![](../_assets/3-Safety-io/E02301/그림9.png)<br>
+ ![](../_assets/3-Safety-io/E02301/그림9_en.png)<br>
 
 1)	IO 전원 상태를 확인하는 방법<br>
 A.	위 그림의 두개의 LED가 녹색 점등 상태 인지를 확인<br>
@@ -2121,7 +2218,7 @@ TP화면에서 서비스 -> 시스템 진단 -> 시스템 버전 으로 이동�
 
 #### [각 모듈간(메인제어모듈(H6COM-T), 서보보드(BD640), 안전보드(BD632)) Ethernet 케이블 결선 상태 확인]
 
-![](../_assets/3-Safety-io/E64002/그림9.png)<br>
+![](../_assets/3-Safety-io/E64002/그림9_en.png)<br>
  
 
 1)	점검 대상<br>
@@ -2149,7 +2246,7 @@ C.	이더넷 커넥터(PCB 단자부) 손상 가능성도 점검<br>
 
 #### [안전보드(BD632)를 점검하는 방법]
 
-![](../_assets/3-Safety-io/E64002/그림11.png)<br>
+![](../_assets/3-Safety-io/E64002/그림11_en.png)<br>
  
 1)	전원 상태를 확인하는 방법<br>
 A.	위 그림의 두개의 전원 LED가 녹색 점등 상태 인지를 확인<br>
@@ -2216,7 +2313,7 @@ FND 값 P.002 : 초기화 완료
 (3)	안전보드(BD632)를 점검하십시오.
 
 * 안전보드(BD632)를 점검하는 방법
-![](../_assets/3-Safety-io/E64003/그림3.png)<br>
+![](../_assets/3-Safety-io/E64003/그림3_en.png)<br>
  
 
 1)	IO 전원 상태를 확인하는 방법<br>
@@ -2251,7 +2348,7 @@ C.	안전보드(BD632) 접지 상태 점검 (접지 케이블, 접지 단자 체
 ### (1)	안전보드(BD632)를 점검하십시오.
 
 #### [안전보드(BD632)를 점검하는 방법]
-![](../_assets/3-Safety-io/E64035/그림1.png)<br>
+![](../_assets/3-Safety-io/E64035/그림1_en.png)<br>
 
 1)	IO 전원 상태를 확인하는 방법<br>
 A.	위 그림의 두개의 LED가 녹색 점등 상태 인지를 확인<br>
@@ -2299,7 +2396,7 @@ C.	안전보드(BD632) 접지 상태 점검 (접지 케이블, 접지 단자 체
 
 엔코더측 커넥터 pin(3-4)의 전압을 측정해 주십시오.
 
-![](../_assets/4.서보보드/엔코더_커넥터_핀정보.png)
+![](../_assets/4.서보보드/encoder_connector_pin_info_en.png)
 
                     (그림 4.1 엔코더 커넥터 핀 정보)
 
@@ -2324,11 +2421,11 @@ C.	안전보드(BD632) 접지 상태 점검 (접지 케이블, 접지 단자 체
 * 제어기 내부 배선을 점검하십시오.
 CNEC1,4(BD640)커넥터와 CEC1 간의 배선을 점검하십시오.
 
-![](../_assets/4.서보보드/hi6N제어기.png)
+![](../_assets/4.서보보드/hi6N제어기_en.png)
 
                     (그림 4.3 Hi6-N 제어기 엔코더 배선 점검)
 
-![](../_assets/4.서보보드/Hi6_T15제어기.png)
+![](../_assets/4.서보보드/Hi6_T15제어기_en.png)
 
                     (그림 4.4 Hi6-T15 제어기 엔코더 배선 점검)
 
@@ -2362,11 +2459,11 @@ CER1과 엔코더측 커넥터간의 배선을 점검하십시오.
 (3)	서보보드를 교체 시험하십시오. 
 서보 보드를 교체한 후 에러가 발생하지 않으면 서보보드의 엔코더 수신부 불량입니다. 서보 보드를 정상품으로 교체하여 주십시오.
 
-![](../_assets/4.서보보드/N제어기_서보보드_교체.png)
+![](../_assets/4.서보보드/N제어기_서보보드_교체_en.png)
 
                     (그림 4.10 N제어기 서보보드 교체)
 
-![](../_assets/4.서보보드/T제어기_서보보드_교체.png)
+![](../_assets/4.서보보드/T제어기_서보보드_교체_en.png)
 
                     (그림 4.11 T제어기 서보보드 교체)
 
@@ -2384,7 +2481,7 @@ CER1과 엔코더측 커넥터간의 배선을 점검하십시오.
 
                     (그림 4.13 엔코더 통신실패 모니터링)
 
-![](../_assets/4.서보보드/엔코더_통신실패_횟수.png)
+![](../_assets/4.서보보드/엔코더_통신실패_횟수_en.png)
 
 
 [__SOURCE](4-servo-board-part/E02451.md)
@@ -2427,11 +2524,11 @@ CER1과 엔코더측 커넥터간의 배선을 점검하십시오.
 
     CNEC1,4(BD640)커넥터와 CEC1간의 배선을 점검하십시오.
 
-    ![](../_assets/4.서보보드/hi6N제어기.png)
+    ![](../_assets/4.서보보드/hi6N제어기_en.png)
     
                     (그림 4.14 Hi6-N 제어기 엔코더 배선 점검)
 
-    ![](../_assets/4.서보보드/Hi6_T15제어기.png)
+    ![](../_assets/4.서보보드/Hi6_T15제어기_en.png)
 
                     (그림 4.15 Hi6-T15 제어기 엔코더 배선 점검)
 
@@ -2476,11 +2573,11 @@ CER1과 엔코더측 커넥터간의 배선을 점검하십시오.
 
 서보 보드를 교체한 후 에러가 발생하지 않으면 서보보드의 불량입니다. 서보 보드를 정상품으로 교체하여 주십시오.
 
-![](../_assets/4.서보보드/N제어기_서보보드_교체.png)
+![](../_assets/4.서보보드/N제어기_서보보드_교체_en.png)
 
                     (그림 4.22 N제어기 서보보드 교체)
 
-![](../_assets/4.서보보드/T제어기_서보보드_교체.png)
+![](../_assets/4.서보보드/T제어기_서보보드_교체_en.png)
 
                     (그림 4.23 T제어기 서보보드 교체)
     
@@ -2492,7 +2589,7 @@ CER1과 엔코더측 커넥터간의 배선을 점검하십시오.
 
                     (그림 4.24 엔코더 통신실패 모니터링)
 
-![](../_assets/4.서보보드/엔코더_통신실패_횟수.png)
+![](../_assets/4.서보보드/엔코더_통신실패_횟수_en.png)
 
 
 [__SOURCE](4-servo-board-part/E02452.md)
@@ -2644,7 +2741,7 @@ CE(Counter Error) : 엔코더 주전원 On시, 1회전 Data가 오동작 또는 
 
 엔코더측 커넥터 pin(3-4)의 전압을 측정해 주십시오.
 
-![](../_assets/4.서보보드/엔코더_커넥터_핀정보.png)
+![](../_assets/4.서보보드/엔코더_커넥터_핀정보_en.png)
 
                         (그림 4.25 엔코더 커넥터 핀 정보)
 
@@ -2963,11 +3060,11 @@ BE(Battery Error) : 엔코더 주전원 Off시 외부배터리전압이 3.1V이�
 
 서보보드(BD640) → 서보구동장치 → 파워전장모듈 → 모터 순으로 교체하여 에러발생 여부를 확인하십시오.
 
-![](../_assets/4.서보보드/N제어기_모터및구동장치.png)
+![](../_assets/4.서보보드/N제어기_모터및구동장치_en.png)
 
                 (그림 4.70 N제어기 모터 및 구동 모듈)
 
-![](../_assets/4.서보보드/T제어기_모터및구동장치.png)
+![](../_assets/4.서보보드/T제어기_모터및구동장치_en.png)
 
                 (그림 4.70 T제어기 모터 및 구동 모듈)
 
@@ -3303,11 +3400,11 @@ BE(Battery Error) : 엔코더 주전원 Off시 외부배터리전압이 3.1V이�
 
 서보보드에 이상이 있을 경우 에러가 발생할 수 있습니다. 보드를 교체하여 확인하십시오.
 
-![](../_assets/4.서보보드/N제어기_서보보드_교체.png)
+![](../_assets/4.서보보드/N제어기_서보보드_교체_en.png)
 
                     (그림 4.98 N제어기 서보보드 교체)
 
-![](../_assets/4.서보보드/T제어기_서보보드_교체.png)
+![](../_assets/4.서보보드/T제어기_서보보드_교체_en.png)
 
                     (그림 4.99 T제어기 서보보드 교체)
 
@@ -3315,7 +3412,7 @@ BE(Battery Error) : 엔코더 주전원 Off시 외부배터리전압이 3.1V이�
 
 해당축의 구동부(모터, 감속기)가 정상적으로 작동하는지 확인하십시오.
 
-![](../_assets/4.서보보드/축구동부.png)
+![](../_assets/4.서보보드/축구동부_en.png)
 
                     (그림 4.100 구동부 정상동작 확인)
 [__SOURCE](4-servo-board-part/E02651.md)
@@ -3537,11 +3634,11 @@ Project 폴더를 USB에 복사합니다.
 
         보드 간 인터페이스인 EtherCAT 케이블 연결 상태를 점검하십시오. 제거 후 다시 설치하시기 바랍니다.
 
-![](../_assets/4.서보보드/보드_인터페이스.png)
+![](../_assets/4.서보보드/보드_인터페이스_en.png)
 
                     (그림 4.118 N제어기 EtherCAT 케이블 연결)
 
-![](../_assets/4.서보보드/T제어기-보드인터페이스.png)
+![](../_assets/4.서보보드/T제어기-보드인터페이스_en.png)
 
                     (그림 4.119 T제어기 EtherCAT 케이블 연결)
 
@@ -3753,7 +3850,7 @@ TP화면상의 등록된 로봇기종과 실제 설치된 로봇이 일치하는
     * 제어기 내부 배선을 점검하십시오.
         제어기 내부에 앰프와 설치되어 있는 배선 점검이 필요합니다.
 
-![](../_assets/4.서보보드/N제어기_브레이크_출력_배선.png)
+![](../_assets/4.서보보드/N제어기_브레이크_출력_배선_en.png)
 
                     (그림 4.134 N제어기 내부 배선 점검)
 
@@ -3766,11 +3863,11 @@ TP화면상의 등록된 로봇기종과 실제 설치된 로봇이 일치하는
 
 서보보드와 앰프보드 간의 연결 및 체결되는 커넥터(보드 to 보드)의 설치가 올바른지 점검하십시오. 체결 상태가 불량일 경우 해당 에러가 발생할 수 있습니다.
 
-![](../_assets/4.서보보드/서보보드_앰프보드_b2b.png)
+![](../_assets/4.서보보드/서보보드_앰프보드_b2b_en.png)
 
                     (그림 4.136 N제어기 서보 보드와 앰프보드의 연결)
 
-![](../_assets/4.서보보드/T제어기_서보보드_앰프보드.png)
+![](../_assets/4.서보보드/T제어기_서보보드_앰프보드_en.png)
 
                     (그림 4.137 T제어기 서보 보드와 앰프보드의 연결)
 
@@ -3778,11 +3875,11 @@ TP화면상의 등록된 로봇기종과 실제 설치된 로봇이 일치하는
 
 서보보드(BD640) → 앰프 보드 → 와이어 하네스 → 모터 → PSM의 순으로 교체하여 에러발생 여부를 확인하십시오.
 
-![](../_assets/4.서보보드/N제어기_모터및구동장치.png)
+![](../_assets/4.서보보드/N제어기_모터및구동장치_en.png)
 
                     (그림 4.138 N제어기 구동 부품)
 
-![](../_assets/4.서보보드/T제어기_모터및구동장치.png)
+![](../_assets/4.서보보드/T제어기_모터및구동장치_en.png)
 
                     (그림 4.138 T제어기 구동 부품)
 
@@ -3863,7 +3960,7 @@ TP화면상의 등록된 로봇기종과 실제 설치된 로봇이 일치하는
     * 제어기 내부 배선을 점검하십시오.
         제어기 내부에 앰프와 설치되어 있는 배선 점검이 필요합니다.
 
-![](../_assets/4.서보보드/N제어기_브레이크_출력_배선.png)
+![](../_assets/4.서보보드/N제어기_브레이크_출력_배선_en.png)
 
                     (그림 4.134 N제어기 내부 배선 점검)
 
@@ -3876,11 +3973,11 @@ TP화면상의 등록된 로봇기종과 실제 설치된 로봇이 일치하는
 
 서보보드와 앰프보드 간의 연결 및 체결되는 커넥터(보드 to 보드)의 설치가 올바른지 점검하십시오. 체결 상태가 불량일 경우 해당 에러가 발생할 수 있습니다.
 
-![](../_assets/4.서보보드/서보보드_앰프보드_b2b.png)
+![](../_assets/4.서보보드/서보보드_앰프보드_b2b_en.png)
 
                     (그림 4.136 N제어기 서보 보드와 앰프보드의 연결)
 
-![](../_assets/4.서보보드/T제어기_서보보드_앰프보드.png)
+![](../_assets/4.서보보드/T제어기_서보보드_앰프보드_en.png)
 
                     (그림 4.137 T제어기 서보 보드와 앰프보드의 연결)
 
@@ -3888,11 +3985,11 @@ TP화면상의 등록된 로봇기종과 실제 설치된 로봇이 일치하는
 
 서보보드(BD640) → 앰프 보드 → 와이어 하네스 → 모터 → PSM의 순으로 교체하여 에러발생 여부를 확인하십시오.
 
-![](../_assets/4.서보보드/N제어기_모터및구동장치.png)
+![](../_assets/4.서보보드/N제어기_모터및구동장치_en.png)
 
                     (그림 4.138 N제어기 구동 부품)
 
-![](../_assets/4.서보보드/T제어기_모터및구동장치.png)
+![](../_assets/4.서보보드/T제어기_모터및구동장치_en.png)
 
                     (그림 4.138 T제어기 구동 부품)
 
@@ -3946,11 +4043,11 @@ Job 프로그램을 동작시키면서 포화되는 엔코더 온도를 확인�
 
 서보 보드를 교체한 후 에러가 발생하지 않으면 서보 보드의 엔코더 데이터 수신부의 고장으로 판단할 수 있습니다.
 
-![](../_assets/4.서보보드/N제어기_서보보드_교체.png)
+![](../_assets/4.서보보드/N제어기_서보보드_교체_en.png)
 
                     (그림 4.38 N제어기 서보보드 교체)
 
-![](../_assets/4.서보보드/T제어기_서보보드_교체.png)
+![](../_assets/4.서보보드/T제어기_서보보드_교체_en.png)
 
                     (그림 4.39 T제어기 서보보드 교체)
 
@@ -3993,11 +4090,11 @@ Hi6-N 제어기의 경우, 서보보드와 전장보드, 케이블 배선에 문
 
 서보 보드를 교체한 후 에러가 발생하지 않으면 서보 보드의 엔코더 데이터 수신부의 고장으로 판단할 수 있습니다.
 
-![](../_assets/4.서보보드/N제어기_서보보드_교체.png)
+![](../_assets/4.서보보드/N제어기_서보보드_교체_en.png)
 
                     (그림 4.42 N제어기 서보보드 교체)
 
-![](../_assets/4.서보보드/T제어기_서보보드_교체.png)
+![](../_assets/4.서보보드/T제어기_서보보드_교체_en.png)
 
                     (그림 4.43 T제어기 서보보드 교체)
     
@@ -4052,11 +4149,11 @@ Hi6-N 제어기의 경우, 서보보드와 전장보드, 케이블 배선에 문
 
 서보 보드를 교체한 후 에러가 발생하지 않으면 서보 보드의 엔코더 데이터 수신부의 고장으로 판단할 수 있습니다.
 
-![](../_assets/4.서보보드/N제어기_서보보드_교체.png)
+![](../_assets/4.서보보드/N제어기_서보보드_교체_en.png)
 
                     (그림 4.46 N제어기 서보보드 교체)
 
-![](../_assets/4.서보보드/T제어기_서보보드_교체.png)
+![](../_assets/4.서보보드/T제어기_서보보드_교체_en.png)
 
                  (그림 4.47 T제어기 서보보드 교체)
 
@@ -4092,7 +4189,7 @@ Hi6-N 제어기의 경우, 서보보드와 전장보드, 케이블 배선에 문
     * 제어기 내부 배선을 점검하십시오.
         Hi6-N 제어기의 경우, CNB1(BD640) 커넥터와 CMC1, CMC2 간의 배선을 점검하십시오.
 
-![](../_assets/4.서보보드/N제어기_브레이크_출력_배선.png)
+![](../_assets/4.서보보드/N제어기_브레이크_출력_배선_en.png)
 
                     (그림 4.54 N제어기 브레이크 출력 배선)
 
@@ -4115,11 +4212,11 @@ Hi6-N 제어기의 경우, 서보보드와 전장보드, 케이블 배선에 문
 
 서보 보드를 교체한 후 에러가 발생하지 않으면 서보 보드의 엔코더 데이터 수신부의 고장으로 판단할 수 있습니다.
 
-![](../_assets/4.서보보드/N제어기_서보보드_교체.png)
+![](../_assets/4.서보보드/N제어기_서보보드_교체_en.png)
 
                     (그림 4.58 N제어기 서보보드 교체)
 
-![](../_assets/4.서보보드/T제어기_서보보드_교체.png)
+![](../_assets/4.서보보드/T제어기_서보보드_교체_en.png)
 
                     (그림 4.59 T제어기 서보보드 교체)
 
@@ -4155,7 +4252,7 @@ Hi6-N 제어기의 경우, 서보보드와 전장보드, 케이블 배선에 문
     * 제어기 내부 배선을 점검하십시오.
         Hi6-N 제어기의 경우, CNB1(BD640) 커넥터와 CMC1, CMC2 간의 배선을 점검하십시오.
 
-![](../_assets/4.서보보드/N제어기_브레이크_출력_배선.png)
+![](../_assets/4.서보보드/N제어기_브레이크_출력_배선_en.png)
 
                     (그림 4.48 N제어기 브레이크 출력 배선)
 
@@ -4178,11 +4275,11 @@ Hi6-N 제어기의 경우, 서보보드와 전장보드, 케이블 배선에 문
 
 서보 보드를 교체한 후 에러가 발생하지 않으면 서보 보드의 엔코더 데이터 수신부의 고장으로 판단할 수 있습니다.
 
-![](../_assets/4.서보보드/N제어기_서보보드_교체.png)
+![](../_assets/4.서보보드/N제어기_서보보드_교체_en.png)
 
                     (그림 4.52 N제어기 서보보드 교체)
 
-![](../_assets/4.서보보드/T제어기_서보보드_교체.png)
+![](../_assets/4.서보보드/T제어기_서보보드_교체_en.png)
 
                     (그림 4.53 T제어기 서보보드 교체)
 [__SOURCE](5-communication/README.md)
@@ -4326,7 +4423,7 @@ C.	이더넷 커넥터(PCB 단자부) 손상 가능성도 점검<br>
 1-2) 가 모두 정상임에도 이더캣 통신 연결에 문제가 있는 경우 보드를 교체 하십시오.
 
 [__SOURCE](appendices/README.md)
-# 별첨
+# Appendices
 
   
 

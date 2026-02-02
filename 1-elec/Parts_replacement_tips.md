@@ -1,78 +1,81 @@
-# 1.4. 부품 교환 요령
+# 1.4. Component Replacement Guidelines
+This section describes the guidelines for replacing individual components and circuit boards during troubleshooting.
 
-고장수리(troubleshooting)시 각 부품 및 기판의 교환요령을 설명합니다.
-
-### 1. 모듈 교환 요령
-
-{% hint style="warning" %}
-모듈 교환시 작업자는 다음의 주의 사항을 유념하여 주십시오.
-{% endhint %}
-
-①	작업전에 반드시 전원장치의 전원을 꺼 주십시오.
-②	작업자의 손을 청결하게 하여 기름이나 수분이 기판에 묻지 않도록 주의하십시오. 기판을 잡아야 할 경우에는 그 주위를 잡도록 하십시오. 전자 부품이나 패턴, 그리고 특히 커넥터의 접촉부분에는 손이 닿지 않도록 주의하여 주십시오.
-③	작업자의 몸(손)과 제어기와는 동전위(同電位)가 되도록 하여 주십시오.
-④	각 기판에는 다수의 커넥터가 있습니다. 교환시에 오삽입, 누락 또는 헐렁한 상태가 되지 않도록 정확히 삽입하여 주십시오. 커넥터의 명판과 기판상에 인쇄된 이름을 맞추어 삽입하십시오.
-
-### 1.1. 메인모듈 교환 요령
+### 1. Module Replacement Guidelines
 
 {% hint style="warning" %}
-메인모듈을 빼기 전에 반드시 먼저 다음 사항을 조치하여 주십시오.
+When replacing a module, the operator should observe the following precautions.
 {% endhint %}
 
-①	메인모듈를 교환하고자 할 때는 먼저 필요한 프로그램 / 정수 데이터를 (Notebook) PC의 HR-VIEW S/W 또는 USB Memory를 이용하여 백업한 후에 교체하여 주십시오.
-②	티칭한 프로그램 / 정수 데이터는 메인모듈의 RAM상에 저장되어 있으므로, 새로운 기판으로 교체하였을 때는 원하는 기존의 프로그램 / 정수 데이터가 없습니다.  
-③	교체한 후에는 앞서 백업(backup)받은 내용을 새로운 기판에 로드(load)하여 사용하시면 됩니다.
+① Before starting any work, be sure to turn off the power supply.<br>
+② Ensure that the operator’s hands are clean to prevent oil or moisture from contaminating the circuit board. If it is necessary to handle the board, hold it by the edges. Avoid touching electronic components, circuit patterns, and especially connector contact areas.<br>
+③ Ensure that the operator’s body(hands) and the controller are at the same electrical potential to prevent electrostatic discharge(ESD).<br>
+④ Each circuit board is equipped with multiple connectors. When replacing a board, insert all connectors accurately and securely to prevent incorrect insertion, omission, or loose connections. Ensure that the connector nameplates match the corresponding names printed on the circuit board before insertion.
 
-이상의 주의사항을 지키고, 다음의 순서에 따라 기판을 교환하여 주십시오. 
-
-#### 1.1.1 메인모듈의 분리
-①	먼저 전원 장치의 입력 전원을 제거해 주십시오.
-②	모듈에 연결된 각종 커넥터를 빼십시오. 이때 나사로 체결되어 있는 커넥터의 경우에는 알맞은 드라이버를 이용하여 풀며, 커넥터에 무리가 가지 않도록 하여 빼십시오.
-③	상하에 있는 고정 나사를 약간만 풀고, 모듈을 위로 이동시킨 후 당겨 빼냅니다.
-
-#### 1.1.1 메인모듈의 결합
-①	먼저 제어기 입력전원이 OFF 상태임을 확인해 주십시오.
-②	상하에 있는 고정 나사에 교체할 모듈을 걸어서 장착한 후 고정나사를 체결합니다.
-③	모듈에 연결된 각종 커넥터를 연결하십시오. 이때 나사로 체결되어 있는 커넥터의 경우에는 알맞은 드라이버를 이용하여 연결하고, 커넥터에 무리가 가지 않도록 연결하십시오.
-④	통신선이 잘못 연결되진 않았는지, 빠트린 작업이 없는지 한번 더 확인하십시오.
-
-### 1.2. 구동장치(Drive Module) 교환 요령
+### 1.1. Main Module Replacement Guidelines
 
 {% hint style="warning" %}
-서보 구동장치 교환 시 작업자는 다음의 주의 사항을 유념하여 주십시오.
+Before removing the main module, be sure to complete the following preparations.
 {% endhint %}
 
-다른 기종의 서보 구동장치와 호환성이 없는 경우가 있으므로, 앞면 패널의 명판을 반드시 확인 하십시오.
+① Before replacing the main module, back up all required programs and integer data using the HR-VIEW software on a notebook PC or a USB memory device.<br>
+② Taught programs and integer data are stored in the RAM of the main module.
+Therefore, when the module is replaced with a new board, the previously used programs and integer data will not be available.<br>
+③ After replacement, load the previously backed-up data onto the new board and continue operation.<br>
 
-#### 1.2.1 서보 구동장치(Drive Unit)의 분리
-①	먼저 전원 장치의 입력 전원을 꺼 주십시오.
-②	서보 구동장치의 보호 커버의 고정볼트를 풀어서 떼어 냅니다.
-③	단자대에 나사로 고정된 배선을 떼어 냅니다.
-④	접속되어 있는 커넥터를 모두 떼어 냅니다.
-⑤	서보 구동장치를 고정하고 있는 나사를 떼어 냅니다.
-⑥	서보 구동장치를 꺼냅니다. 서보 구동장치는 무거우므로 꺼낼 때 다치지 않도록 주의하십시오. 또한 옆의 배선들도 손상되지 않도록 주의하십시오.
+After observing the above precautions, replace the circuit board by following the procedure described below.
 
-#### 1.2.2 서보 구동장치(Drive Unit)의 결합
-①	먼저 전원 장치의 입력 전원을 꺼 주십시오.
-②	서보 구동장치를 잘 들어서 밀어 넣습니다. 서보 구동장치는 무거우므로 밀어 넣을 때 다치지 않도록 주의하십시오. 또한 옆의 배선들도 손상되지 않도록 주의하십시오.
-③	서보 구동장치를 나사로 고정시키십시오.
-④	배선들을 단자대에 나사로 조이십시오.
-⑤	커넥터를 모두 접속시키십시오.
-⑥	서보 구동장치 보호 커버을 볼트로 체결합니다.
-⑤	빠트린 작업이 없는지 한번 더 확인하십시오.
+#### 1.1.1. Removal of the Main Module
+① First, disconnect the input power supply to the controller.<br>
+② Disconnect all connectors connected to the module. For connectors secured with screws, loosen them using an appropriate screwdriver and remove the connectors carefully to avoid applying excessive force.<br>
+③ Loosen the upper and lower mounting screws slightly, move the module upward, and then pull it out.<br>
 
-### 1.3. 1.1.4. PSM(Power Supply Module)의 교환 요령 
+#### 1.1.2. Installation of the Main Module
+① First, verify that the controller input power is turned OFF.<br>
+② Hang the replacement module onto the upper and lower mounting screws, then secure it by tightening the mounting screws.<br>
+③ Reconnect all connectors to the module.
+For connectors secured with screws, use an appropriate screwdriver and tighten them carefully to avoid stressing the connectors.<br>
+④ Double-check that the communication cables are connected correctly and that no steps have been missed.<br>
+
+### 1.2. Drive Module Replacement Guidelines
+
 {% hint style="warning" %}
-PSM는 주 제어전원으로 이용되는 복합전원장치로서 정밀장치이므로 취급에 특별한 주의를 바랍니다.
+When replacing the servo drive module, the operator must observe the following precautions.
 {% endhint %}
 
-#### 1.2.1 PSM(Power Supply Module)의 분리
-①	먼저 전원 장치의 입력 전원을 꺼 주십시오.
-②	모듈에 연결된 각종 커넥터를 빼십시오.
-③	상하에 있는 고정 나사를 약간만 풀고, 모듈을 위로 이동시킨 후 당겨 빼냅니다. PSM은 무거우므로 꺼낼 때 다치지 않도록 주의하십시오. 또한 옆의 배선들도 손상되지 않도록 주의하십시오. 이때 너무 갑자기 세게 잡아당기면 다칠 수도 있으니 주의하십시오.
+Since compatibility may not be guaranteed with servo drive modules of different models, be sure to verify the nameplate on the front panel before replacement.
 
-#### 1.2.2 PSM(Power Supply Module)의 결합
-①	먼저 제어기 입력전원이 OFF 상태임을 확인해 주십시오.
-②	상하에 있는 고정 나사에 교체할 모듈을 걸어서 장착한 후 고정나사를 체결합니다. PSM은 무거우므로 장착할 때 다치지 않도록 주의하십시오. 또한 옆의 배선들도 손상되지 않도록 주의하십시오. 이때 너무 갑자기 세게 집어넣으면 다칠 수도 있으니 주의하십시오.
-③	모듈에 연결된 각종 커넥터를 연결하십시오. 이때 나사로 체결되어 있는 커넥터의 경우에는 알맞은 드라이버를 이용하여 연결하고, 커넥터에 무리가 가지 않도록 연결하십시오.
-④	커넥터가 잘못 연결되진 않았는지, 빠트린 작업이 없는지 한번 더 확인하십시오.
+#### 1.2.1. Removal of the Servo Drive Unit
+① First, turn off the input power supply.<br>
+② Loosen the fixing bolts of the protective cover on the servo drive unit and remove the cover.<br>
+③ Disconnect the wiring secured to the terminal block by screws.<br>
+④ Disconnect all connected connectors.<br>
+⑤ Remove the screws securing the servo drive unit.<br>
+⑥ Remove the servo drive unit. The servo drive unit is heavy; use caution to avoid injury when removing it. Also, take care not to damage the adjacent wiring.<br>
+
+#### 1.2.2. Installation of the Servo Drive Unit
+① First, ensure that the input power supply is turned OFF.<br>
+② Carefully lift and slide the servo drive unit into position. The servo drive unit is heavy; use caution to avoid injury while installing it. Also, take care not to damage adjacent wiring.<br>
+③ Secure the servo drive unit with screws.<br>
+④ Tighten the wiring to the terminal block using screws.<br>
+⑤ Connect all connectors.<br>
+⑥ Fasten the protective cover of the servo drive unit with bolts.<br>
+⑦ Double-check that no steps have been missed.<br>
+
+### 1.3. PSM(Power Supply Module) Replacement Guidelines 
+{% hint style="warning" %}
+The PSM is a composite power supply unit used as the main control power source.
+As it is a precision device, special care must be taken during handling.
+{% endhint %}
+
+#### 1.3.1. Removal of the PSM(Power Supply Module)
+① First, turn off the input power supply.<br>
+② Disconnect all connectors connected to the module.<br>
+③ Loosen the upper and lower mounting screws slightly, move the module upward, and then pull it out. The PSM is heavy; use caution to avoid injury when removing it. Also, take care not to damage adjacent wiring. Do not pull the module out suddenly or with excessive force, as this may result in injury.<br>
+
+#### 1.3.2. Installation of the PSM(Power Supply Module)
+① First, verify that the controller input power is turned OFF.<br>
+② Hang the replacement module onto the upper and lower mounting screws, then secure it by tightening the mounting screws. The PSM is heavy; use caution to avoid injury during installation. Also, take care not to damage adjacent wiring.
+Do not insert the module suddenly or with excessive force, as this may result in injury.<br>
+③ Reconnect all connectors to the module. For connectors secured with screws, use an appropriate screwdriver and tighten them carefully to avoid stressing the connectors.<br>
+④ Double-check that all connectors are connected correctly and that no steps have been missed.<br>

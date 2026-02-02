@@ -1,12 +1,12 @@
 ﻿{
-    "langCode": "ko",
-    "series": "Hi6 제어기",
-    "title": "보수설명서 - 트러블슈팅",
-    "publisher": "HD현대로보틱스",
-    "tocTitle": "목차",
+    "langCode": "en",
+    "series": "Hi6 Controller",
+    "title": "Maintenance Manual – Troubleshooting",
+    "publisher": "HD Hyundai Robotics",
+    "tocTitle": "Contents",
     "tocTitleElements": "[ \"h1\", \"h2\" ]",
     "docId": "HI6TROUBLESHOOT_KO_001",
     "references": [
-        { "rpath" : "doc-hi6-n-maintenance/ko" }
+        { "rpath" : "doc-hi6-n-maintenance/en" }
     ]
 }

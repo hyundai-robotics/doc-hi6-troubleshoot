@@ -1,39 +1,31 @@
-# 1.5. 조정 요령
+# 1.5. Adjustment Guidelines
 
-본 제어기는 출하시에 기본적으로 모든 것이 조정이 되어 있으므로 별도로 조정할 필요 없습니다. 그러나 부품을 교환할 경우에는 일부 조정이 필요하며 그 조정위치와 요령을 설명합니다. 필요한 경우를 제외하고는 조정하지 말고 문제가 발생하였더라도 그 원인이 밝혀지지 않은 경우에는 절대로 건드리지 않도록 하십시오. 
+This controller is fully adjusted at the factory prior to shipment and normally requires no additional adjustment. However, if components are replaced, certain adjustments may be required. This section explains the locations and procedures for those adjustments. Do not perform any adjustments unless absolutely necessary. Even if a problem occurs, do not make any adjustments unless the cause has been clearly identified, as improper adjustment may result in malfunction or damage.
 
-### 1. 전원계통의 조정 
+### 1. Adjustment of Power System 
+If a fault occurs in the power system, or if the power supply configuration has been changed, measure each power supply voltage and adjust any values that deviate from the specified reference levels(Measurements must be taken using a digital voltmeter).
 
-전원계통에 고장이 발생한 경우, 혹은 전원을 변경한 경우는 각 전원 전압을 측정하여 기준치를 벗어나는 것은 조정해 주십시오(디지털 전압계를 사용하여 측정하십시오). 
+### 1.1. Adjustment of the Hi6-N Controller Power System
+![](../_assets/1.전장/조정요령/Hi6-N제어기%20전원%20기준치_en.PNG)<br>
+Figure 1. Reference Power Supply Voltage Levels of the Hi6-N Controller
 
-### 1.1. Hi6-N 제어기 전원계통의 조정
+(Note 1) If the measured value is outside the specified reference range, replace the PSM.<br>
+(Note 2) First, verify the reference value at the specified measurement point.
+Then, if possible, measure the voltage between the pins of the terminal block or connector closest to the robot encoder. At this point, the reference value must be DC 5.1V ± 0.1V.
 
+### 1.2. Adjustment of the Hi6-T Controller Power System
 
-![](../_assets/1.전장/조정요령/Hi6-N제어기%20전원%20기준치.PNG)
+![](../_assets/1.전장/조정요령/Hi6-T제어기%20전원%20기준치_en.PNG)<br>
+Figure 2. Reference Power Supply Voltage Levels of the Hi6-T Controller
 
-그림 1. Hi6-N 제어기 전원 기준치
+(Note 1) If the measured value is outside the specified reference range, replace the PSM.
+(Note 2) First, verify the reference value at the specified measurement point.
+Then, if possible, measure the voltage between the pins of the terminal block or connector closest to the robot encoder. At this point, the reference value must be DC 5.1V ± 0.1V.
 
-
-(주1) 기준치에 들어있지 않은 경우는 PSM을 교환하십시오. 
-
-(주2) 일단 측정장소에서의 기준치를 확인하고, 가능한 로봇의 엔코더에 가장 가까운 단자대, 커넥터의 핀 사이에서 측정하여 주십시오. 이때 기준치는 DC5.1V±0.1V이어야 합니다. 
-
-### 1.2. Hi6-T 제어기 전원계통의 조정
-
-![](../_assets/1.전장/조정요령/Hi6-T제어기%20전원%20기준치.PNG)
-
-그림 2. Hi6-T 제어기 전원 기준치
-
-(주1) 기준치에 들어있지 않은 경우는 PSM을 교환하십시오. 
-
-(주2) 일단 측정장소에서의 기준치를 확인하고, 가능한 로봇의 엔코더에 가장 가까운 단자대, 커넥터의 핀 사이에서 측정하여 주십시오. 이때 기준치는 DC5.1V±0.1V이어야 합니다. 
-
-### 2. 변압기 (TR2)
-
+### 2. Transformer(TR2)
 {% hint style="warning" %}
-Hi6-N제어기 : 변압기(TR2)의 출력 전원은 반드시 AC220V 로 이용하여야 합니다.
-2차측 단자는 내부 부품들의 사양에 맞는 전원으로 연결되어 있으니, 절대로 손대지마십시오.
+For the Hi6-N controller, the output voltage of the transformer(TR2) must be AC 220V. The secondary-side terminals are connected according to the power specifications of the internal components; do not touch or modify them under any circumstances.
 {% endhint %}
 
-본 제어기내 입력전원은 반드시 AC220V 3상을 사용해야 합니다. 그외 전압 사양의 제어기는 출하 시 조정 완료된 상태이오니, 당사 요원의 허락 없이 절대로 탭을 변경할 수 없습니다.
+The input power supply for this controller must be AC 220V, 3-phases. Controllers with other voltage specifications are factory-adjusted prior to shipment; therefore, the transformer taps must not be changed without authorization from the manufacturer’s service personnel.
 

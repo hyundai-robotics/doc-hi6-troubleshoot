@@ -1,8 +1,6 @@
-﻿# 보수설명서 - 트러블슈팅
+﻿# Maintenance Manual – Troubleshooting
+The controller is designed with a primary focus on high precision and high-speed performance. In the event of a malfunction, the system is structured to allow easy identification of the cause and rapid recovery. Please ensure that you fully understand this manual and use it effectively for smooth and efficient troubleshooting.
 
-제어기는 고정밀도, 고신속성을 가장 중점으로 구성되어 있습니다. 만일 문제가 발생한 경우 원인 발견 및 복귀가 용이하도록 배려되어 있습니다. 이 설명서를 충분히 이해하여 원활한 고장수리(Troubleshooting)에 활용되도록 바랍니다.
-
-## 고장수리 방법
-
-Hi6-N과 T제어기에서 발생하는 에러코드에 대하여 각각의 고장수리 방법에 대해서 설명합니다.
+## Troubleshooting Procedure
+This section describes the troubleshooting methods for each error code that may occur in the Hi6-N and Hi6-T controllers.
 

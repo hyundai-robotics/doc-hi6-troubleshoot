@@ -1,19 +1,18 @@
-﻿# 1.1. 전압점검1 – Hi6-N 제어기 내부 3상 전압 점검절차
+﻿# 1.1. Voltage Check1 - Hi6-N Controller Internal 3-Phase Voltage Check Procedure
 
+(1) Check the 3-phase power voltage inside the controller.
 
-(1) 제어기 내부의 3상 전원 전압을 확인하십시오.
+The power supply module(PSM) attached to the front of the controller is responsible for distributing and relaying various power sources. The 3-phase power is turned on and off via a magnetic switch within the power module. With the motor off, check that the voltage input to the power module is within a 10% tolerance of 220 V AC. If the measured voltage is outside the acceptable range, perform the following checks.
 
-제어기 전면에 부착된 전장모듈(PSM)은 각종 전원의 분배 및 중계를 담당하고 있으며, 3상 전원은 전장모듈 내 마그네트 스위치를 통하여 온/오프 됩니다. 모터 오프 상태에서 전장모듈에 입력되는 전압이 AC 220V 기준으로 오차범위가 10%이내인지 점검합니다. 만약 측정된 전압이 허용 범위를 벗어나는 경우에는 아래와 같이 점검하십시오.
-
-![](../_assets/1.전장/전압점검/전압점검1.PNG)
-그림 1.1 전장모듈에 입력되는 3상 전원
+![](../_assets/1.전장/전압점검/전압점검1_en.PNG)<br>
+Figure 1.1. 3-Phase Power Input to the Power Supply Module(PSM)
 
 {% hint style="warning" %}
-고전압 측정 시 주변 부품 및 상간 단락 가능성이 있으므로 주의하십시오.
+Be careful when measuring high voltages as there is a possibility of short circuiting between surrounding components and phases.
 {% endhint %}
 
-1)	제어기 명판의 전압이 220V 인 경우
-제어기 입력 전압이 AC 220V인 경우에는 외부에서 전원 스위치 또는 터미널 블록으로 입력되는 전압과 내부의 전장모듈에 측정된 전압이 동일해야 합니다. 만약 차이가 있다면 3상 전원 배선을 점검하시기 바랍니다.
+1) If the voltage on the controller nameplate is AC 220V<br>
+If the controller input voltage is AC 220V, the voltage input from the external power switch or terminal block and the voltage measured at the internal control module must be the same. If there is a difference, check the three-phase power wiring.
 
-2)	제어기 명판의 전압이 220V가 아닌 경우
-제어기 입력전원이 AC 220V 사양이 아닌 경우에는 내장된 트랜스포머를 사용하여 3상 전원을 AC220V로 변환하여 전장모듈에 연결됩니다. 전장모듈 측에서 측정된 전압이 AC 220V 기준으로 오차범위가 10%이내인지 점검합니다. 만약 측정된 전압이 허용 범위를 벗어나는 경우에는 내장된 트랜스포머의 입력과 출력 단자의 연결 상태를 점검하십시오. 내장된 트랜스포머의 1차단은 제어기 명판에 표기된 전압으로 연결되어야 합니다. 트랜스포머의 2차단은 항상 AC 3상 220V로 설정되어 있습니다. 입력단자와 출력단자가 올바르게 연결된 상태에서도 출력단자에서 AC 3상 220V가 정상적으로 출력되지 않으면 트랜스포머 불량입니다. 이때의 트랜스포머의 출력전압 오차는 5% 이내이어야 합니다.
+2) If the voltage on the controller nameplate is not AC 220V<br>
+If the controller input power is not AC 220V, the built-in transformer converts the three-phase power to AC 220V and connects it to the control module. Check that the voltage measured at the control module is within a 10% tolerance of AC 220V. If the measured voltage is outside the tolerance range, check the connection between the input and output terminals of the built-in transformer. The primary terminal of the built-in transformer must be connected to the voltage indicated on the controller nameplate.
