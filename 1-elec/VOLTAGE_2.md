@@ -7,7 +7,7 @@ Check that the voltage actually supplied to the controller is within the allowab
 * Measurement on the power line side of the front switch
 
 ![](../_assets/1.전장/전압점검/전압점검2.PNG)<br>
-(a) Hi6-N 제어기
+(a) Hi6-N Controller
 
 Figure 1.2. Measurement on the power line side of the power switch
 

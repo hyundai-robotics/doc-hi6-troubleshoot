@@ -16,7 +16,7 @@ This section describes the troubleshooting methods for each error code that may 
 
 The power supply module(PSM) attached to the front of the controller is responsible for distributing and relaying various power sources. The 3-phase power is turned on and off via a magnetic switch within the power module. With the motor off, check that the voltage input to the power module is within a 10% tolerance of 220 V AC. If the measured voltage is outside the acceptable range, perform the following checks.
 
-![](../_assets/1.전장/전압점검/전압점검1.PNG)<br>
+![](../_assets/1.전장/전압점검/전압점검1_en.PNG)<br>
 Figure 1.1. 3-Phase Power Input to the Power Supply Module(PSM)
 
 {% hint style="warning" %}
@@ -39,7 +39,7 @@ Check that the voltage actually supplied to the controller is within the allowab
 * Measurement on the power line side of the front switch
 
 ![](../_assets/1.전장/전압점검/전압점검2.PNG)<br>
-(a) Hi6-N 제어기
+(a) Hi6-N Controller
 
 Figure 1.2. Measurement on the power line side of the power switch
 
@@ -58,7 +58,7 @@ Check that the voltage actually supplied to the controller is within the allowab
 Be careful when measuring high voltages, as there is a risk of short circuits between nearby components and phases.
 {% endhint %}
 
-![](../_assets/1.전장/전압점검/전압점검3.PNG)<br>
+![](../_assets/1.전장/전압점검/전압점검3_en.PNG)<br>
 Figure 1.3. H6-T15 Controller Single-Phase Power Input SMPS Terminal Block
 
 [__SOURCE](1-elec/Parts_replacement_tips.md)
@@ -153,7 +153,7 @@ This controller is fully adjusted at the factory prior to shipment and normally 
 If a fault occurs in the power system, or if the power supply configuration has been changed, measure each power supply voltage and adjust any values that deviate from the specified reference levels(Measurements must be taken using a digital voltmeter).
 
 ### 1.1. Adjustment of the Hi6-N Controller Power System
-![](../_assets/1.전장/조정요령/Hi6-N제어기%20전원%20기준치.PNG)<br>
+![](../_assets/1.전장/조정요령/Hi6-N제어기%20전원%20기준치_en.PNG)<br>
 Figure 1. Reference Power Supply Voltage Levels of the Hi6-N Controller
 
 (Note 1) If the measured value is outside the specified reference range, replace the PSM.<br>
@@ -162,7 +162,7 @@ Then, if possible, measure the voltage between the pins of the terminal block or
 
 ### 1.2. Adjustment of the Hi6-T Controller Power System
 
-![](../_assets/1.전장/조정요령/Hi6-T제어기%20전원%20기준치.PNG)<br>
+![](../_assets/1.전장/조정요령/Hi6-T제어기%20전원%20기준치_en.PNG)<br>
 Figure 2. Reference Power Supply Voltage Levels of the Hi6-T Controller
 
 (Note 1) If the measured value is outside the specified reference range, replace the PSM.
@@ -4430,13 +4430,12 @@ C.	이더넷 커넥터(PCB 단자부) 손상 가능성도 점검<br>
 
 
 [__SOURCE](appendices/rules-occupational-safety.md)
-# 산업안전보건기준에 관한 규칙 및 안전검사 고시
+# Rules on Occupational Safety and Health Standards and Safety Inspection Notification
+This industrial robot shall be installed in consideration of the inspection requirements specified in the Rules on Occupational Safety and Health Standards and the Safety Inspection Notification, where applicable.
 
-당해 산업용 로봇은 산업안전보건기준에 관한 규칙 및 안전검사 고시(검사 대상일 경우)의 검사 기준을 고려하여 설치하여야 한다.
-
-"[산업안전보건기준에 관한 규칙](https://hrbook-hrc.web.app/#/view/rules-on-occupational-safety-and-health-standards/korean/README)"
+"[Rules on Occupational Safety and Health Standards](https://hrbook-hrc.web.app/#/view/rules-on-occupational-safety-and-health-standards/korean/README)"
 
 [__SOURCE](quality-assurance.md)
-# 품질보증
+# Quality Assurance
 
-"[품질보증](https://hrbook-hrc.web.app/#/view/quality-assurance/korean/README)"
+"[Quality Assurance](https://hrbook-hrc.web.app/#/view/quality-assurance/korean/README)"
