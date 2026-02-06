@@ -1,1 +1,1 @@
-# 3. 안전신호 보드
+# 3. Safety Signal Board
