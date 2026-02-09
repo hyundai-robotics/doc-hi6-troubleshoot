@@ -78,8 +78,8 @@
   * [4.31. E02564 (O Axis) Brake Output Overcurrent Detected](4-servo-board-part/E02564.md)
 
 * [5. Communication](5-communication/README.md)
-  * [5.1. E29003 Electrical Board Communication Error (EtherCAT Connection Lost)](5-communication/E29003.md)
-  * [5.2. E29016 Electrical Board Communication Error (EtherCAT Master Connection Lost)](5-communication/E29016.md)
+  * [5.1. E29003 Board Communication Error (EtherCAT Disconnected)](5-communication/E29003.md)
+  * [5.2. E29016 Board Communication (EtherCAT) Master Disconnection Detected](5-communication/E29016.md)
 
 * [Appendices](appendices/README.md)
   * [Rules on Occupational Safety and Health Standards and Safety Inspection Notices](appendices/rules-occupational-safety.md)
