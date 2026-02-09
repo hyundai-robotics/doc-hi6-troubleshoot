@@ -1,16 +1,10 @@
-﻿
-[__SOURCE](README.md)
-# Maintenance Manual – Troubleshooting
+﻿# Maintenance Manual – Troubleshooting
 The controller is designed with a primary focus on high precision and high-speed performance. In the event of a malfunction, the system is structured to allow easy identification of the cause and rapid recovery. Please ensure that you fully understand this manual and use it effectively for smooth and efficient troubleshooting.
 
 ## Troubleshooting Procedure
 This section describes the troubleshooting methods for each error code that may occur in the Hi6-N and Hi6-T controllers.
 
-
-[__SOURCE](1-elec/README.md)
-# 1. Electrical Components
-[__SOURCE](1-elec/VOLTAGE_1.md)
-# 1.1. Voltage Check1 - Hi6-N Controller Internal 3-Phase Voltage Check Procedure
+# 1. Electrical Components# 1.1. Voltage Check1 - Hi6-N Controller Internal 3-Phase Voltage Check Procedure
 
 (1) Check the 3-phase power voltage inside the controller.
 
@@ -28,8 +22,6 @@ If the controller input voltage is AC 220V, the voltage input from the external 
 
 2) If the voltage on the controller nameplate is not AC 220V<br>
 If the controller input power is not AC 220V, the built-in transformer converts the three-phase power to AC 220V and connects it to the control module. Check that the voltage measured at the control module is within a 10% tolerance of AC 220V. If the measured voltage is outside the tolerance range, check the connection between the input and output terminals of the built-in transformer. The primary terminal of the built-in transformer must be connected to the voltage indicated on the controller nameplate.
-
-[__SOURCE](1-elec/VOLTAGE_2.md)
 # 1.2. Voltage Check2 – Hi6-N Controller 3-Phase Voltage Check Procedure
 
 (1)	Check the voltage on the nameplate attached to the controller against the actual input voltage.
@@ -47,8 +39,6 @@ Figure 1.2. Measurement on the power line side of the power switch
 Be careful when measuring high voltages, as there is a risk of short circuits in surrounding components and between phases.
 {% endhint %}
 
-
-[__SOURCE](1-elec/VOLTAGE_3.md)
 # 1.3. Voltage Check3 – Hi6-T Controller Input Single-Phase Voltage Check Procedure
 
 (1) Check the voltage on the nameplate attached to the controller against the actual input voltage.<br>
@@ -60,8 +50,6 @@ Be careful when measuring high voltages, as there is a risk of short circuits be
 
 ![](../_assets/1.전장/전압점검/전압점검3_en.PNG)<br>
 Figure 1.3. H6-T15 Controller Single-Phase Power Input SMPS Terminal Block
-
-[__SOURCE](1-elec/Parts_replacement_tips.md)
 # 1.4. Component Replacement Guidelines
 This section describes the guidelines for replacing individual components and circuit boards during troubleshooting.
 
@@ -143,8 +131,6 @@ As it is a precision device, special care must be taken during handling.
 Do not insert the module suddenly or with excessive force, as this may result in injury.<br>
 ③ Reconnect all connectors to the module. For connectors secured with screws, use an appropriate screwdriver and tighten them carefully to avoid stressing the connectors.<br>
 ④ Double-check that all connectors are connected correctly and that no steps have been missed.<br>
-
-[__SOURCE](1-elec/Adjustment_tips.md)
 # 1.5. Adjustment Guidelines
 
 This controller is fully adjusted at the factory prior to shipment and normally requires no additional adjustment. However, if components are replaced, certain adjustments may be required. This section explains the locations and procedures for those adjustments. Do not perform any adjustments unless absolutely necessary. Even if a problem occurs, do not make any adjustments unless the cause has been clearly identified, as improper adjustment may result in malfunction or damage.
@@ -176,11 +162,7 @@ For the Hi6-N controller, the output voltage of the transformer(TR2) must be AC 
 
 The input power supply for this controller must be AC 220V, 3-phases. Controllers with other voltage specifications are factory-adjusted prior to shipment; therefore, the transformer taps must not be changed without authorization from the manufacturer’s service personnel.
 
-
-[__SOURCE](2-servo-control-board-part/README.md)
-# 2. Servo AMP Board
-[__SOURCE](2-servo-control-board-part/E02500.md)
-# 2.1. E02500 AMP Regenerative Discharge Resistor Overheat
+# 2. Servo AMP Board# 2.1. E02500 AMP Regenerative Discharge Resistor Overheat
 
 ### 1. Overview
 
@@ -260,9 +242,7 @@ If none of the fans are operating, please check the input voltage to the fans. T
 
 * Check for errors based on the robot's playback speed.
 
-If an overheat error occurs during continuous playback for more than 5 minutes, it is because the robot's repetitive movements have exceeded the controller's cooling capacity. Please verify if the error persists after lowering the robot's playback speed. If lowering the speed resolves the regenerative resistor overheat error but prevents you from achieving the required cycle time (operating speed), please contact our technical support department.
-[__SOURCE](2-servo-control-board-part/E02501.md)
-# 2.2. E02501 AMP Regenerative Discharge Resistor Open Circuit, Resistor, or Circuit Error
+If an overheat error occurs during continuous playback for more than 5 minutes, it is because the robot's repetitive movements have exceeded the controller's cooling capacity. Please verify if the error persists after lowering the robot's playback speed. If lowering the speed resolves the regenerative resistor overheat error but prevents you from achieving the required cycle time (operating speed), please contact our technical support department.# 2.2. E02501 AMP Regenerative Discharge Resistor Open Circuit, Resistor, or Circuit Error
 
 ### 1. Overview
 
@@ -339,8 +319,6 @@ Overheat errors can occur due to an open circuit in the resistor or an abnormali
 -> Servo Drive Unit Input Voltage Specification: 3-Phase AC 220V
 
 -> Allowable Range during Motor ON: 198V ~ 242V
-
-[__SOURCE](2-servo-control-board-part/E02502.md)
 # 2.3. E02501 AMP Regenerative Discharge Resistor Detection Circuit Error
 
 ### 1. Overview
@@ -419,8 +397,6 @@ The modules responsible for detecting regenerative discharge resistor overheat e
 -> Hi6-T Controller: BD667T
 
 Please identify the components of the controller currently in use before proceeding with the inspection. Verify whether the error recurs after replacing the suspected part with a known functional unit.
-
-[__SOURCE](2-servo-control-board-part/E02503.md)
 # 2.4. E02503 AMP PN Overvoltage Occurred
 
 ### 1. Overview
@@ -472,9 +448,7 @@ If the regenerative resistance value is higher than the specified value, regener
 
 (b) Hi6-T Controller
 
-Figure 1.1 Measuring the resistance value at CNDR
-[__SOURCE](2-servo-control-board-part/E02504.md)
-# 2.5. E02504 AMP Diode Module Error or AC Input Voltage Exceeded
+Figure 1.1 Measuring the resistance value at CNDR# 2.5. E02504 AMP Diode Module Error or AC Input Voltage Exceeded
 
 ### 1. Overview
 
@@ -534,8 +508,6 @@ If a voltage of AC 242V or higher is input to the servo drive unit, an overvolta
 
 -> Allowable Range (Motor ON): 198V ~ 242V
 
-
-[__SOURCE](2-servo-control-board-part/E02505.md)
 # 2.6. E02505 AMP PN Overvoltage Detection Path Error or Discharge Error
 
 Previous Error Code: E0011 AMP Overvoltage (P-N) Occurred
@@ -610,9 +582,7 @@ Please check the components of the controller currently in use before proceeding
 
 ![](../_assets/2.서보AMP/E02505/E02505_과전압_부품교체_T제어기.PNG)
 
-Figure 1.2 Component Layout for Overvoltage Errors in Hi6-T Controllers
-[__SOURCE](2-servo-control-board-part/E02506.md)
-# E02506 AMP PN Under-voltage Occurred
+Figure 1.2 Component Layout for Overvoltage Errors in Hi6-T Controllers# E02506 AMP PN Under-voltage Occurred
 
 ### 1. Overview
 
@@ -663,8 +633,6 @@ An AMP under-voltage error is triggered at approximately DC 142V (or 210V). The 
 -> Servo Drive Input Voltage Specification: Single-Phase AC 220V
 
 -> Allowable Range (Motor ON): AC 198V ~ 242V
-
-[__SOURCE](2-servo-control-board-part/E02507.md)
 # 2.8. E02507 AMP Diode Module Error or AC Input Voltage Insufficient
 
 
@@ -765,8 +733,6 @@ An AMP under-voltage error is triggered at approximately DC 142V. The error may 
 
 
 
-
-[__SOURCE](2-servo-control-board-part/E02508.md)
 # 2.9. E02508 AMP PN Under-voltage Detection Path Error or Discharge Error
 
 
@@ -851,8 +817,6 @@ Figure 1.1 Replacement of BD640 and Servo Drive Unit
 ![](../_assets/2.서보AMP/E02508/E02508_과전압_부품교체_T제어기.PNG)
 
 Figure 1.1 Replacement of BD641T, BD602T, and BD667T
-
-[__SOURCE](2-servo-control-board-part/E02520.md)
 # 2.10. E02520 (Axis ○) IPM Fault
 
 ### 1. Overview
@@ -1004,8 +968,6 @@ If a fan is not rotating or its speed is abnormally low, please replace the corr
 ->	Inspection of Fan Power Supply Voltage
 
 If all fans are inoperative, please verify the fan input voltage. The fan input voltage is set to AC 220V, with an allowable range within 10% of the rated voltage. If the voltage is more than 10% below the rating, the cooling efficiency will decrease due to the reduced fan rotation speed. If the voltage is low, please inspect the power connectors for the rear cooling fans and the overall input voltage of the controller.
-
-[__SOURCE](2-servo-control-board-part/E02521.md)
 # 2.11. E02521 (Axis ○) IPM Fault - Gate Drive Power Under-voltage
 
 ### 1. Overview
@@ -1069,9 +1031,7 @@ If the error does not recur after replacing the servo drive unit, the original u
 If the error does not recur after replacing the servo board, the original board is defective. Please replace the servo board with a known functional unit.
 
 *   Hi6-N Controller: BD640
-*   Hi6-T15 Controller: BD641T
-[__SOURCE](2-servo-control-board-part/E02522.md)
-# 2.12. E02522 (Axis ○) IPM Fault – Specific Step
+*   Hi6-T15 Controller: BD641T# 2.12. E02522 (Axis ○) IPM Fault – Specific Step
 
 ### 1. Overview
 
@@ -1115,8 +1075,6 @@ If the error occurs at a step where a posture transition causes a sudden change 
 ->  Verify the error by changing the interpolation of the taught step
 
 If axis speed fluctuations remain extreme even after reducing the playback speed below 75%, change the interpolation of the taught step to 'P' (Point-to-Point) and verify the error. If the error is resolved by changing the interpolation at the same playback speed, please modify the teaching points.
-
-[__SOURCE](2-servo-control-board-part/E02541.md)
 # 2.13. E02541 Drive Unit Control Voltage Drop
 
 ### 1. Overview
@@ -1248,11 +1206,7 @@ Figure 1.1 Locations of Controller Power Status LEDs
 *   Replace the backplane board (BD602T) and check the LED status.
 
 
-
-[__SOURCE](3-safety-board-part/README.md)
-# 3. Safety Signal Board
-[__SOURCE](3-safety-board-part/E00002.md)
-# 3.1. E00002. Hardware Limit Switch Triggered
+# 3. Safety Signal Board# 3.1. E00002. Hardware Limit Switch Triggered
 
 ### 1. Overview
 
@@ -1411,8 +1365,6 @@ C. Check the grounding condition of the Safety Board (BD632) <br>
 (ground cable and grounding terminal connection status).<br>
 
 
-
-[__SOURCE](3-safety-board-part/E00014.md)
 # 3.2. E0014. Momentary Contact of Safety Switches (EM, OTR, TS, etc.)
 
 ### 1. Overview
@@ -1542,8 +1494,6 @@ replace the entire electrical module.
 
 ![](../_assets/3-Safety-io/E00014/그림16_en.png)<br>
 **Figure 6** Electrical Module Structure and Nomenclature for the Hi6-N Controller
-
-[__SOURCE](3-safety-board-part/E00043.md)
 # 3.3. E0043. Auto Mode Safety Guard (Auto Guard) Switch Connection Error
 
 ### 1. Overview
@@ -1612,8 +1562,6 @@ C. Check the grounding condition of the Safety Board (BD632, ground cable and gr
 – Ground terminal connection status
 
 
-
-[__SOURCE](3-safety-board-part/E02200.md)
 # 3.4. E02200. Main Unit Limit Switch Activated
 
 ### 1. Overview
@@ -1667,8 +1615,6 @@ B) Hold the **Enabling Switch** on the Teaching Pendant (TP).<br>
 
 C) In this state, turn the **Motor ON**.<br>
 D) Use the **Jog keys** to move the robot back into the operating range.<br>
-
-[__SOURCE](3-safety-board-part/E02201_E2208.md)
 # 3.5. E02001 ~ E02208 Hardware Limit Switch Inspection Method
 
 ### 1. Causes and Inspection Methods
@@ -1791,8 +1737,6 @@ A fault exists in another area. Further troubleshooting is required. Please cont
 
 Figure 5 Structure of the Hardware Limit SW Harness C(M)ER1
 
-
-[__SOURCE](3-safety-board-part/E02201.md)
 # 3.6. E02201. Body Limit SW Input Mismatch (Safety Chain 1 OFF)
 
 ### 1. Overview
@@ -1844,8 +1788,6 @@ This condition may be caused by the following reasons:
 * Connector: The connector is damaged, causing a short circuit between pins.
 
 For detailed inspection points, refer to the section “Hardware Limit Switch Inspection Method”.
-
-[__SOURCE](3-safety-board-part/E02202.md)
 # 3.7. E02202. Body Limit SW Input Mismatch (Safety Chain 2 OFF)
 
 ### 1. Overview
@@ -1899,8 +1841,6 @@ This condition may be caused by the following reasons:
 * Connector: The connector is damaged, causing a short circuit between pins.
 
 For detailed inspection points, refer to the section “Hardware Limit Switch Inspection Method”.
-
-[__SOURCE](3-safety-board-part/E02206.md)
 # 3.8. E02206. Body Limit SW Open Circuit or Not Connected
 
 ### 1. Overview
@@ -1928,8 +1868,6 @@ Since there may be a problem with the switch or wiring system, inspection is req
 * Connector: The connector is disconnected or damaged, resulting in an open-circuit due to poor connection.
 
 For detailed inspection points, refer to the section “Hardware Limit Switch Inspection Method”.
-
-[__SOURCE](3-safety-board-part/E02207.md)
 # 3.9. E02207. Body Limit SW Input Mismatch (Safety Chain 1 OFF)
 
 ### 1. Overview
@@ -1958,8 +1896,6 @@ The problem occurs because Safety Chain 1 is open. Inspect the related switches 
 * Connector: The connector is disconnected or damaged, resulting in an open-circuit or contact failure.
 
 For detailed inspection points, refer to the section **“Hardware Limit Switch Inspection Method.”**
-
-[__SOURCE](3-safety-board-part/E02208.md)
 # 3.10. E02208. Body Limit SW Input Mismatch (Safety Chain 2 OFF)
 
 ### 1. Overview
@@ -1988,9 +1924,7 @@ Inspect the related switches and wiring system.
 * Wiring: The wiring is broken or damaged, causing poor contact.
 * Connector: The connector is disconnected or damaged, resulting in an open-circuit due to poor contact.
 
-For detailed inspection points, refer to the section “Hardware Limit Switch Inspection Method”.
-[__SOURCE](3-safety-board-part/E02260.md)
-# 3.11. E02260. Magnetic Contactor (MC2) Failure / Detection Error During Servo ON Attempt
+For detailed inspection points, refer to the section “Hardware Limit Switch Inspection Method”.# 3.11. E02260. Magnetic Contactor (MC2) Failure / Detection Error During Servo ON Attempt
 
 ### 1. Overview
 
@@ -2077,9 +2011,7 @@ If all four servo boards (BD640) are not connected, set the switches (SW1 to SW4
 * Set SW3 and SW4 to the ON position.
 
 ![](../_assets/3-Safety-io/E02260/picture6.png)<br>
-Figure 7. DIP switch settings of the Extended Axis Safety Interface Board (BD6H0) 
-[__SOURCE](3-safety-board-part/E02261.md)
-# 3.12. E02261. MC2 Magnetic Contactor Failure/Detection Abnormality During Servo ON
+Figure 7. DIP switch settings of the Extended Axis Safety Interface Board (BD6H0) # 3.12. E02261. MC2 Magnetic Contactor Failure/Detection Abnormality During Servo ON
 
 ### 1. Overview
 
@@ -2097,8 +2029,6 @@ While the servo is ON, the magnetic contactor MC2 turned OFF abnormally.
 {% endhint %}
 
 For detailed inspection procedures, refer to **“E02260 MC2 Magnetic Contactor Failure/Detection Abnormality During Servo ON Attempt”**.
-
-[__SOURCE](3-safety-board-part/E02280.md)
 # 3.13. E02280. MC1 Magnetic Contactor Failure/Detection Abnormality During Servo ON Attempt
 
 ### 1. Overview
@@ -2152,8 +2082,6 @@ For Hi6-T controller, this wiring does not exist, so no action is required.
 ### (4) Inspect the System Board
 
 If there are no issues in the monitoring system, magnetic contactors, or power board, replace the system board.
-
-[__SOURCE](3-safety-board-part/E02281.md)
 # 3.14. E02281. MC1 Magnetic Contactor Fault/Detection Error During Servo ON
 
 ### 1. Overview
@@ -2172,8 +2100,6 @@ During Servo ON, the MC1 magnetic contactor is abnormally turned OFF.
 {% endhint %}
 
 For detailed inspection procedures, refer to “E02280 MC1 Magnetic Contactor Fault/Detection Error During Servo ON.”
-
-[__SOURCE](3-safety-board-part/E02301.md)
 # 3.15. E2301. CPUERR Signal Mismatch (H6COM Task Error)
 
 ### 1. Overview
@@ -2239,8 +2165,6 @@ A. Check the connection status of the IO power connector.
 B. Inspect the IO power cable.  
 C. Check the grounding status of the safety board (BD632), including the grounding cable and grounding terminal connections.
 
-
-[__SOURCE](3-safety-board-part/E64002.md)
 # 3.16. E64002 H6COM-T Heartbeat Update Stopped Error
 
 ### 1. Overview
@@ -2346,8 +2270,6 @@ B. The ECAT LED should not show any red blinking or steady ON
 
 5) If all checks from 1) to 4) show no abnormalities but communication issues persist, replace the Safety Board (BD632)
 `
-
-[__SOURCE](3-safety-board-part/E64003.md)
 # 3.17. E64003 Servo Board (BD640) Status Input Error
 
 ### 1. Overview
@@ -2406,8 +2328,6 @@ B. If the LED turns red or goes off at the moment the motor is ON, the IO power 
 A. Check the connection status of the IO power connector.  
 B. Inspect the IO power cable.  
 C. Verify the grounding of the Safety Board (BD632), including grounding cables and terminal connections.
-
-[__SOURCE](3-safety-board-part/E64035.md)
 # 3.18. E64035. Safety Module Status Output (SFST) Mismatch (Safety Chain 2 OFF)
 
 ### 1. Overview
@@ -2441,1929 +2361,1882 @@ A.	Check the connection of the IO power connector.<br>
 B.	Inspect the IO power cable.<br>
 C.	Check the grounding of the Safety Board (BD632) (ground cable and ground terminal connection status).<br>
 `
+# 4. Servo Board# 4.1. E02450. (O Axis) No Encoder Response
 
-[__SOURCE](4-servo-board-part/README.md)
-# 4. 서보보드
-[__SOURCE](4-servo-board-part/E02450.md)
-# 4.1. E02450. (O축) 엔코더 응답 없음
+### 1. Overview
 
-### 1. 개요
+The servo board performs serial communication with the encoder to control the servo motor and receives encoder data periodically. This error occurs when the data received from the encoder violates the specified communication protocols.
 
-서보보드에서는 서보 모터의 제어를 수행하기 위해 엔코더와 시리얼통신을 하여 주기적으로 엔코더 데이터를 수신하는데, 엔코더로부터 수신된 데이터가 정해진 통신규정에 어긋나는 경우 발생하는 에러입니다.
+This error can be caused by failure of components transmitting/receiving encoder data, or issues with wiring or encoder shield line processing.
 
-엔코더 데이터를 송수신하는 부품들의 고장이거나 배선 또는 엔코더 쉴드 라인의 처리 문제로 상기의 에러가 발생할 수 있습니다.
-
-### 2. 원인 및 점검
+### 2. Cause and Inspection
 
 {% hint style="info" %}
 
-(1)	엔코더 공급전압을 확인하십시오 
+(1)	Check the encoder supply voltage.
 
-(2)	엔코더 배선을 점검하십시오
+(2)	Inspect the encoder wiring.
 
-(3)	서보보드를 교체 시험하십시오
+(3)	Perform a replacement test of the servo board.
 
-(4)	모터(엔코더)를 교체 시험하십시오
+(4)	Perform a replacement test of the motor (encoder).
 
-(5)	조치 완료후 배선의 통신상태를 점검하십시오
+(5)	Inspect the communication status of the wiring after completing the measures.
 
 {% endhint %}
 
-(1)	엔코더 공급전압을 확인하십시오.
-엔코더에 공급하는 전원전압은 엔코더측 커넥터 공급 전압이 5V±5% (4.75V ~ 5.25V)범위 내에 있어야 합니다. 엔코더측 커넥터 전압이 4.75V이하로 떨어질 경우, 엔코더가 정상 동작하지 않아, 상기 에러 발생 가능성이 있습니다.
+(1)	Check the encoder supply voltage.<br>
+The power voltage supplied to the encoder must be within the range of 5V±5% (4.75V ~ 5.25V) at the encoder-side connector. If the voltage at the encoder-side connector drops below 4.75V, the encoder may not operate normally, leading to the possibility of the above error.
 
-엔코더측 커넥터 pin(3-4)의 전압을 측정해 주십시오.
+Please measure the voltage of pins (3-4) on the encoder-side connector.
 
 ![](../_assets/4.서보보드/encoder_connector_pin_info_en.png)
 
-                    (그림 4.1 엔코더 커넥터 핀 정보)
+    (Figure 4.1 Encoder Connector Pin Information)
 
-측정된 전압이 기준전압보다 낮을 경우 서보보드(BD640)의 VR1 볼륨저항을 돌려 엔코더측 커넥터 전압이 기준전압 이내가 되도록 조정하십시오.
+If the measured voltage is lower than the reference voltage, adjust the VR1 variable resistor on the servo board (BD640) so that the voltage at the encoder-side connector falls within the reference voltage range.
 
 ![](../_assets/4.서보보드/BD640_가변저항.png)
 
-                    (그림 4.2 BD640 가변저항)
+    (Figure 4.2 BD640 Variable Resistor)
 
-(2)	엔코더 배선을 점검하십시오.
+(2)	Inspect the encoder wiring.
 
-엔코더의 배선점검 순서는 다음과 같습니다.
+The sequence for inspecting the encoder wiring is as follows.
 
-1차: 엔코더 배선에 관련된 커넥터들의 접촉 불량여부를 점검하십시오.
+1st: Check for poor contact in connectors related to the encoder wiring.
 
-2차: 엔코더 배선의 단락 유무를 점검하십시오. 멀티미터(테스터기)와 같은 장비를 이용하여 각 상의 배선을 1:1로 체크하십시오.
+2nd: Check for short circuits in the encoder wiring. Check the wiring of each phase 1:1 using equipment such as a multimeter (tester).
 
-3차: 엔코더 배선을 교체시험 하십시오.
+3rd: Perform a replacement test of the encoder wiring.
 
-엔코더 배선이 단선되지 않고 쉴드선의 접촉불량, 엔코더 신호선과 타 전력선 또는 로봇 본체 금속부위와의 접촉 등의 현상이 있을 경우에는 단락유무 검사로는 검사할 수 없으므로 배선교체 시험을 하여주십시오.
+If the encoder wiring is not disconnected but there are issues such as poor contact of the shield wire, or contact between the encoder signal line and other power lines or the metal part of the robot body, it cannot be detected by a short circuit test, so please perform a wiring replacement test.
 
-* 제어기 내부 배선을 점검하십시오.
-CNEC1,4(BD640)커넥터와 CEC1 간의 배선을 점검하십시오.
+* Inspect the internal wiring of the controller.
+Inspect the wiring between CNEC1,4 (BD640) connectors and CEC1.
 
 ![](../_assets/4.서보보드/hi6N제어기_en.png)
 
-                    (그림 4.3 Hi6-N 제어기 엔코더 배선 점검)
+    (Figure 4.3 Hi6-N Controller Encoder Wiring Inspection)
 
 ![](../_assets/4.서보보드/Hi6_T15제어기_en.png)
 
-                    (그림 4.4 Hi6-T15 제어기 엔코더 배선 점검)
+    (Figure 4.4 Hi6-T15 Controller Encoder Wiring Inspection)
 
-* 제어기와 로봇간의 배선을 점검하십시오.
-Hi6-N제어기의 경우, CNEC1와 CER1간의 배선을 Hi6-T15제어기의 경우, CMEC1과 CMER1 간의 배선을 점검하십시오.
+* Inspect the wiring between the controller and the robot.
+In the case of the Hi6-N controller, inspect the wiring between CNEC1 and CER1. In the case of the Hi6-T15 controller, inspect the wiring between CMEC1 and CMER1.
 
 ![](../_assets/4.서보보드/로봇_N제어기_설치구성.png)
 
-                    (그림 4.5 Hi6-N 제어기와 로봇간 기본 설치 구성도)
+    (Figure 4.5 Hi6-N Controller and Robot Basic Installation Configuration Diagram)
 
 ![](../_assets/4.서보보드/로봇_T제어기_설치구성.png)
 
-                    (그림 4.6 Hi6-T15 제어기와 로봇간 기본 설치 구성도)
+    (Figure 4.6 Hi6-T15 Controller and Robot Basic Installation Configuration Diagram)
 
 ![](../_assets/4.서보보드/N제어기_설치구성_상세.png)
 
-                    (그림 4.7 Hi6-N 제어기와 로봇간 기본 설치 구성도 상세)
+    (Figure 4.7 Hi6-N Controller and Robot Basic Installation Configuration Diagram Detail)
 
 ![](../_assets/4.서보보드/T제어기_설치구성_상세.png)
 
-                    (그림 4.8 Hi6-N 제어기와 로봇간 기본 설치 구성도 상세)
+    (Figure 4.8 Hi6-N Controller and Robot Basic Installation Configuration Diagram Detail)
 
-* 본체 내부의 배선을 점검하십시오.
-CER1과 엔코더측 커넥터간의 배선을 점검하십시오.
-배선점검은 로봇 보수설명서의 배선 접속도를 참고하시기 바랍니다.
+* Inspect the internal wiring of the body.
+Inspect the wiring between CER1 and the encoder-side connector.
+For wiring inspection, please refer to the wiring connection diagram in the robot maintenance manual.
 
 ![](../_assets/4.서보보드/로봇기내배선.png)
 
-                    (그림 4.9 로봇기내배선)
+    (Figure 4.9 Robot Internal Wiring)
 
-(3)	서보보드를 교체 시험하십시오. 
-서보 보드를 교체한 후 에러가 발생하지 않으면 서보보드의 엔코더 수신부 불량입니다. 서보 보드를 정상품으로 교체하여 주십시오.
-
-![](../_assets/4.서보보드/N제어기_서보보드_교체_en.png)
-
-                    (그림 4.10 N제어기 서보보드 교체)
-
-![](../_assets/4.서보보드/T제어기_서보보드_교체_en.png)
-
-                    (그림 4.11 T제어기 서보보드 교체)
-
-(4)	모터(엔코더)를 교체 시험하십시오. 
-서보 모터를 교체한 후 에러가 발생하지 않으면 서보모터의 불량입니다. 서보 모터를 정상품으로 교체하여 주십시오. 아래 그림은 HS165 로봇의 각 축 모터의 위치를 나타내고 있으며, 다른 로봇은 해당 기구 보수설명서를 참고하여 교체하시기 바랍니다.
-
-![](../_assets/4.서보보드/로봇_모터_위치.png)
-
-                    (그림 4.12 HS165 로봇의 각 축 모터 위치)
-
-(5)	조치 완료후 배선의 통신상태를 점검하십시오.
-문제부분의 조치가 완료된후 『엔코더 통신실패 횟수 표시 기능 메뉴얼』을 참고하여 통신상태를 점검 하십시오.
-
-![](../_assets/4.서보보드/엔코더통신실패.png)
-
-                    (그림 4.13 엔코더 통신실패 모니터링)
-
-![](../_assets/4.서보보드/엔코더_통신실패_횟수_en.png)
-
-
-[__SOURCE](4-servo-board-part/E02451.md)
-# 4.2. E02451. (O축) 엔코더 데이터 수신 개수 이상
-
-### 1. 개요
-
-서보보드에서는 서보 모터의 제어를 수행하기 위해 엔코더와 시리얼통신을 하여 주기적으로 엔코더 데이터를 수신합니다, 해당 에러는 엔코더로부터 수신된 데이터의 개수가 규정치에 어긋나는 경우 발생합니다.
-
-엔코더로부터 수신된 데이터의 개수가 맞지 않을 경우는 주로 배선 또는 엔코더 쉴드 라인의 처리 문제로 엔코더 신호선에 노이즈가 유입되는 경우 발생할 수 있습니다.
-
-### 2. 원인 및 점검
-
-{% hint style="info" %}
-
-(1)	엔코더 배선을 점검하십시오
-
-(2)	모터(엔코더)를 교체 시험하십시오
-
-(3)	서보보드를 교체 시험하십시오
-
-(4)	조치 완료후 배선의 통신상태를 점검하십시오
-
-{% endhint %}
-
-(1)	엔코더 배선을 점검하십시오.
-
-엔코더의 배선점검 순서는 다음과 같습니다.
-
-1차: 엔코더 배선에 관련된 커넥터들의 접촉 불량여부를 점검하십시오.
-
-2차: 
-엔코더 배선의 단락 유무를 점검하십시오. 멀티미터(테스터기)와 같은 장비를 이용하여 각 상의 배선을 1:1로 체크하십시오.
-
-3차: 엔코더 배선을 교체시험 하십시오.
-
-엔코더 배선이 단선되지 않고 쉴드선의 접촉불량, 엔코더 신호선과 타 전력선 또는 로봇 본체 금속부위와의 접촉 등의 현상이 있을 경우에는 단락유무 검사로는 검사할 수 없으므로 배선교체 시험을 하여주십시오.
-
-* 제어기 내부 배선을 점검하십시오.
-
-    CNEC1,4(BD640)커넥터와 CEC1간의 배선을 점검하십시오.
-
-    ![](../_assets/4.서보보드/hi6N제어기_en.png)
-    
-                    (그림 4.14 Hi6-N 제어기 엔코더 배선 점검)
-
-    ![](../_assets/4.서보보드/Hi6_T15제어기_en.png)
-
-                    (그림 4.15 Hi6-T15 제어기 엔코더 배선 점검)
-
-* 제어기와 로봇간의 배선을 점검하십시오.
-
-    Hi6-N제어기의 경우, CNEC1와 CER1간의 배선을 Hi6-T15제어기의 경우, CMEC1과 CMER1 간의 배선을 점검하십시오.
-
-    ![](../_assets/4.서보보드/로봇_N제어기_설치구성.png)
-
-                    (그림 4.16 Hi6-N 제어기와 로봇간 기본 설치 구성도)
-
-    ![](../_assets/4.서보보드/로봇_T제어기_설치구성.png)
-
-                    (그림 4.17 Hi6-T 제어기와 로봇간 기본 설치 구성도)
-
-    ![](../_assets/4.서보보드/N제어기_설치구성_상세.png)
-
-                    (그림 4.18 Hi6-N 제어기와 로봇간 기본 설치 구성도 상세)
-
-    ![](../_assets/4.서보보드/T제어기_설치구성_상세.png)
-
-                    (그림 4.19 Hi6-T 제어기와 로봇간 기본 설치 구성도 상세)
-
-* 본체 내부의 배선을 점검하십시오.
-
-    CER1과 엔코더측 커넥터간의 배선을 점검하십시오.
-    배선점검은 로봇 보수설명서의 배선 접속도를 참고하시기 바랍니다.
-
-    ![](../_assets/4.서보보드/로봇기내배선.png)
-
-                    (그림 4.20 로봇 기내 배선)
-
-(2)	모터(엔코더)를 교체 시험하십시오. 
-
-서보 모터를 교체한 후 에러가 발생하지 않으면 서보모터의 불량입니다. 서보 모터를 정상품으로 교체하여 주십시오. 아래 그림은 HS165 로봇의 각 축 모터의 위치를 나타내고 있으며, 다른 로봇은 해당 기구 보수설명서를 참고하여 교체하시기 바랍니다.
-
-![](../_assets/4.서보보드/로봇_모터_위치.png)
-
-                    (그림 4.21 HS165 로봇의 각 축 모터 위치)
-
-(3)	서보보드를 교체 시험하십시오. 
-
-서보 보드를 교체한 후 에러가 발생하지 않으면 서보보드의 불량입니다. 서보 보드를 정상품으로 교체하여 주십시오.
+(3)	Perform a replacement test of the servo board. 
+If the error does not occur after replacing the servo board, the encoder receiving part of the servo board is defective. Please replace the servo board with a normal one.
 
 ![](../_assets/4.서보보드/N제어기_서보보드_교체_en.png)
 
-                    (그림 4.22 N제어기 서보보드 교체)
+    (Figure 4.10 N Controller Servo Board Replacement)
 
 ![](../_assets/4.서보보드/T제어기_서보보드_교체_en.png)
 
-                    (그림 4.23 T제어기 서보보드 교체)
-    
-(4)	조치 완료후 배선의 통신상태를 점검하십시오.
+    (Figure 4.11 T Controller Servo Board Replacement)
 
-문제부분의 조치가 완료된후 『엔코더 통신실패 횟수 표시 기능 메뉴얼』을 참고하여 통신상태를 점검 하십시오.
+(4)	Perform a replacement test of the motor (encoder). 
+If the error does not occur after replacing the servo motor, the servo motor is defective. Please replace the servo motor with a normal one. The figure below shows the positions of the motors for each axis of the HS165 robot; for other robots, please refer to the corresponding mechanical maintenance manual for replacement.
+
+![](../_assets/4.서보보드/로봇_모터_위치.png)
+
+    (Figure 4.12 HS165 Robot Axis Motor Positions)
+
+(5)	Inspect the communication status of the wiring after completing the measures.
+After the measures for the problematic part are completed, please refer to the "Encoder Communication Failure Count Display Function Manual" to check the communication status.
 
 ![](../_assets/4.서보보드/엔코더통신실패.png)
 
-                    (그림 4.24 엔코더 통신실패 모니터링)
+    (Figure 4.13 Encoder Communication Failure Monitoring)
 
 ![](../_assets/4.서보보드/엔코더_통신실패_횟수_en.png)
 
+# 4.2. E02451. (O Axis) Abnormal Number of Encoder Data Received
 
-[__SOURCE](4-servo-board-part/E02452.md)
-# 4.3. E02452. (O축) 엔코더 데이터 종료 신호(Ser_End) 수신 실패
+### 1. Overview
 
-### 1. 개요
+The servo board performs serial communication with the encoder to control the servo motor and receives encoder data periodically; this error occurs when the number of data items received from the encoder deviates from the specified value.
 
-서보보드에서는 서보 모터의 제어를 수행하기 위해 엔코더와 시리얼통신을 하여 주기적으로 엔코더 데이터를 수신합니다, 해당 에러는 엔코더로부터 데이터 프레임의 종료를 알리는 신호(Ser_End)가 수신되지 않는 경우 발생합니다.
+If the number of data items received from the encoder is incorrect, it may primarily occur when noise is introduced into the encoder signal line due to wiring issues or problems with the encoder shield line processing.
 
-엔코더로부터 데이터 프레임의 종료를 알리는 신호가 수신되지 않을 경우는 주로 배선 또는 엔코더 쉴드 라인의 처리 문제로 엔코더 신호선에 노이즈가 유입되는 경우 발생할 수 있습니다.
-
-### 2. 원인 및 점검
+### 2. Cause and Inspection
 
 {% hint style="info" %}
 
-(1)	엔코더 배선을 점검하십시오
+(1)	Inspect the encoder wiring
 
-(2)	모터(엔코더)를 교체 시험하십시오
+(2)	Perform a replacement test of the motor (encoder)
 
-(3)	서보보드를 교체 시험하십시오
+(3)	Perform a replacement test of the servo board
 
-(4)	조치 완료후 배선의 통신상태를 점검하십시오
+(4)	Inspect the communication status of the wiring after completing the measures
 
 {% endhint %}
 
-세부적인 점검방법은 "E02450 (O축) 엔코더 응답 없음"을 참조하십시오.
-[__SOURCE](4-servo-board-part/E02453.md)
-# 4.4. E02453. (O축) 엔코더 데이터 오류 (CRC 오류 검출됨)
+(1)	Inspect the encoder wiring.
 
-### 1. 개요
+The sequence for inspecting the encoder wiring is as follows.
 
-서보보드에서는 서보 모터의 제어를 수행하기 위해 엔코더와 시리얼통신을 하여 주기적으로 엔코더 데이터를 수신합니다, 해당 에러는 엔코더로부터 수신된 데이터의 CRC값과 서보 보드에서 계산한 CRC 값이 일치하지 않는 경우 발생합니다.
+1st: Check for poor contact in connectors related to the encoder wiring.
 
-엔코더로부터 수신된 데이터의 CRC에러가 발생할 경우는 주로 배선 또는 엔코더 쉴드 라인의 처리 문제로 엔코더 신호선에 노이즈가 유입되는 경우 발생할 수 있습니다.
+2nd: 
+Check for short circuits in the encoder wiring. Check the wiring of each phase 1:1 using equipment such as a multimeter (tester).
 
+3rd: Perform a replacement test of the encoder wiring.
 
-### 2. 원인 및 점검
+If the encoder wiring is not disconnected but there are issues such as poor contact of the shield wire, or contact between the encoder signal line and other power lines or the metal part of the robot body, it cannot be detected by a short circuit test, so please perform a wiring replacement test.
+
+* Inspect the internal wiring of the controller.
+
+    Inspect the wiring between CNEC1,4 (BD640) connectors and CEC1.
+
+    ![](../_assets/4.서보보드/hi6N제어기_en.png)
+    
+    (Figure 4.14 Hi6-N Controller Encoder Wiring Inspection)
+
+    ![](../_assets/4.서보보드/Hi6_T15제어기_en.png)
+
+    (Figure 4.15 Hi6-T15 Controller Encoder Wiring Inspection)
+
+* Inspect the wiring between the controller and the robot.
+
+    In the case of the Hi6-N controller, inspect the wiring between CNEC1 and CER1. In the case of the Hi6-T15 controller, inspect the wiring between CMEC1 and CMER1.
+
+    ![](../_assets/4.서보보드/로봇_N제어기_설치구성.png)
+
+    (Figure 4.16 Hi6-N Controller and Robot Basic Installation Configuration Diagram)
+
+    ![](../_assets/4.서보보드/로봇_T제어기_설치구성.png)
+
+    (Figure 4.17 Hi6-T Controller and Robot Basic Installation Configuration Diagram)
+
+    ![](../_assets/4.서보보드/N제어기_설치구성_상세.png)
+
+    (Figure 4.18 Hi6-N Controller and Robot Basic Installation Configuration Diagram Detail)
+
+    ![](../_assets/4.서보보드/T제어기_설치구성_상세.png)
+
+    (Figure 4.19 Hi6-T Controller and Robot Basic Installation Configuration Diagram Detail)
+
+* Inspect the internal wiring of the body.
+
+    Inspect the wiring between CER1 and the encoder-side connector.
+    For wiring inspection, please refer to the wiring connection diagram in the robot maintenance manual.
+
+    ![](../_assets/4.서보보드/로봇기내배선.png)
+
+    (Figure 4.20 Robot Internal Wiring)
+
+(2)	Perform a replacement test of the motor (encoder). 
+
+If the error does not occur after replacing the servo motor, the servo motor is defective. Please replace the servo motor with a normal one. The figure below shows the positions of the motors for each axis of the HS165 robot; for other robots, please refer to the corresponding mechanical maintenance manual for replacement.
+
+![](../_assets/4.서보보드/로봇_모터_위치.png)
+
+    (Figure 4.21 HS165 Robot Axis Motor Positions)
+
+(3)	Perform a replacement test of the servo board. 
+
+If the error does not occur after replacing the servo board, the servo board is defective. Please replace the servo board with a normal one.
+
+![](../_assets/4.서보보드/N제어기_서보보드_교체_en.png)
+
+    (Figure 4.22 N Controller Servo Board Replacement)
+
+![](../_assets/4.서보보드/T제어기_서보보드_교체_en.png)
+
+    (Figure 4.23 T Controller Servo Board Replacement)
+    
+(4)	Inspect the communication status of the wiring after completing the measures.
+
+After the measures for the problematic part are completed, please refer to the "Encoder Communication Failure Count Display Function Manual" to check the communication status.
+
+![](../_assets/4.서보보드/엔코더통신실패.png)
+
+    (Figure 4.24 Encoder Communication Failure Monitoring)
+
+![](../_assets/4.서보보드/엔코더_통신실패_횟수_en.png)
+
+# 4.3. E02452. (O Axis) Encoder End Signal (Ser_End) Not Received
+
+### 1. Overview
+
+The servo board performs serial communication with the encoder to control the servo motor and receives encoder data periodically; this error occurs when the signal indicating the end of the data frame (Ser_End) is not received from the encoder.
+
+Failure to receive the signal indicating the end of the data frame from the encoder can primarily occur when noise is introduced into the encoder signal line due to wiring issues or problems with the encoder shield line processing.
+
+### 2. Cause and Inspection
 
 {% hint style="info" %}
 
-(1)	엔코더 배선을 점검하십시오
+(1)	Inspect the encoder wiring
 
-(2)	모터(엔코더)를 교체 시험하십시오
+(2)	Perform a replacement test of the motor (encoder)
 
-(3)	서보보드를 교체 시험하십시오
+(3)	Perform a replacement test of the servo board
 
-(4)	조치 완료후 배선의 통신상태를 점검하십시오
+(4)	Inspect the communication status of the wiring after completing the measures
 
 {% endhint %}
 
-세부적인 점검방법은 "E02450 (O축) 엔코더 응답 없음"을 참조하십시오.
+For detailed inspection methods, please refer to "E02450 (O Axis) No Encoder Response".# 4.4. E02453. (O Axis) Encoder Data Error (CRC Error Detected)
 
-[__SOURCE](4-servo-board-part/E02454.md)
-# 4.5. E02454. (O축) 엔코더 단선 혹은 접촉불량(모터 OFF 상태)
+### 1. Overview
 
-### 1. 개요
+The servo board performs serial communication with the encoder to control the servo motor and receives encoder data periodically; this error occurs when the CRC value of the data received from the encoder does not match the CRC value calculated by the servo board.
 
-서보보드에서는 서보 모터의 제어를 수행하기 위해 엔코더와 시리얼통신을 하여 주기적으로 엔코더 데이터를 수신합니다, 해당 에러는 엔코더와 서보 보드 간의 통신이 불안정하거나 신호가 아예 수신되지 않을 때 발생합니다.
-
-엔코더로부터 서보 보드 간의 통신이 불안정하거나 신호가 아에 수신되지 않는 경우는 주로 엔코더 케이블의 단선 또는 접촉 불량인 경우 발생할 수 있습니다.
-
-### 2. 원인 및 점검
-{% hint style="info" %}
-(1)	엔코더 공급전압을 확인하십시오 
-(2)	엔코더 배선을 점검하십시오
-(3)	서보보드를 교체 시험하십시오
-(4)	모터(엔코더)를 교체 시험하십시오
-(5)	조치 완료후 배선의 통신상태를 점검하십시오
-{% endhint %}
-
-세부적인 점검방법은 "E02450 (O축) 엔코더 응답 없음"을 참조하십시오.
-[__SOURCE](4-servo-board-part/E02455.md)
-# 4.6. E02455. (O축) 엔코더 데이터 이상 (비정상 값 변화 감지)
-
-### 1. 개요
-
-서보보드에서는 서보 모터의 제어를 수행하기 위해 엔코더와 시리얼통신을 하여 주기적으로 엔코더 데이터를 수신합니다, 해당 에러는 엔코더에서 수신된 위치값 또는 속도값이 비정상적으로 변경될 때 발생합니다. 
-
-엔코더로부터 수신된 위치값 또는 속도값이 비정상적으로 변경되는 경우는 주로 배선 또는 엔코더 쉴드 라인의 처리 문제로 엔코더 신호선에 노이즈가 유입되는 경우 발생할 수 있습니다.
+When a CRC error occurs in the data received from the encoder, it can primarily occur when noise is introduced into the encoder signal line due to wiring issues or problems with the encoder shield line processing.
 
 
-### 2. 원인 및 점검
+### 2. Cause and Inspection
 
 {% hint style="info" %}
 
-(1)	엔코더 배선을 점검하십시오
+(1)	Inspect the encoder wiring
 
-(2)	모터(엔코더)를 교체 시험하십시오
+(2)	Perform a replacement test of the motor (encoder)
 
-(3)	서보보드를 교체 시험하십시오
+(3)	Perform a replacement test of the servo board
 
-(4)	조치 완료후 배선의 통신상태를 점검하십시오
+(4)	Inspect the communication status of the wiring after completing the measures
 
 {% endhint %}
 
-세부적인 점검방법은 "E02450 (O축) 엔코더 응답 없음"을 참조하십시오.
-[__SOURCE](4-servo-board-part/E02459.md)
-# 4.7. E02459. (O축) 엔코더 단선 혹은 접촉불량(모터 ON 상태)
+For detailed inspection methods, please refer to "E02450 (O Axis) No Encoder Response".
+# 4.5. E02454. (O Axis) Encoder Disconnected or Contact Failure (Motor OFF State)
 
-### 1. 개요
+### 1. Overview
 
-서보보드에서는 서보 모터의 제어를 수행하기 위해 엔코더와 시리얼통신을 하여 주기적으로 엔코더 데이터를 수신합니다, 해당 에러는 엔코더와 서보 보드 간의 통신이 불안정하거나 신호가 아예 수신되지 않을 때 발생합니다.
+The servo board performs serial communication with the encoder to control the servo motor and receives encoder data periodically; this error occurs when communication between the encoder and the servo board is unstable or when no signal is received at all.
 
-엔코더로부터 서보 보드 간의 통신이 불안정하거나 신호가 아에 수신되지 않는 경우는 주로 엔코더 케이블의 단선 또는 접촉 불량인 경우 발생할 수 있습니다.
+Cases where communication between the encoder and servo board is unstable or no signal is received at all can primarily occur due to disconnection or poor contact of the encoder cable.
+
+### 2. Cause and Inspection
+{% hint style="info" %}
+
+(1)	Check the encoder supply voltage <br>
+(2)	Inspect the encoder wiring<br>
+(3)	Perform a replacement test of the servo board<br>
+(4)	Perform a replacement test of the motor (encoder)<br>
+(5)	Inspect the communication status of the wiring after completing the measures<br>
+
+{% endhint %}
+
+For detailed inspection methods, please refer to "E02450 (O Axis) No Encoder Response".# 4.6. E02455. (O Axis) Abnormal Encoder Data (Irregular Value Detected)
+
+### 1. Overview
+
+The servo board performs serial communication with the encoder to control the servo motor and receives encoder data periodically; this error occurs when the position value or speed value received from the encoder changes abnormally. 
+
+Cases where the position value or speed value received from the encoder changes abnormally can primarily occur when noise is introduced into the encoder signal line due to wiring issues or problems with the encoder shield line processing.
 
 
-### 2. 원인 및 점검
+### 2. Cause and Inspection
 
 {% hint style="info" %}
 
-(1)	엔코더 공급전압을 확인하십시오 
+(1)	Inspect the encoder wiring
 
-(2)	엔코더 배선을 점검하십시오
+(2)	Perform a replacement test of the motor (encoder)
 
-(3)	서보보드를 교체 시험하십시오
+(3)	Perform a replacement test of the servo board
 
-(4)	모터(엔코더)를 교체 시험하십시오
-
-(5)	조치 완료후 배선의 통신상태를 점검하십시오
+(4)	Inspect the communication status of the wiring after completing the measures
 
 {% endhint %}
 
-세부적인 점검방법은 "E02450 (O축) 엔코더 응답 없음"을 참조하십시오.
-[__SOURCE](4-servo-board-part/E02460.md)
-# 4.8. E02450. (O축) 엔코더 내부 회전값 오류 (CE 비트 감지)
+For detailed inspection methods, please refer to "E02450 (O Axis) No Encoder Response".# 4.7. E02459. (O Axis) Encoder Disconnected or Contact Failure (Motor ON State)
 
-### 1. 개요
+### 1. Overview
 
-서보보드에서는 서보 모터의 제어를 수행하기 위해 엔코더와 시리얼통신을 하여 주기적으로 엔코더 데이터를 수신합니다, 해당 에러는 엔코더 내부에서 회전값 계산에 오류가 발생하여 CE(Counter Error) 비트가 세트 되었을 때 발생합니다.
+The servo board performs serial communication with the encoder to control the servo motor and receives encoder data periodically; this error occurs when communication between the encoder and the servo board is unstable or when no signal is received at all.
 
-엔코더로부터 수신된 데이터는 정상이나 엔코더가 스스로 내부상태를 감시한 결과 에러상태(CE)인 경우에 발생할 수 있습니다.
- 
-CE(Counter Error) : 엔코더 주전원 On시, 1회전 Data가 오동작 또는 고장등에 의해 위치 어긋남이 발생하는 경우 발생
+Cases where communication between the encoder and servo board is unstable or no signal is received at all can primarily occur due to disconnection or poor contact of the encoder cable.
 
-### 2. 원인 및 점검
+
+### 2. Cause and Inspection
 
 {% hint style="info" %}
 
-(1)	엔코더 공급전압을 확인하십시오.
+(1)	Check the encoder supply voltage 
 
-(2)	시리얼 엔코더 에러해제 후, 제어기 전원을 껏다카 다시 켜십시오.
+(2)	Inspect the encoder wiring
 
-(3)	계속 에러발생시 모터(엔코더)를 교체 시험하십시오. 
+(3)	Perform a replacement test of the servo board
+
+(4)	Perform a replacement test of the motor (encoder)
+
+(5)	Inspect the communication status of the wiring after completing the measures
 
 {% endhint %}
 
-(1)	엔코더 공급전압을 확인하십시오.
-엔코더에 공급하는 전원전압은 엔코더측 커넥터 공급 전압이 5V±5% (4.75V ~ 5.25V)범위 내에 있어야 합니다. 엔코더측 커넥터 전압이 4.75V이하로 떨어질 경우, 엔코더가 정상 동작하지 않아, 상기 에러 발생 가능성이 있습니다.
+For detailed inspection methods, please refer to "E02450 (O Axis) No Encoder Response".# 4.8. E02460. (O Axis) Encoder Internal Rotation Value Error (CE Bit Detected)
 
-엔코더측 커넥터 pin(3-4)의 전압을 측정해 주십시오.
+### 1. Overview
+
+The servo board performs serial communication with the encoder to control the servo motor and receives encoder data periodically; this error occurs when an error occurs in the calculation of the rotation value within the encoder and the CE (Counter Error) bit is set.
+
+This can occur when the data received from the encoder is normal, but the encoder is in an error state (CE) as a result of monitoring its own internal status.
+ 
+CE (Counter Error): Occurs when a position mismatch occurs due to malfunction or failure of 1-turn data when the encoder main power is turned on.
+
+### 2. Cause and Inspection
+
+{% hint style="info" %}
+
+(1)	Check the encoder supply voltage.
+
+(2)	After clearing the serial encoder error, turn the controller power off and then on again.
+
+(3)	If the error persists, perform a replacement test of the motor (encoder). 
+
+{% endhint %}
+
+(1)	Check the encoder supply voltage.<br>
+The power voltage supplied to the encoder must be within the range of 5V±5% (4.75V ~ 5.25V) at the encoder-side connector. If the voltage at the encoder-side connector drops below 4.75V, the encoder may not operate normally, which may cause the above error.
+
+Please measure the voltage of pins (3-4) on the encoder-side connector.
 
 ![](../_assets/4.서보보드/엔코더_커넥터_핀정보_en.png)
 
-                        (그림 4.25 엔코더 커넥터 핀 정보)
+        (Figure 4.25 Encoder Connector Pin Information)
 
-측정된 전압이 기준전압보다 낮을 경우 서보보드(BD640)의 VR1 볼륨저항을 돌려 엔코더측 커넥터 전압이 기준전압 이내가 되도록 조정하십시오.
+If the measured voltage is lower than the reference voltage, adjust the VR1 variable resistor on the servo board (BD640) so that the encoder-side connector voltage is within the reference voltage.
 
 ![](../_assets/4.서보보드/BD640_가변저항.png)
 
-                        (그림 4.26 BD640 가변저항)
+        (Figure 4.26 BD640 Variable Resistor)
 
-(2)	시리얼 엔코더 에러해제 후, 제어기 전원을 껏다카 다시 켜십시오.
+(2)	After clearing the serial encoder error, turn the controller power off and then on again.
 
-에러해제 후, 주전원 OFF/ON시 계속 에러가 발생하면 모터(엔코더)교체 시험하십시오.
-에러해제는 아래의 메뉴에서 실행합니다.
+If the error persists when turning the main power OFF/ON after clearing the error, perform a motor (encoder) replacement test.
+The error clearing is executed in the menu below.
 
-        시스템 -> 5. 초기화 -> 4. 시리얼 엔코더 리셋 - 에러해제
+        System -> 5. Initialization -> 4. Serial Encoder Reset - Error Reset
 
 ![](../_assets/4.서보보드/엔코더_에러해제.png)
 
-                        (그림 4.27 시리얼 엔코더 에러해제)
+        (Figure 4.27 Serial Encoder Error Reset)
 
-(3)	계속 에러 발생 시 모터(엔코더)를 교체 시험하십시오. 
+(3)	If the error persists, perform a replacement test of the motor (encoder). 
 
-서보 모터를 교체한 후 에러가 발생하지 않으면 서보모터의 불량입니다. 서보 모터를 정상품으로 교체하여 주십시오. 아래 그림은 HS165 로봇의 각 축 모터의 위치를 나타내고 있으며, 다른 로봇은 해당 기구 보수설명서를 참고하여 교체하시기 바랍니다.
+If the error does not occur after replacing the servo motor, the servo motor is defective. Please replace the servo motor with a normal one. The figure below shows the positions of the motors for each axis of the HS165 robot; for other robots, please refer to the corresponding mechanical maintenance manual for replacement.
 
 ![](../_assets/4.서보보드/로봇_모터_위치.png)
 
-                        (그림 4.28 HS165 로봇의 각 축 모터 위치)
-[__SOURCE](4-servo-board-part/E02461.md)
-# 4.9. E02461. (O축) 엔코더 과속 오류 (OS 비트 감지)
+        (Figure 4.28 HS165 Robot Axis Motor Positions)# 4.9. E02461. (O Axis) Encoder Overspeed Error (OS Bit Detected)
 
-### 1. 개요
-서보보드에서는 서보 모터의 제어를 수행하기 위해 엔코더와 시리얼통신을 하여 주기적으로 엔코더 데이터를 수신합니다, 해당 에러는 엔코더 회전 속도가 허용 범위를 초과하여 OS(OverSpeed) 비트가 세트되었을 때 발생합니다. 이는 실제 과속 상황이거나, 신호 이상으로 잘못 감지되었을 수 있습니다.
+### 1. Overview
+The servo board performs serial communication with the encoder to control the servo motor and receives encoder data periodically; this error occurs when the encoder rotation speed exceeds the allowable range and the OS (OverSpeed) bit is set. This may be an actual overspeed situation or a false detection due to signal abnormality.
 
-엔코더로부터 수신된 데이터는 정상이나 엔코더가 스스로 내부상태를 감시한 결과 에러상태(OS)인 경우에 발생할 수 있습니다.
+This can occur when the data received from the encoder is normal, but the encoder is in an error state (OS) as a result of monitoring its own internal status.
 
-### 2. 원인 및 점검
-
-{% hint style="info" %}
-(1)	엔코더 공급전압을 확인하십시오.
-(2)	엔코더 배선을 점검하십시오
-(3)	시리얼 엔코더 에러해제 후, 제어기 전원을 껏다카 다시 켜십시오.
-(4)	계속 에러발생시 모터(엔코더)를 교체 시험하십시오. 
-{% endhint %}
-
-세부적인 점검방법은 "E02460 (O축) 엔코더 내부 회전값 오류(CE 비트 감지)"을 참조하십시오.
-
-[__SOURCE](4-servo-board-part/E02462.md)
-# 4.10. E02462. (O축) 엔코더 위치 정보 초기화되지 않음 (FS 비트 검지)
-
-### 1. 개요
-
-서보보드에서는 서보 모터의 제어를 수행하기 위해 엔코더와 시리얼통신을 하여 주기적으로 엔코더 데이터를 수신합니다, 해당 에러는 엔코더 내부에서 Full Absolute 상태에 도달하지 않아 정확한 위치 정보가 아직 확보되지 않을 때 발생합니다. 이는 엔코더 전원 인가 직후, 데이터 초기화 실패, 또는 백업 정보 손실로 인해 발생할 수 있습니다.
-
-엔코더로부터 수신된 데이터는 정상이나 엔코더가 스스로 내부상태를 감시한 결과 에러상태(FS)인 경우에 발생할 수 있습니다.
-
-FS(Full Absolute) : 해당 비트가 0이면 위치 데이터가 초기화 되지 않았거나, 백업 정보가 불완전한 상태. 해당 비트가 1이면 엔코더 내부 데이터가 완전하고 정상 상태임을 나타냅니다.
-
-### 2. 원인 및 점검
-
-{% hint style="info" %}
-(1)	엔코더 공급전압을 확인하십시오.
-(2)	시리얼 엔코더 에러해제 후, 제어기 전원을 껏다카 다시 켜십시오.
-(3)	계속 에러발생시 모터(엔코더)를 교체 시험하십시오. 
-{% endhint %}
-
-세부적인 점검방법은 "E02460 (O축) 엔코더 내부 회전값 오류(CE 비트 감지)"을 참조하십시오.
-[__SOURCE](4-servo-board-part/E02463.md)
-# 4.11. E02463. (O축) 엔코더 멀티턴 저장 오류 (ME 비트 감지)
-
-### 1. 개요
-
-서보보드에서는 서보 모터의 제어를 수행하기 위해 엔코더와 시리얼통신을 하여 주기적으로 엔코더 데이터를 수신합니다, 해당 에러는 엔코더 내부에서 배터리 백업 불량, 내부 저장 회로 오류, 전원 인가 중 예기치 않은 차단 등의 원인으로 멀티턴(회전수)가 정상적으로 저장되지 않아 ME 비트가 세트되었을때 발생합니다.
-
-엔코더로부터 수신된 데이터는 정상이나 엔코더가 스스로 내부상태를 감시한 결과 에러상태(ME)인 경우에 발생할 수 있습니다.
-
-### 2. 원인 및 점검
-{% hint style="info" %}
-(1)	엔코더 공급전압을 확인하십시오.
-(2)	시리얼 엔코더 에러해제 후, 제어기 전원을 껏다카 다시 켜십시오.
-(3)	계속 에러발생시 모터(엔코더)를 교체 시험하십시오. 
-{% endhint %}
-
-세부적인 점검방법은 "E02460 (O축) 엔코더 내부 회전값 오류(CE 비트 감지)"을 참조하십시오.
-
-[__SOURCE](4-servo-board-part/E02464.md)
-# 4.12. E02464. (O축) 엔코더 배터리 이상 (BE 감지)
-
-### 1. 개요
-
-서보보드에서는 서보 모터의 제어를 수행하기 위해 엔코더와 시리얼통신을 하여 주기적으로 엔코더 데이터를 수신합니다, 해당 에러는 엔코더에 연결된 배터리 전압이 기준치 이하로 떨어지거나 연결에 문제가 발생하여 BE(Battery Error)가 세트되었을 경우 발생합니다.
-
-엔코더로부터 수신된 데이터는 정상이나 엔코더가 스스로 내부상태를 감시한 결과 에러상태(BE)인 경우에 발생할 수 있습니다.
-
-BE(Battery Error) : 엔코더 주전원 Off시 외부배터리전압이 3.1V이하로 되었던 경우에 발생.
-
-
-### 2. 원인 및 점검
+### 2. Cause and Inspection
 
 {% hint style="info" %}
 
-(1)	시리얼 엔코더 에러해제 후, 제어기 전원을 껏다카 다시 켜십시오.
-
-(2)	엔코더 백업용 배터리 전압 확인하십시오.
-
-(3)	엔코더 배터리 결선상태를 점검하십시오.
-
-(4)	모터(엔코더)를 교체 시험하십시오. 
+(1)	Check the encoder supply voltage.<br>
+(2)	Inspect the encoder wiring.<br>
+(3)	After clearing the serial encoder error, turn the controller power off and then on again.<br>
+(4)	If the error persists, perform a replacement test of the motor (encoder). <br>
 
 {% endhint %}
 
-(1)	시리얼 엔코더 에러해제 후, 제어기 전원을 껏다카 다시 켜십시오.
+For detailed inspection methods, please refer to "E02460 (O Axis) Encoder Internal Rotation Value Error (CE Bit Detected)".
+# 4.10. E02462. (O Axis) Encoder Position Not Initialized (FS Bit Detected)
 
-에러해제 후, 주전원 OFF/ON시 계속 에러가 발생하면 모터(엔코더)교체 시험하십시오.
-에러해제는 아래의 메뉴에서 실행합니다.
+### 1. Overview
+
+The servo board performs serial communication with the encoder to control the servo motor and receives encoder data periodically; this error occurs when the encoder has not reached the Full Absolute state and accurate position information has not yet been secured. This may occur immediately after encoder power is applied, due to data initialization failure, or loss of backup information.
+
+This can occur when the data received from the encoder is normal, but the encoder is in an error state (FS) as a result of monitoring its own internal status.
+
+FS (Full Absolute): If this bit is 0, it means the position data has not been initialized or the backup information is incomplete. If this bit is 1, it indicates that the encoder's internal data is complete and in a normal state.
+
+### 2. Cause and Inspection
+
+{% hint style="info" %}
+
+(1)	Check the encoder supply voltage.<br>
+(2)	After clearing the serial encoder error, turn the controller power off and then on again.<br>
+(3)	If the error persists, perform a replacement test of the motor (encoder). <br>
+
+{% endhint %}
+
+For detailed inspection methods, please refer to "E02460 (O Axis) Encoder Internal Rotation Value Error (CE Bit Detected)".# 4.11. E02463. (O Axis) Encoder Multiturn Storage Error (ME Bit Detected)
+
+### 1. Overview
+
+The servo board performs serial communication with the encoder to control the servo motor and receives encoder data periodically; this error occurs when the multiturn (number of rotations) data is not stored normally due to causes such as battery backup failure, internal storage circuit error, or unexpected power interruption during power-on, and the ME bit is set.
+
+This can occur when the data received from the encoder is normal, but the encoder is in an error state (ME) as a result of monitoring its own internal status.
+
+### 2. Cause and Inspection
+{% hint style="info" %}
+
+(1)	Check the encoder supply voltage.<br>
+(2)	After clearing the serial encoder error, turn the controller power off and then on again.<br>
+(3)	If the error persists, perform a replacement test of the motor (encoder). <br>
+
+{% endhint %}
+
+For detailed inspection methods, please refer to "E02460 (O Axis) Encoder Internal Rotation Value Error (CE Bit Detected)".
+# 4.12. E02464. (O Axis) Encoder Battery Error (BE Bit Detected)
+
+### 1. Overview
+
+The servo board performs serial communication with the encoder to control the servo motor and receives encoder data periodically; this error occurs when the battery voltage connected to the encoder drops below the reference value or a connection problem occurs, causing the BE (Battery Error) bit to be set.
+
+This can occur when the data received from the encoder is normal, but the encoder is in an error state (BE) as a result of monitoring its own internal status.
+
+BE (Battery Error): Occurs when the external battery voltage drops below 3.1V while the encoder main power is OFF.
+
+
+### 2. Cause and Inspection
+
+{% hint style="info" %}
+
+(1)	After clearing the serial encoder error, turn the controller power off and then on again.
+
+(2)	Check the encoder backup battery voltage.
+
+(3)	Inspect the encoder battery wiring connection.
+
+(4)	Perform a replacement test of the motor (encoder). 
+
+{% endhint %}
+
+(1)	After clearing the serial encoder error, turn the controller power off and then on again.
+
+If the error persists when turning the main power OFF/ON after clearing the error, perform a motor (encoder) replacement test.
+The error clearing is executed in the menu below.
         
-        시스템 -> 5.초기화 -> 4. 시리얼 엔코더 리셋 - 에러해제
+        System -> 5. Initialization -> 4. Serial Encoder Reset - Error Reset
 
 ![](../_assets/4.서보보드/엔코더_에러해제.png)
 
-                        (그림 4.29 엔코더 에러 해제)
+                        (Figure 4.29 Encoder Error Reset)
 
-(2)	엔코더 배터리 전압을 확인하십시오. 
-엔코더용 배터리는 3.6V 입니다. 이 전압이 3.0V~3.2V 로 저하되면 “W0104 ○축 엔코더Battery 전압저하입니다” 로 표시 됩니다. 이 경고가 발생할 때 엔코더용 배터리를 교환해야 합니다. 엔코더 배터리 교환은 반드시 제어기 전원이 ON되어 있는 상태에서 배터리를 교체해야 합니다. 이 상태에서 정상적인 엔코더 배터리로 교체하면 문제 없이 로봇을 계속 사용할 수 있습니다.
+(2)	Check the encoder battery voltage. <br>
+The battery for the encoder is 3.6V. If this voltage drops to 3.0V–3.2V, "W0104 (Axis O) Encoder Battery Voltage Low" is displayed. When this warning occurs, the encoder battery must be replaced. The encoder battery must be replaced while the controller power is ON. If the battery is replaced with a normal one in this state, the robot can continue to be used without problems.
 
-엔코더 배터리 교체시기를 지나서 엔코더용 배터리 전압이 2.5V~3.0V 가 되면 제어기 전원 ON시“E2470 ○축 엔코더 이상 : 엔코더 리셋 필요” 에러가 발생합니다. 이 에러가 발생하면 이미 엔코더의 위치데이터를 잃어버린 상태입니다. 엔코더 배터리를 교체하고 엔코더를 리셋 시킨 후에 축좌표계 수동 조작으로 로봇을 기준자세로 이동하여 해당 축의 엔코더 보정을 재실시 해야 합니다.
+If the encoder battery voltage reaches 2.5V–3.0V after the replacement period has passed, the error "E2470 (Axis O) Encoder Error: Encoder Reset Required" occurs when the controller power is turned ON. When this error occurs, the encoder's position data has already been lost. After replacing the encoder battery and resetting the encoder, you must move the robot to the reference posture using manual operation in the axis coordinate system and re-perform encoder calibration for the corresponding axis.
 
 ![](../_assets/4.서보보드/배터리_교환위치.png)
 
-                         (그림 4.30 엔코더 배터리 교환 위치)
+                         (Figure 4.30 Encoder Battery Replacement Location)
 
-엔코더 리셋은 아래의 메뉴에서 실행합니다.
+The encoder reset is executed in the menu below.
 
-        시스템 -> 5. 초기화 -> 4. 시리얼 엔코더 리셋 - 엔코더 리셋
+        System -> 5. Initialization -> 4. Serial Encoder Reset - Encoder Reset
 
 ![](../_assets/4.서보보드/엔코더_리셋.png)
 
-                         (그림 4.31 엔코더 리셋)
+                         (Figure 4.31 Encoder Reset)
 
-(3)	엔코더 배터리 결선 상태를 점검하십시오. 
-엔코더 배터리 위치부터 모터까지 연결되는 배터리 결선 상태를 확인하십시오.
+(3)	Inspect the encoder battery wiring connection. <br>
+Check the condition of the battery wiring connected from the encoder battery location to the motor.
 
 
-(4)	모터(엔코더)를 교체 시험하십시오. 
-에러리셋후 주전원 OFF/ON시 계속 에러가 발생하면 모터(엔코더)교체 시험하십시오. 교체한 후 에러가 발생하지 않으면 서보모터의 불량입니다. 서보 모터를 정상품으로 교체하여 주십시오. 아래 그림은 HS165 로봇의 각 축 모터의 위치를 나타내고 있으며, 다른 로봇은 해당 기구 보수설명서를 참고하여 교체하시기 바랍니다.
+(4)	Perform a replacement test of the motor (encoder). <br>
+If the error persists when turning the main power OFF/ON after resetting the error, perform a motor (encoder) replacement test. If the error does not occur after replacement, the servo motor is defective. Please replace the servo motor with a normal one. The figure below shows the positions of the motors for each axis of the HS165 robot; for other robots, please refer to the corresponding mechanical maintenance manual for replacement.
 
 ![](../_assets/4.서보보드/로봇_모터_위치.png)
 
-                        (그림 4.32 HS165 로봇의 각 축 모터 위치)
+                        (Figure 4.32 HS165 Robot Axis Motor Positions)
 
+# 4.13. E02470. (O Axis) Encoder Error: Reset Required
 
-[__SOURCE](4-servo-board-part/E02470.md)
-# 4.13. E02470. (O축) 엔코더 이상: 엔코더 리셋 필요
+### 1. Overview
 
-### 1. 개요
+In order for the encoder to preserve the motor's position data, power must be supplied to the encoder at all times. 
 
-엔코더가 모터의 위치데이터를 보존하기 위해서는 상시 엔코더에 전원이 공급되어야 합니다. 
+Power to the encoder is supplied either by keeping the controller power ON or by the encoder backup battery. If the controller power is turned OFF while the encoder backup battery is discharged, the encoder loses its position data, resulting in an error. 
 
-엔코더의 전원은 제어기 전원을 ON시켜 두거나 엔코더용 백업 배터리에 의해서 전원이 공급됩니다. 만일 엔코더용 백업 배터리가 방전되어 있는 상태에서 제어기 전원을 OFF 시키면 엔코더가 위치데이터를 잃어버리기 때문에 에러가 발생합니다. 
+Similarly, when a motor is replaced, the same error occurs because the encoder of the new motor was already in a state where no power was being supplied.
+Resetting the encoder changes the reference position data for the corresponding axis; therefore, you must move the robot to the reference posture using manual operation in the axis coordinate system and re-perform encoder calibration for the corresponding axis.
 
-마찬가지로 모터를 교체할 때에도 신규 모터의 엔코더는 이미 전원이 공급되지 않는 상태였기 때문에 동일한 에러가 발생합니다.
-엔코더를 리셋시키면 해당 축의 기준위치 데이터가 변경되므로 반드시 축좌표계 수동 조작으로 로봇을 기준자세로 이동하여 해당 축의 엔코더 보정을 재실시해야 합니다. 
-
-### 2. 원인 및 점검
+### 2. Cause and Inspection
 
 {% hint style="info" %}
-(1)	엔코더 배터리 전압을 확인하십시오.
-(2)	엔코더 배터리 결선 상태를 점검하십시오.
-(3)	모터를 교체 시험하십시오.
-(4)	엔코더 리셋 이후에는 로봇 기준위치에서 엔코더 보정을 재실시해야 합니다.
+
+(1)	Check the encoder battery voltage.<br>
+(2)	Inspect the encoder battery wiring connection.<br>
+(3)	Perform a replacement test of the motor.<br>
+(4)	After resetting the encoder, encoder calibration must be re-performed at the robot's reference position.<br>
+
 {% endhint %}
 
-(1)	엔코더 배터리 전압을 확인하십시오. 
-엔코더용 배터리는 3.6V 입니다. 이 전압이 3.0V~3.2V 로 저하되면 “W0104 ○축 엔코더Battery 전압저하입니다” 로 표시 됩니다. 이 경고가 발생할 때 엔코더용 배터리를 교환해야 합니다. 엔코더 배터리 교환은 반드시 제어기 전원이 ON되어 있는 상태에서 배터리를 교체해야 합니다. 이 상태에서 정상적인 엔코더 배터리로 교체하면 문제 없이 로봇을 계속 사용할 수 있습니다.
+(1)	Check the encoder battery voltage.<br> 
+The battery for the encoder is 3.6V. If this voltage drops to 3.0V–3.2V, "W0104 (Axis O) Encoder Battery Voltage Low" is displayed. When this warning occurs, the encoder battery must be replaced. The encoder battery must be replaced while the controller power is ON. If the battery is replaced with a normal one in this state, the robot can continue to be used without problems.
 
-엔코더 배터리 교체시기를 지나서 엔코더용 배터리 전압이 2.5V~3.0V 가 되면 “E2470 ○축 엔코더 이상 : 엔코더 리셋 필요” 에러가 발생합니다. 이 에러가 발생하면 이미 엔코더의 위치데이터를 잃어버린 상태입니다. 엔코더 배터리를 교체하고 엔코더를 리셋 시킨 후에 축좌표계 수동 조작으로 로봇을 기준자세로 이동하여 해당 축의 엔코더 보정을 재실시 해야 합니다.
+If the encoder battery voltage drops to 2.5V–3.0V after the replacement period has passed, the error "E2470 (Axis O) Encoder Error: Encoder Reset Required" occurs. When this error occurs, the encoder's position data has already been lost. After replacing the encoder battery and resetting the encoder, you must move the robot to the reference posture using manual operation in the axis coordinate system and re-perform encoder calibration for the corresponding axis.
 
 ![](../_assets/4.서보보드/배터리_교환위치.png)
 
-                    (그림 4.34 엔코더 배터리 교환 위치)
+    (Figure 4.34 Encoder Battery Replacement Location)
 
-엔코더 리셋은 아래의 메뉴에서 실행합니다.
+The encoder reset is executed in the menu below.
 
-            시스템 -> 5. 초기화 -> 4. 시리얼 엔코더 리셋
+    System -> 5. Initialization -> 4. Serial Encoder Reset
 
 ![](../_assets/4.서보보드/엔코더_리셋.png)
 
-                    (그림 4.35 시리얼 엔코더 리셋)
+    (Figure 4.35 Serial Encoder Reset)
 
-(2)	엔코더 배터리 결선 상태를 점검하십시오. 
+(2) Inspect the encoder battery wiring connection. 
 
-엔코더 배터리 위치부터 모터까지 연결되는 배터리 결선 상태를 확인하십시오.
+Check the condition of the battery wiring connected from the encoder battery location to the motor.
 
-(3)	모터를 교체 시험하십시오.
+(3) Perform a replacement test of the motor.
 
-상기 조치로도 문제가 해결되지 않는다면 엔코더 자체 고장일 가능성이 높습니다. 모터를 교체 시험하십시오.
+If the problem is not resolved by the above measures, there is a high possibility that the encoder itself is defective. Perform a replacement test of the motor.
 
     
+# 4.14. E02630. (O Axis) position deviation exceeded
 
-[__SOURCE](4-servo-board-part/E02630.md)
-# 4.14. E02630. (O축) 위치편차 초과
+### 1. Overview
+This error occurs when the position deviation exceeds the set value during robot operation. While the robot is operating under servo control, if the difference between the commanded movement position and the actual position is too large, the servo board detects this as an error and stops the robot.
 
-### 1. 개요
-로봇 구동 중 위치편차가 설정값을 초과할 경우 발생합니다. 서보제어에 의해 로봇 동작하는 중, 이동명령위치와 실제위치와의 차이가 너무 클 경우 서보보드는 이를 에러를 감지하고 로봇을 정지시킵니다.
-
-### 2. 원인 및 점검
+### 2. Cause and Inspection
 {% hint style="info" %}
 
-(1)	에러가 발생한 축이 다른 설비와 기계적 간섭이 있는지 확인하십시오.
-(2)	로봇 기종이 맞게 설정되어 있는지 확인하십시오.
-(3)	브레이크 해제가 정상적으로 작동되는지 확인하십시오.
-    개별 축 브레이크 해제 이상 점검
-    브레이크용 전원이상 점검.
-(4)	배선상태를 점검하십시오.
-(5)	정격부하를 사용하지는 확인하십시오.
-(6)	위치편차 설정 레벨을 확인하십시오.
-(7)	서보 보드(BD640)와 main com의 버전을 확인하십시오. 
-(8)	기타의 부품을 교체하십시오.
+(1)	Check if the axis where the error occurred has mechanical interference with other equipment.<br>
+(2)	Verify that the robot model is configured correctly.<br>
+(3)	Verify that the brake release is operating normally.<br>
+    - Inspect for abnormalities in individual axis brake release.<br>
+    - Inspect for abnormalities in brake power supply.<br>
+(4)	Inspect the wiring condition.<br>
+(5)	Check if the rated load is being exceeded.<br>
+(6)	Verify the position deviation setting level.<br>
+(7)	Check the versions of the servo board (BD640) and the main COM.<br>
+(8)	Replace other components.<br>
+
 {% endhint %}
 
-(1)	에러가 발생한 축이 다른 설비와 기계적 간섭이 있는지 확인하십시오.
+(1)	Check if the axis where the error occurred has mechanical interference with other equipment.
 
-로봇의 기구적 간섭 혹은 충돌이 있을 경우 이 에러가 발생할 수 있습니다. 제한영역을 벗어나 있을 경우에는 수동조작하여 안전영역으로 로봇을 이동시켜야 합니다.
+This error can occur if there is mechanical interference or a collision with the robot. If the robot is outside the restricted area, move it to a safe area using manual operation.
 
-(2)	로봇 기종이 맞게 설정되어 있는지 확인하십시오.
+(2)	Verify that the robot model is configured correctly.
 
 ![](../_assets/4.서보보드/로봇모델확인.png)
 
-                    (그림 4.60 TP 로봇 모델 확인)
-    TP화면상의 등록된 로봇기종과 실제 설치된 로봇이 일치하는지 확인하십시오.
+                    (Figure 4.60 Checking Robot Model on TP)
+    Verify that the robot model registered on the TP (Teach Pendant) screen matches the actually installed robot.
 
-(3)	브레이크 해제가 정상적으로 작동되는지 확인하십시오.
+(3)	Verify that the brake release is operating normally.
 
-해당 축 브레이크의 해제기능에 문제가 있거나 브레이크 해제전압의 이상일 수 있습니다.
- * 개별 축 브레이크 해제 이상 점검
+There may be a problem with the brake release function of the corresponding axis or an abnormality in the brake release voltage.
+ * Inspect for abnormalities in individual axis brake release.
 
-    축 잠금 기능을 사용하여 해당 축 브레이크 해제 기능 작동을 확인하십시오.
-확인 하려는 축을 제외하고 축 잠금을 한 뒤 모터 온/오프를 반복하여 기구부의 모터에서 브레이크 해제 소리(“딸깍”)가 들리는지 확인하십시오.
+Verify the operation of the brake release function for the corresponding axis using the Axis Lock function.
+After performing an Axis Lock on all axes except the one you wish to check, repeatedly turn the motor on/off and listen for a "click" sound of the brake releasing from the motor in the mechanical unit.
 
-    축 잠금 기능을 사용하는 방법은 아래와 같습니다.
+The procedure for using the Axis Lock function is as follows:
     
-        시스템 -> 5. 초기화 -> 9. 축 잠금 설정 -> 확인 -> 개별 축 축잠금
+        System -> 5. Initialization -> 9. Axis Lock Setting -> OK -> Individual Axis Lock
 
 ![](../_assets/4.서보보드/축잠금1.png)
 
-                    (그림 4.61 축 잠금 설정화면1)
+                    (Figure 4.61 Axis Lock Setting Screen 1)
 
 ![](../_assets/4.서보보드/축잠금2.png)
 
-                    (그림 4.62 축 잠금 설정화면2)
+                    (Figure 4.62 Axis Lock Setting Screen 2)
 
 ![](../_assets/4.서보보드/축잠금3.png)
 
-                    (그림 4.63 축 잠금 설정화면3)
+                    (Figure 4.63 Axis Lock Setting Screen 3)
 
-    해당 축의 브레이크가 해제되지 않는다면 서보보드의 브레이크 출력상태를 확인해야 합니다. 브레이크 배선(CNB1, CNB7, CNB8 커넥터)를 제거하고 브레이크 전압을 출력하십시오. CNB1, CNB7 또는 CNB8 커넥터에서 해당 축의 브레이크 전압이 20V 이상으로 출력되는지 측정하십시오. 20V 이하의 전압으로 출력되는 축이 있다면 서보보드(BD640)의 고장이므로 고체하십시오.
+   If the brake for the corresponding axis does not release, the brake output status of the servo board must be checked. Remove the brake wiring (CNB1, CNB7, CNB8 connectors) and output the brake voltage. Measure whether the brake voltage for the corresponding axis is output at 20V or higher from the CNB1, CNB7, or CNB8 connectors. If there is an axis where the voltage output is below 20V, the servo board (BD640) is defective and must be replaced.
 
 ![](../_assets/4.서보보드/CNB_커넥터_배치.png)
 
-                    (그림 4.64 CNB1,CNB7,CNB8 커넥터의 핀배치)
+                    (Figure 4.64 Pin Assignment of CNB1, CNB7, and CNB8 Connectors)
 
- * 브레이크용 전원이상 점검
+ * Inspect for abnormalities in brake power supply
 
-    브레이크 전원 배선점검 순서는 다음과 같습니다.
+The inspection sequence for the brake power wiring is as follows:
 
-    1차: 브레이크 전원 배선에 관련된 커넥터들의 접촉 불량여부를 점거하십시오.
+Step 1: Inspect the connectors related to the brake power wiring for any poor contact.
 
-    2차: 브레이크 전원 배선의 단락 유무를 점검하십시오. 멀티미터(테스터기)와 같은 장비를 이용하여 1:1로 체크하십시오.
+Step 2: Check the brake power wiring for short circuits. Perform a 1:1 check using equipment such as a multimeter (tester).
 
-    파워전장모듈 내부 배선을 점검하십시오. Hi6-T15 제어기는 파워전장모듈이 없으므로 해당 사항이 없습니다.
+    * Inspect the internal wiring of the power electronic module. 
+      The Hi6-T15 controller is not applicable as it does not have a power electronic module.
 
 ![](../_assets/4.서보보드/전장모듈내부_전장보드.png)
 
-                    (그림 4.65 전장모듈 및 전장보드)
+                    (Figure 4.65 Electronic Module and Electronic Board)
 
- * 서보보드(BD640)를 점검 하십시오.
+ * Inspect the servo board (BD640).
 
-    파워전장모듈이 정상이라면 서보보드에서 브레이크 전원(DC24V)을 측정하십시오. 아래 그림의 빨간색 구역에 테스트 포인트(PAD24V0BK1)의 측정 값이 DC24V 이상 되어야 정상입니다. 만약 20V 미만이라면 브레이크 전원을 생성하는 전원 장치의 이상입니다. 전장모듈을 교체하십시오.
+If the power electronic module is normal, measure the brake power (DC24V) on the servo board. The measured value at the test point (PAD24V0BK1) in the red area of the figure below must be DC24V or higher to be considered normal. If it is less than 20V, there is an abnormality in the power supply unit that generates the brake power. Replace the electronic module.
 
-    ![](../_assets/4.서보보드/서보보드_브레이크전원_측정.png)
+![](../_assets/4.서보보드/서보보드_브레이크전원_측정.png)
 
-                    (그림 4.66 서보보드 브레이크 전원)
+                    (Figure 4.66 Servo Board Brake Power)
 
-(4)	배선상태를 점검하십시오.
+(4)	Inspect the wiring condition.
 
-모터배선(U, V, W상)이 올바르게 연결되어 있는지 확인하십시오.
-또한 모터 배선이 다른 배선 또는 접지선(FG)과 단락되어 있는지 확인하십시오.
+Verify that the motor wiring (U, V, W phases) is connected correctly.
+Also, check if the motor wiring is shorted to other wiring or the ground wire (FG).
 
-(5)	정격부하를 사용하는지 확인하십시오.
+(5)	Check if the rated load is being exceeded.
 
-작업 물을 포함하여 전체무게가 정격부하를 초과하고 있다면 해당 로봇의 사양서를 참조하여 정격 이내로 부하를 조정하십시오.
+If the total weight, including the workpiece, exceeds the rated load, adjust the load to within the rated capacity by referring to the robot's specification manual.
 
-(6)	위치편차 설정 레벨 오류
+(6)	Position deviation setting level error
 
-위치편차 설정치가 다음의 측정최대치 보다 작으면 설정치를 상향조정 하십시오.
+If the position deviation setting value is smaller than the following measured maximum value, increase the setting value.
 
-             싸이클 이상 동작시킨 후의 위치편차 측정최대치x1.5
+             Maximum measured position deviation after operating for a few cycles x 1.5
 ![](../_assets/4.서보보드/위치편차_모니터링_화면.png)
 
-                (그림 4.67 위치편차 측정최대치 모니터링 화면)
+                (Figure 4.67 Monitoring screen for maximum measured position deviation)
 
 ![](../_assets/4.서보보드/위치편차_설정_변경.png)
 
-                (그림 4.68 위치편차 설정 변경 화면)
+                (Figure 4.68 Position deviation setting change screen)
 
-(7)	서보 보드(BD640)와 main com의 버전을 확인하십시오.
+(7)	Check the versions of the servo board (BD640) and the main COM.
 
-서보 보드(BD640)와 main com버전의 호환성이 깨져 발생할 수 있습니다. 특히 모듈을 교체한 상황이라면 버전업을 진행하여 각 모듈의 버전을 현재 메인 com 버전에 맞춰주십시오. 각 모듈의 버전은 아래의 경로에서 확인할 수 있습니다.
+This error can occur if the compatibility between the servo board (BD640) and the main COM version is broken. Especially in cases where a module has been replaced, perform a version upgrade to match the version of each module with the current main COM version. The version of each module can be checked at the following path.
 
-                서비스 -> 7.시스템 진단 -> 1.시스템 버전
+Service -> 7. System Diagnosis -> 1. System Version
 
 ![](../_assets/4.서보보드/TP버전확인.png)
 
-                (그림 4.69 TP의 각 모듈 버전 확인 창)
+                (Figure 4.69 Version check window for each module on TP)
 
-(8)	기타의 부품을 교체하십시오.
+(8)	Replace other components.
 
-서보보드(BD640) → 서보구동장치 → 파워전장모듈 → 모터 순으로 교체하여 에러발생 여부를 확인하십시오.
+Check if the error occurs by replacing components in the following order: Servo Board (BD640) → Servo Drive Unit → Power Electronic Module → Motor.
 
 ![](../_assets/4.서보보드/N제어기_모터및구동장치_en.png)
 
-                (그림 4.70 N제어기 모터 및 구동 모듈)
+                (Figure 4.70 N Controller Motor and Drive Module)
 
 ![](../_assets/4.서보보드/T제어기_모터및구동장치_en.png)
 
-                (그림 4.70 T제어기 모터 및 구동 모듈)
+                (Figure 4.71 T Controller Motor and Drive Module)
 
 
 
+# 4.15. E02631. (O Axis) Speed-Based Position Deviation Excess
 
-[__SOURCE](4-servo-board-part/E02631.md)
-# 4.15. E02631. (O축) 속도별 위치편차 초과
+### 1. Overview
 
-### 1. 개요
+The position deviation occurring during jog operation or low-speed operation is larger than the set value. While the robot is operating under servo control, if the difference between the commanded movement position and the actual position is too large, the servo board detects an error during servo calculation and stops the robot.
 
-조그 동작 또는 저속 동작 시 발생하는 위치편차가 설정치 보다 큽니다. 서보제어에 의한 로봇 동작 중 이동명령위치와 실제위치와의 차이가 너무 큰 경우, 서보보드는 서보연산 중 에러를 감지하고 로봇을 정지시킵니다.
-
-### 2. 원인 및 점검
+### 2. Cause and Inspection
 
 {% hint style="info" %}
 
-(1)	에러가 발생한 축이 다른 설비와 기계적 간섭이 있는지 확인하십시오.
+(1)	Check if the axis where the error occurred has mechanical interference with other equipment.
 
-(2)	브레이크 해제가 정상적으로 작동되는지 확인하십시오.
-	개별 축 브레이크 해제 이상 점검
-	브레이크용 전원이상 점검.
+(2)	Verify that the brake release is operating normally.
+    * Inspect for abnormalities in individual axis brake release.
+    * Inspect for abnormalities in brake power supply.
 
-(3)	배선상태를 점검하십시오.
+(3)	Inspect the wiring condition.
 
-(4)	정격부하를 사용하지는 확인하십시오.
+(4)	Check if the rated load is being exceeded.
 
-(5)	위치편차 설정 레벨을 확인하십시오.
+(5)	Verify the position deviation setting level.
 
-(6)	서보 보드(BD640)와 main com의 버전을 확인하십시오. 
+(6)	Check the versions of the servo board (BD640) and the main COM. 
 
-(7)	기타의 부품을 교체하십시오.
+(7)	Replace other components.
 
 {% endhint %}
 
-세부적인 점검방법은 "E02630 (O축) 위치편차 초과"을 참조하십시오.
-[__SOURCE](4-servo-board-part/E02632.md)
-# 4.16. E02632. (O축) 위치편차초과 - 브레이크전압 저하
+For detailed inspection methods, please refer to "E02630 (Axis O) position deviation exceeded."# 4.16. E02632. (O Axis) position deviation exceeded (brake voltage lowered)
 
-### 1. 개요
+### 1. Overview
 
-위치편차가 설정치 보다 큽니다. 서보제어에 의한 로봇 동작 중 이동명령위치와 실제위치와의 차이가 너무 큰 경우, 서보보드는 서보연산 중 에러를 감지하고 로봇을 정지시킵니다.
-이 에러는 위치편차가 크면서 브레이크전압 저하가 검지되었을 때 발생합니다.
+The position deviation is larger than the set value. While the robot is operating under servo control, if the difference between the commanded movement position and the actual position is too large, the servo board detects an error during servo calculation and stops the robot.
+This error occurs when a drop in brake voltage is detected while the position deviation is large.
 
-### 2. 원인 및 점검
+### 2. Cause and Inspection
 
 {% hint style="info" %}
-(1)	브레이크 해제가 정상적으로 작동되는지 확인하십시오.
-    * 개별 축 브레이크 해제 이상 점검
-    * 브레이크용 전원이상 점검
+
+(1)	Verify that the brake release is operating normally.<br>
+    * Inspect for abnormalities in individual axis brake release<br>
+    * Inspect for abnormalities in brake power supply
+
 {% endhint %}
 
-(1)	브레이크 해제가 정상적으로 작동되는지 확인하십시오.
+(1)	Verify that the brake release is operating normally.
 
-해당 축 브레이크의 해제기능에 문제가 있거나 브레이크 해제전압의 이상일 수 있습니다.
- * 개별 축 브레이크 해제 이상 점검
+There may be a problem with the brake release function of the corresponding axis or an abnormality in the brake release voltage.
+ * Inspect for abnormalities in individual axis brake release
 
-    축 잠금 기능을 사용하여 해당 축 브레이크 해제 기능 작동을 확인하십시오.
-확인 하려는 축을 제외하고 축 잠금을 한 뒤 모터 온/오프를 반복하여 기구부의 모터에서 브레이크 해제 소리(“딸깍”)가 들리는지 확인하십시오.
+    Verify the operation of the brake release function for the corresponding axis using the Axis Lock function.
+After performing an Axis Lock on all axes except the one you wish to check, repeatedly turn the motor on/off and listen for a "click" sound of the brake releasing from the motor in the mechanical unit.
 
-    축 잠금 기능을 사용하는 방법은 아래와 같습니다.
-        시스템 -> 5. 초기화 -> 9. 축 잠금 설정 -> 확인 -> 개별 축 축잠금
+   The procedure for using the Axis Lock function is as follows:
+        
+        System -> 5. Initialization -> 9. Axis Lock Setting -> OK -> Individual Axis Lock
 
 ![](../_assets/4.서보보드/축잠금1.png)
 
-                    (그림 4.71 축 잠금 설정화면1)
+                    (Figure 4.71 Axis Lock Setting Screen 1)
 
 ![](../_assets/4.서보보드/축잠금2.png)
 
-                    (그림 4.72 축 잠금 설정화면2)
+                    (Figure 4.72 Axis Lock Setting Screen 2)
 
 ![](../_assets/4.서보보드/축잠금3.png)
 
-                    (그림 4.73 축 잠금 설정화면3)
+                    (Figure 4.73 Axis Lock Setting Screen 3)
 
-    해당 축의 브레이크가 해제되지 않는다면 서보보드의 브레이크 출력상태를 확인해야 합니다. 브레이크 배선(CNB1, CNB7, CNB8 커넥터)를 제거하고 브레이크 전압을 출력하십시오. CNB1, CNB7 또는 CNB8 커넥터에서 해당 축의 브레이크 전압이 20V 이상으로 출력되는지 측정하십시오. 20V 이하의 전압으로 출력되는 축이 있다면 서보보드(BD640)의 고장이므로 고체하십시오.
+If the brake for the corresponding axis does not release, the brake output status of the servo board must be checked. Remove the brake wiring (CNB1, CNB7, CNB8 connectors) and output the brake voltage. Measure whether the brake voltage for the corresponding axis is output at 20V or higher from the CNB1, CNB7, or CNB8 connectors. If there is an axis where the voltage output is below 20V, the servo board (BD640) is defective and must be replaced.
 
 ![](../_assets/4.서보보드/CNB_커넥터_배치.png)
 
-                    (그림 4.74 CNB1,CNB7,CNB8 커넥터의 핀배치)
+                    (Figure 4.74 Pin Assignment of CNB1, CNB7, and CNB8 Connectors)
 
- * 브레이크용 전원이상 점검
+ * Inspect for abnormalities in brake power supply
 
-    브레이크 전원 배선점검 순서는 다음과 같습니다.
+The inspection sequence for the brake power wiring is as follows:
 
-    1차: 브레이크 전원 배선에 관련된 커넥터들의 접촉 불량여부를 점거하십시오.
+Step 1: Inspect the connectors related to the brake power wiring for any poor contact.
 
-    2차: 브레이크 전원 배선의 단락 유무를 점검하십시오. 멀티미터(테스터기)와 같은 장비를 이용하여 1:1로 체크하십시오.
+Step 2: Check the brake power wiring for short circuits. Perform a 1:1 check using equipment such as a multimeter (tester).
 
-    파워전장모듈 내부 배선을 점검하십시오. Hi6-T15 제어기는 파워전장모듈이 없으므로 해당 사항이 없습니다.
+    * Inspect the internal wiring of the power electronic module. 
+      The Hi6-T15 controller is not applicable as it does not have a power electronic module.
 
 ![](../_assets/4.서보보드/전장모듈내부_전장보드.png)
 
-                    (그림 4.75 전장모듈 및 전장보드)
+                    (Figure 4.75 Electronic Module and Electronic Board)
 
- * 서보보드(BD640)를 점검 하십시오.
+ * Inspect the servo board (BD640).
 
-    파워전장모듈이 정상이라면 서보보드에서 브레이크 전원(DC24V)을 측정하십시오. 아래 그림의 빨간색 구역에 테스트 포인트(PAD24V0BK1)의 측정 값이 DC24V 이상 되어야 정상입니다. 만약 20V 미만이라면 브레이크 전원을 생성하는 전원 장치의 이상입니다. 전장모듈을 교체하십시오.
+If the power electronic module is normal, measure the brake power (DC24V) on the servo board. The measured value at the test point (PAD24V0BK1) in the red area of the figure below must be DC24V or higher to be considered normal. If it is less than 20V, there is an abnormality in the power supply unit that generates the brake power. Replace the electronic module.
 
-    ![](../_assets/4.서보보드/서보보드_브레이크전원_측정.png)
+![](../_assets/4.서보보드/서보보드_브레이크전원_측정.png)
 
-                    (그림 4.76 서보보드 브레이크 전원)
+                    (Figure 4.76 Servo Board Brake Power)
 
     
+# 4.17. E02633. (O Axis) position deviation exceeded (load estimation not executed)
 
-[__SOURCE](4-servo-board-part/E02633.md)
-# 4.17. E02633. (O축) 위치편차 초과 - 부하추정 미실시
+### 1. Overview
+The position deviation is larger than the set value. While the robot is operating under servo control, if the difference between the commanded movement position and the actual position is too large, the servo board detects an error during servo calculation and stops the robot.
+This error occurs when the position deviation is large and load estimation has not been performed.
 
-### 1. 개요
-위치편차가 설정치 보다 큽니다. 서보제어에 의한 로봇 동작 중 이동명령위치와 실제위치와의 차이가 너무 큰 경우, 서보보드는 서보연산 중 에러를 감지하고 로봇을 정지시킵니다.
-이 에러는 위치편차가 크면서 부하추정이 미 실시 되었을 때 발생합니다.
-
-### 2. 원인 및 점검
+### 2. Cause and Inspection
 
 {% hint style="info" %}
 
-(1)	부하추정을 실시하고, 에러가 다시 발생 되는지 확인하십시오.
+(1)	Perform load estimation and check if the error recurs.
 
-(2)	로봇 기종이 맞게 설정되어 있는지 확인하십시오.
+(2)	Verify that the robot model is configured correctly.
 
 {% endhint %}
 
-(1)	부하추정을 실시하고, 에러가 다시 발생 되는지 확인하십시오.
+(1)	Perform load estimation and check if the error recurs.
 
-부하를 확인하는 방법에는 계측기를 사용하는 방법이 가장 정확하지만 여의치 않을 경우에는 제어기 기능 중 부하추정 기능을 사용하여 확인할 수 있습니다. 부하추정 기능은 로봇 끝단에 설치되어 있는 툴에 대한 부분만 추정 가능합니다.
+While using a measuring instrument is the most accurate way to verify the load, if that is not feasible, you can use the load estimation function among the controller features. The load estimation function can only estimate the tool installed at the end of the robot.
 
-부하 추정 방법은 다음과 같습니다.
- * 부하추정 기능으로 들어갑니다.
+The load estimation procedure is as follows:
+ * Enter the load estimation function.
 
-        시스템 -> 6. 자동 캘리브레이션 -> 4. 부하추정 기능
+        System -> 6. Auto Calibration -> 4. Load Estimation
 
 ![](../_assets/4.서보보드/부하추정1.png)
 
-                    (그림 4.77 부하 추정 기능1)
+                    (Figure 4.77 Load Estimation 1)
 
 ![](../_assets/4.서보보드/부하추정2.png)
 
-                    (그림 4.78 부하 추정 기능2)
+                    (Figure 4.78 Load Estimation 2)
 
 ![](../_assets/4.서보보드/부하추정3.png)
 
-                    (그림 4.79 부하 추정 기능3)
+                    (Figure 4.79 Load Estimation 3)
 
- * 부하추정 기능을 사용하여 부하 추정 후 저장할 툴 번호를 선택합니다.
+ * Use the load estimation function to select the tool number to save after estimation.
 
 ![](../_assets/4.서보보드/부하추정4.png)
 
-                    (그림 4.80 부하 추정 기능4)
+                    (Figure 4.80 Load Estimation 4)
 
- * 정상 운전을 클릭하여 수행합니다.
+ * Click "Normal Operation" to perform the task.
 
-    모터 On 스위치를 누르고 데드맨을 잡은 후 정상운전을 클릭합니다.
+    Press the Motor On switch, hold the deadman switch, and then click "Normal Operation."
 
 ![](../_assets/4.서보보드/부하추정5.png)
 
-                    (그림 4.81 부하 추정 기능5)
+                    (Figure 4.81 Load Estimation 5)
 
-* 부하 추정 운전이 완료되면 추정 결과가 화면에 보여집니다.
+* Once the load estimation operation is complete, the estimated results will be displayed on the screen.
 
 ![](../_assets/4.서보보드/부하추정6.png)
 
-                    (그림 4.82 부하 추정 기능6)
+                    (Figure 4.82 Load Estimation 6)
 
-(2)	로봇 기종이 맞게 설정되어 있는지 확인하십시오.
+(2)	Verify that the robot model is configured correctly.
 
 ![](../_assets/4.서보보드/로봇모델확인.png)
 
-                    (그림 4.83 로봇 모델 확인)
+                    (Figure 4.83 Checking Robot Model)
 
-    TP화면상의 등록된 로봇기종과 실제 설치된 로봇이 일치하는지 확인하십시오.
+    Verify that the robot model registered on the TP screen matches the actually installed robot.
 
-    
-[__SOURCE](4-servo-board-part/E02634.md)
-# 4.18. E02634. (O축) 위치편차 초과 - 저온 마찰 증가
+    # 4.18. E02634. (O Axis) Position Deviation Excess (Increased Friction at Low Temperature)
 
-### 1. 개요
+### 1. Overview
 
-위치(속도)편차가 설정치 보다 큽니다. 서보제어에 의한 로봇 동작 중 이동명령위치와 실제위치와의 차이가 너무 큰 경우, 서보보드는 서보연산 중 에러를 감지하고 로봇을 정지시킵니다.
-이 에러는 위치편차가 크면서 엔코더 온도가 저온일 때 발생합니다.
-통상 저온시(엔코더 5℃이하)는, 구리스 점성에 의한 마찰성분이 증가해서 정상시보다 부가적인 토크가 필요하므로 로봇을 고속으로 동작시키면 본 에러가 발생 할 수 있습니다.
+The position (velocity) deviation is larger than the set value. While the robot is operating under servo control, if the difference between the commanded movement position and the actual position is too large, the servo board detects an error during servo calculation and stops the robot.
+This error occurs when the position deviation is large and the encoder temperature is low.
+Normally, at low temperatures (encoder at 5°C or below), the friction component increases due to the viscosity of the grease, requiring additional torque compared to normal conditions. Therefore, operating the robot at high speeds may trigger this error.
 
-### 2. 원인 및 점검
+### 2. Cause and Inspection
 {% hint style="info" %}
-(1)	엔코더 온도가 정상치(약 15℃ 이상)가 될 때까지 저속구동(재생속도 30% 이하) 시킨 후, 정상속도로 재 가동하십시오. 
-(2)	로봇 기종이 맞게 설정되어 있는지 확인하십시오.
+
+(1)	Operate the robot at low speed (playback speed of 30% or less) until the encoder temperature reaches a normal level (approximately 15°C or higher), then restart at normal speed.<br>
+(2)	Verify that the robot model is configured correctly.<br>
+
 {% endhint %}
 
-(1)	엔코더 온도가 정상치(약 15℃ 이상)가 될 때까지 저속구동(재생속도 30% 이하) 시킨 후, 정상속도로 재 가동하십시오
+(1)	Operate the robot at low speed (playback speed of 30% or less) until the encoder temperature reaches a normal level (approximately 15°C or higher), then restart at normal speed.
 
 ![](../_assets/4.서보보드/엔코더온도및재생속도.png)
 
-                    (그림 4.84 엔코더 온도 확인 화면)
+                    (Figure 4.84 Encoder Temperature Check Screen)
 
 
-(2)	로봇 기종이 맞게 설정되어 있는지 확인하십시오.
+(2)	Verify that the robot model is configured correctly.
 
 ![](../_assets/4.서보보드/로봇모델확인.png)
 
-                    (그림 4.85 로봇 모델 확인)
+                    (Figure 4.85 Checking Robot Model)
 
-    TP화면상의 등록된 로봇기종과 실제 설치된 로봇이 일치하는지 확인하십시오.
-[__SOURCE](4-servo-board-part/E02650.md)
-# 4.19. E02650. (O축) 모터 과부하
+ Verify that the robot model registered on the TP screen matches the actually installed robot.# 4.19. E02650. (O Axis) Motor Overload
 
-### 1. 개요
+### 1. Overview
 
-모터 또는 구동장치가 무리하게 동작되고 있습니다. 모터 또는 구동장치가 설정치 보다 무리하게 동작하게 되면, 서보보드는 에러를 감지하고 로봇을 정지시킵니다.
+The motor or drive unit is operating excessively. If the motor or drive unit operates more strainfully than the set value, the servo board detects an error and stops the robot.
 
-### 2. 원인 및 점검
+### 2. Cause and Inspection
 
 {% hint style="info" %}
 
-(1)	부하가 로봇의 정격 이하로 설치되어 있는지 확인하십시오.
+(1)	Check if the load is installed within the robot's rated capacity.
 
-(2)	로봇 동작 중 충돌요소가 있는지 점검하십시오.
+(2)	Check for any collision factors during robot operation.
 
-(3)	축 브레이크가 정상적으로 작동하는지 확인하십시오.
+(3)	Verify that the axis brakes are operating normally.
 
-(4)	모터 케이블 및 커넥터 연결 상태를 점검하십시오.
+(4)	Inspect the connection status of motor cables and connectors.
 
-(5)	서보보드를 교체하여 이상여부를 점검하십시오.
+(5)	Replace the servo board to check for abnormalities.
 
-(6)	구동부가 정상적으로 작동하는지 점검하십시오.
+(6)	Inspect whether the drive unit is operating normally.
 
 {% endhint %}
 
-(1)	부하가 로봇의 정격 이하로 설치되어 있는지 확인하십시오.
+(1)	Check if the load is installed within the robot's rated capacity.
 
-로봇 최대 사양 이하의 부하가 설치되어 있는지 확인하십시오. 사양을 초과할 경우 에러가 발생할 수 있습니다. (여기서 부하란, 로봇 끝단에 설치되는 툴뿐만 아니라 로봇 기구에 부착되는 케이블 및 다른 모든 부분이 포함됩니다.)
+Verify that the load installed is within the robot's maximum specifications. If the specifications are exceeded, an error may occur. (In this context, "load" includes not only the tool installed at the end of the robot but also cables and all other parts attached to the robot mechanism.)
 
-부하를 확인하는 방법에는 계측기를 사용하는 방법이 가장 정확하지만 여의치 않을 경우에는 제어기 기능 중 부하추정 기능을 사용하여 확인할 수 있습니다. 부하추정 기능은 로봇 끝단에 설치되어 있는 툴에 대한 부분만 추정 가능합니다.
+While using a measuring instrument is the most accurate way to verify the load, if that is not feasible, you can use the load estimation function among the controller features. The load estimation function can only estimate the tool installed at the end of the robot.
 
-부하 추정 방법은 다음과 같습니다.
+The load estimation procedure is as follows:
 
-* 부하추정 기능으로 들어갑니다.
+* Enter the load estimation function.
 
-        시스템 -> 6. 자동 캘리브레이션 -> 4. 부하추정 기능
+        System -> 6. Auto Calibration -> 4. Load Estimation
 
 ![](../_assets/4.서보보드/부하추정1.png)
 
-                    (그림 4.86 부하 추정 기능1)
+                    (Figure 4.86 Load Estimation 1)
 
 ![](../_assets/4.서보보드/부하추정2.png)
 
-                    (그림 4.87 부하 추정 기능2)
+                    (Figure 4.87 Load Estimation 2)
 
 ![](../_assets/4.서보보드/부하추정3.png)
 
-                    (그림 4.88 부하 추정 기능3)
+                    (Figure 4.88 Load Estimation 3)
 
- * 부하추정 기능을 사용하여 부하 추정 후 저장할 툴 번호를 선택합니다.
+ * Use the load estimation function to select the tool number to save after estimation.
 
 ![](../_assets/4.서보보드/부하추정4.png)
 
-                    (그림 4.89 부하 추정 기능4)
+                    (Figure 4.89 Load Estimation 4)
 
- * 정상 운전을 클릭하여 수행합니다.
+* Click "Normal Operation" to perform the task.
 
-    모터 On 스위치를 누르고 데드맨을 잡은 후 정상운전을 클릭합니다.
+    Press the Motor On switch, hold the deadman switch, and then click "Normal Operation."
 
 ![](../_assets/4.서보보드/부하추정5.png)
 
-                    (그림 4.90 부하 추정 기능5)
+                    (Figure 4.90 Load Estimation 5)
 
-* 부하 추정 운전이 완료되면 추정 결과가 화면에 보여집니다.
+* Once the load estimation operation is complete, the estimated results will be displayed on the screen.
 
 ![](../_assets/4.서보보드/부하추정6.png)
 
-                    (그림 4.91 부하 추정 기능6)
+                    (Figure 4.91 Load Estimation 6)
 
-(2)	로봇 동작 중 충돌요소가 있는지 점검하십시오.
+(2)	Check for any collision factors during robot operation.
 
-로봇 작업 영역에 로봇과 간섭 또는 충돌하는 부분이 있는지 확인하십시오. 로봇이 다른 기구물과 간섭이 발생할 경우 에러가 발생할 수 있습니다. 이 경우, 작업 프로그램을 수정하여 간섭이 발생하지 않도록 합니다.
+Check if there are any parts in the robot's work area that interfere or collide with the robot. If interference occurs between the robot and other mechanical structures, an error may be generated. In this case, modify the work program to prevent interference from occurring.
 
-(3) 브레이크 해제가 정상적으로 작동되는지 확인하십시오.
+(3) Verify that the brake release is operating normally.
 
-해당 축 브레이크의 해제기능에 문제가 있거나 브레이크 해제전압의 이상일 수 있습니다.
- * 개별 축 브레이크 해제 이상 점검
+There may be a problem with the brake release function of the corresponding axis or an abnormality in the brake release voltage.
+ * Inspect for abnormalities in individual axis brake release.
 
-    축 잠금 기능을 사용하여 해당 축 브레이크 해제 기능 작동을 확인하십시오.
-확인 하려는 축을 제외하고 축 잠금을 한 뒤 모터 온/오프를 반복하여 기구부의 모터에서 브레이크 해제 소리(“딸깍”)가 들리는지 확인하십시오.
+    Verify the operation of the brake release function for the corresponding axis using the Axis Lock function.
+After performing an Axis Lock on all axes except the one you wish to check, repeatedly turn the motor on/off and listen for a "click" sound of the brake releasing from the motor in the mechanical unit.
 
-    축 잠금 기능을 사용하는 방법은 아래와 같습니다.
-        시스템 -> 5. 초기화 -> 9. 축 잠금 설정 -> 확인 -> 개별 축 축잠금
+    The procedure for using the Axis Lock function is as follows:
+        System -> 5. Initialization -> 9. Axis Lock Setting -> OK -> Individual Axis Lock
 
 ![](../_assets/4.서보보드/축잠금1.png)
 
-                    (그림 4.92 축 잠금 설정화면1)
+                    (Figure 4.92 Axis Lock Setting Screen 1)
 
 ![](../_assets/4.서보보드/축잠금2.png)
 
-                    (그림 4.93 축 잠금 설정화면2)
+                    (Figure 4.93 Axis Lock Setting Screen 2)
 
 ![](../_assets/4.서보보드/축잠금3.png)
 
-                    (그림 4.94 축 잠금 설정화면3)
+                    (Figure 4.94 Axis Lock Setting Screen 3)
 
-    해당 축의 브레이크가 해제되지 않는다면 서보보드의 브레이크 출력상태를 확인해야 합니다. 브레이크 배선(CNB1, CNB7, CNB8 커넥터)를 제거하고 브레이크 전압을 출력하십시오. CNB1, CNB7 또는 CNB8 커넥터에서 해당 축의 브레이크 전압이 20V 이상으로 출력되는지 측정하십시오. 20V 이하의 전압으로 출력되는 축이 있다면 서보보드(BD640)의 고장이므로 고체하십시오.
+ If the brake for the corresponding axis does not release, the brake output status of the servo board must be checked. Remove the brake wiring (CNB1, CNB7, CNB8 connectors) and output the brake voltage. Measure whether the brake voltage for the corresponding axis is output at 20V or higher from the CNB1, CNB7, or CNB8 connectors. If there is an axis where the voltage output is below 20V, the servo board (BD640) is defective and must be replaced.
 
 ![](../_assets/4.서보보드/CNB_커넥터_배치.png)
 
-                    (그림 4.95 CNB1,CNB7,CNB8 커넥터의 핀배치)
+                    (Figure 4.95 Pin Assignment of CNB1, CNB7, and CNB8 Connectors)
 
- * 브레이크용 전원이상 점검
+ * Inspect for abnormalities in brake power supply
 
-    브레이크 전원 배선점검 순서는 다음과 같습니다.
+The inspection sequence for the brake power wiring is as follows:
 
-    1차: 브레이크 전원 배선에 관련된 커넥터들의 접촉 불량여부를 점거하십시오.
+Step 1: Inspect the connectors related to the brake power wiring for any poor contact.
 
-    2차: 브레이크 전원 배선의 단락 유무를 점검하십시오. 멀티미터(테스터기)와 같은 장비를 이용하여 1:1로 체크하십시오.
+Step 2: Check the brake power wiring for short circuits. Perform a 1:1 check using equipment such as a multimeter (tester).
 
-    파워전장모듈 내부 배선을 점검하십시오. Hi6-T15 제어기는 파워전장모듈이 없으므로 해당 사항이 없습니다.
+    * Inspect the internal wiring of the power electronic module. 
+      The Hi6-T15 controller is not applicable as it does not have a power electronic module.
 
 ![](../_assets/4.서보보드/전장모듈내부_전장보드.png)
 
-                    (그림 4.96 전장모듈 및 전장보드)
+                    (Figure 4.96 Electronic Module and Electronic Board)
 
- * 서보보드(BD640)를 점검 하십시오.
+ * Inspect the servo board (BD640).
 
-    파워전장모듈이 정상이라면 서보보드에서 브레이크 전원(DC24V)을 측정하십시오. 아래 그림의 빨간색 구역에 테스트 포인트(PAD24V0BK1)의 측정 값이 DC24V 이상 되어야 정상입니다. 만약 20V 미만이라면 브레이크 전원을 생성하는 전원 장치의 이상입니다. 전장모듈을 교체하십시오.
+If the power electronic module is normal, measure the brake power (DC24V) on the servo board. The measured value at the test point (PAD24V0BK1) in the red area of the figure below must be DC24V or higher to be considered normal. If it is less than 20V, there is an abnormality in the power supply unit that generates the brake power. Replace the electronic module.
 
     ![](../_assets/4.서보보드/서보보드_브레이크전원_측정.png)
 
-                    (그림 4.97 서보보드 브레이크 전원)
+                    (Figure 4.97 Servo Board Brake Power)
 
-(4)	모터 케이블 및 커넥터 연결 상태를 점검하십시오.
+(4)	Inspect the connection status of motor cables and connectors.
  
- * 제어기 내부 배선을 점검 하십시오.
- * 제어기와 로봇 간의 배선을 점검하십시오.
- * 로봇 기내 배선을 점검하십시오.
+ * Inspect the internal wiring of the controller.
+ * Inspect the wiring between the controller and the robot.
+ * Inspect the internal wiring of the robot.
 
-(5) 서보보드를 교체하여 이상여부를 확인하십시오.
+(5) Replace the servo board to check for abnormalities.
 
-서보보드에 이상이 있을 경우 에러가 발생할 수 있습니다. 보드를 교체하여 확인하십시오.
+An error may occur if there is an abnormality in the servo board. Replace the board to verify.
 
 ![](../_assets/4.서보보드/N제어기_서보보드_교체_en.png)
 
-                    (그림 4.98 N제어기 서보보드 교체)
+                    (Figure 4.98 Replacing Servo Board for N Controller)
 
 ![](../_assets/4.서보보드/T제어기_서보보드_교체_en.png)
 
-                    (그림 4.99 T제어기 서보보드 교체)
+                    (Figure 4.99 Replacing Servo Board for T Controller)
 
-(6)	구동부가 정상적으로 작동하는지 확인하십시오.
+(6)	Verify that the drive unit is operating normally.
 
-해당축의 구동부(모터, 감속기)가 정상적으로 작동하는지 확인하십시오.
+Check whether the drive unit (motor, reducer) of the corresponding axis is operating normally.
 
 ![](../_assets/4.서보보드/축구동부_en.png)
 
-                    (그림 4.100 구동부 정상동작 확인)
-[__SOURCE](4-servo-board-part/E02651.md)
-# 4.20. E02651. (O축) 모터 과부하 - 브레이크전압 저하
+                    (Figure 4.100 Verifying Normal Operation of the Drive Unit)# 4.20. E02651. (O Axis) Motor Overload (Brake Voltage Drop)
 
-### 1. 개요
+### 1. Overview
 
-모터 또는 구동장치가 무리하게 동작되고 있습니다. 모터 또는 구동장치가 설정치 보다 무리하게 동작하게 되면, 서보보드는 에러를 감지하고 로봇을 정지시킵니다.
-이 에러는 과부하 상태이면서 브레이크전압 저하가 검지되었을 때 발생합니다.
+The motor or drive unit is operating excessively. If the motor or drive unit operates more strainfully than the set value, the servo board detects an error and stops the robot.
+This error occurs when a drop in brake voltage is detected while in an overload state.
 
-### 2. 원인 및 점검
+### 2. Cause and Inspection
 
 {% hint style="info" %}
 
-(1)	브레이크 해제가 정상적으로 작동되는지 확인하십시오.
+(1)	Verify that the brake release is operating normally.
 
-    * 개별 축 브레이크 해제 이상 점검
-    * 브레이크용 전원 이상 점검
+* Inspect for abnormalities in individual axis brake release
+* Inspect for abnormalities in brake power supply
 
 {% endhint %}
 
-(1)	브레이크 해제가 정상적으로 작동되는지 확인하십시오.
+(1)	Verify that the brake release is operating normally.
 
-해당 축 브레이크의 해제기능에 문제가 있거나 브레이크 해제전압의 이상일 수 있습니다.
- * 개별 축 브레이크 해제 이상 점검
+There may be a problem with the brake release function of the corresponding axis or an abnormality in the brake release voltage.
+ * Inspect for abnormalities in individual axis brake release.
 
-    축 잠금 기능을 사용하여 해당 축 브레이크 해제 기능 작동을 확인하십시오.
-확인 하려는 축을 제외하고 축 잠금을 한 뒤 모터 온/오프를 반복하여 기구부의 모터에서 브레이크 해제 소리(“딸깍”)가 들리는지 확인하십시오.
+    Verify the operation of the brake release function for the corresponding axis using the Axis Lock function.
+After performing an Axis Lock on all axes except the one you wish to check, repeatedly turn the motor on/off and listen for a "click" sound of the brake releasing from the motor in the mechanical unit.
 
-    축 잠금 기능을 사용하는 방법은 아래와 같습니다.
+    The procedure for using the Axis Lock function is as follows:
 
-        시스템 -> 5. 초기화 -> 9. 축 잠금 설정 -> 확인 -> 개별 축 축잠금
+        System -> 5. Initialization -> 9. Axis Lock Setting -> OK -> Individual Axis Lock
 
 ![](../_assets/4.서보보드/축잠금1.png)
 
-                    (그림 4.101 축 잠금 설정화면1)
+                    (Figure 4.101 Axis Lock Setting Screen 1)
 
 ![](../_assets/4.서보보드/축잠금2.png)
 
-                    (그림 4.102 축 잠금 설정화면2)
+                    (Figure 4.102 Axis Lock Setting Screen 2)
 
 ![](../_assets/4.서보보드/축잠금3.png)
 
-                    (그림 4.103 축 잠금 설정화면3)
+                    (Figure 4.103 Axis Lock Setting Screen 3)
 
-    해당 축의 브레이크가 해제되지 않는다면 서보보드의 브레이크 출력상태를 확인해야 합니다. 브레이크 배선(CNB1, CNB7, CNB8 커넥터)를 제거하고 브레이크 전압을 출력하십시오. CNB1, CNB7 또는 CNB8 커넥터에서 해당 축의 브레이크 전압이 20V 이상으로 출력되는지 측정하십시오. 20V 이하의 전압으로 출력되는 축이 있다면 서보보드(BD640)의 고장이므로 고체하십시오.
+ If the brake for the corresponding axis does not release, the brake output status of the servo board must be checked. Remove the brake wiring (CNB1, CNB7, CNB8 connectors) and output the brake voltage. Measure whether the brake voltage for the corresponding axis is output at 20V or higher from the CNB1, CNB7, or CNB8 connectors. If there is an axis where the voltage output is below 20V, the servo board (BD640) is defective and must be replaced.
 
 ![](../_assets/4.서보보드/CNB_커넥터_배치.png)
 
-                    (그림 4.104 CNB1,CNB7,CNB8 커넥터의 핀배치)
+                    (Figure 4.104 Pin Assignment of CNB1, CNB7, and CNB8 Connectors)
 
- * 브레이크용 전원이상 점검
+ * Inspect for abnormalities in brake power supply
 
-    브레이크 전원 배선점검 순서는 다음과 같습니다.
+The inspection sequence for the brake power wiring is as follows:
 
-    1차: 브레이크 전원 배선에 관련된 커넥터들의 접촉 불량여부를 점거하십시오.
+Step 1: Inspect the connectors related to the brake power wiring for any poor contact.
 
-    2차: 브레이크 전원 배선의 단락 유무를 점검하십시오. 멀티미터(테스터기)와 같은 장비를 이용하여 1:1로 체크하십시오.
+Step 2: Check the brake power wiring for short circuits. Perform a 1:1 check using equipment such as a multimeter (tester).
 
-    파워전장모듈 내부 배선을 점검하십시오. Hi6-T15 제어기는 파워전장모듈이 없으므로 해당 사항이 없습니다.
+    * Inspect the internal wiring of the power electronic module. 
+      The Hi6-T15 controller is not applicable as it does not have a power electronic module.
 
 ![](../_assets/4.서보보드/전장모듈내부_전장보드.png)
 
-                    (그림 4.105 전장모듈 및 전장보드)
+                    (Figure 4.105 Electronic Module and Electronic Board)
 
- * 서보보드(BD640)를 점검 하십시오.
+ * Inspect the servo board (BD640).
 
-    파워전장모듈이 정상이라면 서보보드에서 브레이크 전원(DC24V)을 측정하십시오. 아래 그림의 빨간색 구역에 테스트 포인트(PAD24V0BK1)의 측정 값이 DC24V 이상 되어야 정상입니다. 만약 20V 미만이라면 브레이크 전원을 생성하는 전원 장치의 이상입니다. 전장모듈을 교체하십시오.
+If the power electronic module is normal, measure the brake power (DC24V) on the servo board. The measured value at the test point (PAD24V0BK1) in the red area of the figure below must be DC24V or higher to be considered normal. If it is less than 20V, there is an abnormality in the power supply unit that generates the brake power. Replace the electronic module.
 
-    ![](../_assets/4.서보보드/서보보드_브레이크전원_측정.png)
+![](../_assets/4.서보보드/서보보드_브레이크전원_측정.png)
 
-                    (그림 4.106 서보보드 브레이크 전원)
+                    (Figure 4.106 Servo Board Brake Power)
+# 4.21. E02652. (O Axis) Motor Overload (Load Estimation Not Performed)
 
-[__SOURCE](4-servo-board-part/E02652.md)
-# 4.21. E02652. (O축) 모터 과부하 - 부하추정 미실시
+### 1. Overview
 
-### 1. 개요
+The motor or drive unit is operating excessively. If the motor or drive unit operates more strainfully than the set value, the servo board detects an error and stops the robot.
+This error occurs when an overload state is detected and load estimation has not been performed.
 
-모터 또는 구동장치가 무리하게 동작되고 있습니다. 모터 또는 구동장치가 설정치 보다 무리하게 동작하게 되면, 서보보드는 에러를 감지하고 로봇을 정지시킵니다.
-이 에러는 과부하 상태이면서 부하추정이 미 실시 되었을 때 발생합니다.
-
-### 2. 원인 및 점검
+### 2. Cause and Inspection
 
 {% hint style="info" %}
 
-(1)	부하추정을 실시하고, 에러가 다시 발생 되는지 확인하십시오.
+(1)	Perform load estimation and check if the error recurs.
 
 {% endhint %}
 
-(1)	부하추정을 실시하고, 에러가 다시 발생 되는지 확인하십시오.
+(1)	Perform load estimation and check if the error recurs.
 
-부하를 확인하는 방법에는 계측기를 사용하는 방법이 가장 정확하지만 여의치 않을 경우에는 제어기 기능 중 부하추정 기능을 사용하여 확인할 수 있습니다. 부하추정 기능은 로봇 끝단에 설치되어 있는 툴에 대한 부분만 추정 가능합니다.
+While using a measuring instrument is the most accurate way to verify the load, if that is not feasible, you can use the load estimation function among the controller features. The load estimation function can only estimate the tool installed at the end of the robot.
 
-부하 추정 방법은 다음과 같습니다.
- * 부하추정 기능으로 들어갑니다.
+The load estimation procedure is as follows:
+ * Enter the load estimation function.
 
-        시스템 -> 6. 자동 캘리브레이션 -> 4. 부하추정 기능
+        System -> 6. Auto Calibration -> 4. Load Estimation
 
 ![](../_assets/4.서보보드/부하추정1.png)
 
-                    (그림 4.107 부하 추정 기능1)
+                    (Figure 4.107 Load Estimation 1)
 
 ![](../_assets/4.서보보드/부하추정2.png)
 
-                    (그림 4.108 부하 추정 기능2)
+                    (Figure 4.108 Load Estimation 2)
 
 ![](../_assets/4.서보보드/부하추정3.png)
 
-                    (그림 4.109 부하 추정 기능3)
+                    (Figure 4.109 Load Estimation 3)
 
- * 부하추정 기능을 사용하여 부하 추정 후 저장할 툴 번호를 선택합니다.
+ * Use the load estimation function to select the tool number to save after estimation.
 
 ![](../_assets/4.서보보드/부하추정4.png)
 
-                    (그림 4.110 부하 추정 기능4)
+                    (Figure 4.110 Load Estimation 4)
 
- * 정상 운전을 클릭하여 수행합니다.
+* Click "Normal Operation" to perform the task.
 
-    모터 On 스위치를 누르고 데드맨을 잡은 후 정상운전을 클릭합니다.
+    Press the Motor On switch, hold the deadman switch, and then click "Normal Operation."
 
 ![](../_assets/4.서보보드/부하추정5.png)
 
-                    (그림 4.111 부하 추정 기능5)
+                    (Figure 4.111 Load Estimation 5)
 
-* 부하 추정 운전이 완료되면 추정 결과가 화면에 보여집니다.
+* Once the load estimation operation is complete, the estimated results will be displayed on the screen.
 
 ![](../_assets/4.서보보드/부하추정6.png)
 
-                    (그림 4.112 부하 추정 기능6)
+                    (Figure 4.112 Load Estimation 6)
+# 4.22. E02653. (O Axis) motor overloaded (low-temperature friction increased)
 
-[__SOURCE](4-servo-board-part/E02653.md)
-# 4.22. E02653. (O축) 모터 과부하 - 저온 마찰 증가
+### 1. Overview
 
-### 1. 개요
+The motor or drive unit is operating excessively. If the motor or drive unit operates more strainfully than the set value, the servo board detects an error and stops the robot.
+This error occurs when an overload state is detected and the encoder temperature is low.
+Normally, at low temperatures (encoder at 5°C or below), the friction component increases due to the viscosity of the grease, requiring additional torque compared to normal conditions. Therefore, operating the robot at high speeds may trigger this error.
 
-모터 또는 구동장치가 무리하게 동작되고 있습니다. 모터 또는 구동장치가 설정치 보다 무리하게 동작하게 되면, 서보보드는 에러를 감지하고 로봇을 정지시킵니다.
-이 에러는 과부하 상태이면서 엔코더 온도가 저온일 때 발생합니다.
-통상 저온시(엔코더 5℃이하)는, 구리스 점성에 의한 마찰성분이 증가해서 정상시보다 부가적인 토크가 필요하므로 로봇을 고속으로 동작시키면 본 에러가 발생 할 수 있습니다.
-
-### 2. 원인 및 점검
+### 2. Cause and Inspection
 
 {% hint style="info" %}
 
-(1)	엔코더 온도가 정상치(약 15℃ 이상)가 될 때까지 저속구동(재생속도 30% 이하) 시킨 후, 정상속도로 재 가동하십시오 
+(1)	Operate the robot at low speed (playback speed of 30% or less) until the encoder temperature reaches a normal level (approximately 15°C or higher), then restart at normal speed. 
 
 {% endhint %}
 
-(1)	엔코더 온도가 정상치(약 15℃ 이상)가 될 때까지 저속구동(재생속도 30% 이하) 시킨 후, 정상속도로 재 가동하십시오
+(1)	Operate the robot at low speed (playback speed of 30% or less) until the encoder temperature reaches a normal level (approximately 15°C or higher), then restart at normal speed.
 
 ![](../_assets/4.서보보드/엔코더온도및재생속도.png)
 
-                    (그림 4.113 엔코더 온도 확인 화면)
+                    (Figure 4.113 Encoder Temperature Check Screen)
 
+# 4.23. E02670. (O Axis) command value abnormal
 
-[__SOURCE](4-servo-board-part/E02670.md)
-# 4.23. E02670. (O축) 지령치 이상
+### 1. Overview
 
-### 1. 개요
+An error may occur due to a communication abnormality between the mainboard and the servo board or because of rapid motion changes. If a communication problem occurs between the boards, normal commands cannot be transmitted from the mainboard to the servo board. In this case, the robot may exhibit abnormal behavior due to incorrect commands, so the system triggers an error and stops the robot. Additionally, in the case of rapid motion, the drive unit may fail to follow the position commands, which also triggers an error and stops the robot.
 
-메인보드와 서보보드간 통신이상이나 급격한 모션변화에 의해서 에러가 발생할 수 있습니다. 보드간 통신 문제가 발생하면 정상적인 지령이 메인보드에서 서보보드로 전달되지 못하며, 이때 잘못된 지령으로 로봇이 이상 동작을 할 수 있으므로 에러를 발생시키고 로봇을 정지시킵니다. 또한 급격한 모션의 경우 구동장치가 위치 지령을 추종하지 못하는 경우가 발생되므로 에러를 발생시키고 로봇을 정지시킵니다.
-
-### 2. 원인 및 점검
+### 2. Cause and Inspection
 
 {% hint style="info" %}
 
-(1)	메인보드와 서보보드가 올바로 설치되어 있는지 점검하십시오.
+(1)	Check if the mainboard and the servo board are installed correctly.
 
-    * 보드가 올바르게 설치되어 있는지 점검하십시오.
-    * 보드 이상여부를 점검하십시오.
+    * Inspect whether the boards are installed properly.
+    * Inspect the boards for any abnormalities or defects.
 
-(2)	로봇이 급격하게 동작하는 작업 프로그램이 있는지 점검하십시오.
+(2)	Check if there is a work program that causes the robot to move abruptly.
 
 {% endhint %}
 
 
-(1)	메인보드와 서보보드가 올바르게 설치되어 있는지 점검하십시오.
+(1)	Check if the mainboard and the servo board are installed correctly.
 
-메인보드와 서보보드가 랙에 올바로 설치되어 있지 않거나 보드에 문제가 있으면 통신에 문제가 되어 에러가 발생할 수 있습니다.
+If the mainboard and servo board are not correctly installed in the rack, or if there is a problem with the boards themselves, communication issues may arise, leading to errors.
 
 ---
 
 <div style="border: 2px solid #f5c542; background-color: #fff8e1; padding: 1em; border-radius: 8px;">
 
-### ⚠️ 경고(Warning)
+### ⚠️ Warning
 
-**이전 작업 프로그램을 보호하기 위해서 보드를 랙에서 제거하기 전에 반드시 메인보드의 모든 파일을 USB 메모리를 이용하여 백업하시기 바랍니다.**
+**To protect existing work programs, please ensure all files on the mainboard are backed up to a USB memory device before removing the boards from the rack.**
 
 </div>
 
 ---
 
-USB 메모리에 메인보드 파일을 백업하는 방법은 다음과 같습니다.
+The procedure for backing up mainboard files to a USB memory device is as follows:
 
 ![](../_assets/4.서보보드/USB연결.png)
 
-                    (그림 4.114 TP USB 연결)
+                    (Figure 4.114 Connecting USB to TP)
                 
-USB가 TP에서 인식되면 화면 위에 다음과 같은 아이콘으로 표시됩니다.
+When the USB is recognized by the TP, the following icon will appear at the top of the screen.
 
 ![](../_assets/4.서보보드/USB인식.png)
 
-                    (그림 4.115 TP USB 인식)
+                    (Figure 4.115 TP USB Recognition)
 
-파일을 백업하기 위해서 아래의 경로로 진입합니다.
+To back up files, navigate to the following path:
 
-            서비스 -> 5. 파일관리
+            Service -> 5. File Management
 
 ![](../_assets/4.서보보드/백업1.png)
 
-                    (그림 4.116 백업 단계1)
+                    (Figure 4.116 Backup Step 1)
 
 ![](../_assets/4.서보보드/백업2.png)
 
-                    (그림 4.117 백업 단계2)
+                    (Figure 4.117 Backup Step 2)
 
-Project 폴더를 USB에 복사합니다.
+Copy the "Project" folder to the USB.
 
-    * 보드가 올바르게 설치되어 있는지 점검하십시오.
+    * Inspect whether the boards are installed properly.
 
-        보드 간 인터페이스인 EtherCAT 케이블 연결 상태를 점검하십시오. 제거 후 다시 설치하시기 바랍니다.
+        Check the connection status of the EtherCAT cable, which serves as the interface between the boards. Please remove and then reinstall it.
 
 ![](../_assets/4.서보보드/보드_인터페이스_en.png)
 
-                    (그림 4.118 N제어기 EtherCAT 케이블 연결)
+                    (Figure 4.118 Connecting EtherCAT Cable for N Controller)
 
 ![](../_assets/4.서보보드/T제어기-보드인터페이스_en.png)
 
-                    (그림 4.119 T제어기 EtherCAT 케이블 연결)
+                    (Figure 4.119 Connecting EtherCAT Cable for T Controller)
 
 
-    * 보드 이상여부를 점검하십시오.
-        보드 이상 여부를 판단하기 위해서 보드 교체를 하시기 바랍니다.
+    * Inspect the boards for any abnormalities.
+        Please replace the board to determine if there is a defect.
 
         
 
-(2)	로봇이 급격하게 동작하는 작업 프로그램이 있는지 점검하십시오.
-로봇 동작 중 급격하게 모션이 변하는 구간에서 에러가 발생하는지 확인하십시오.
-만약, 급격한 모션 중에 에러가 발생한다면 작업 프로그램의 수정이 필요합니다.
+(2)	Check if there is a work program that causes the robot to move abruptly.
+Verify whether the error occurs during segments where the motion changes rapidly.
+If the error occurs during abrupt motion, the work program must be modified.
 
-급격한 모션에서 에러가 발생하는 원인은 다음과 같습니다. 작업 프로그램을 수행할 때 짧은 구간을 이동하면서 불가피하게 로봇의 자세가 많이 틀어지는 경우가 있습니다. 이 때, 로봇의 축 속도가 갑자기 높아지게 되고 이를 서보보드에서 추종하지 못할 경우 에러가 발생하게 됩니다. 해결하는 방법은 자세가 급격히 변하는 지점의 티칭 포인트를 수정하거나 로봇 자세를 바꾸어 주면 됩니다. 
+The reasons for errors occurring during abrupt motions are as follows: When executing a work program, there are cases where the robot's posture inevitably changes significantly while moving through a short interval. In such instances, the axial speed of the robot increases suddenly. If the servo board cannot follow this command, an error is triggered. To resolve this, you should modify the teaching points at the location where the posture changes abruptly or adjust the robot's orientation.
+# 4.24. E02680. (O Axis) Maximum Speed Exceeded
 
+### 1. Overview
 
-[__SOURCE](4-servo-board-part/E02680.md)
-# 4.24. E02680. (O축) 최고속 초과
+The speed of the robot axis has exceeded the maximum limit. Since the robot is in a state where it cannot be controlled normally, the system processes this as an error and stops the robot.
 
-### 1. 개요
+When sending commands from the mainboard to the servo board, restricted commands are sent so as not to exceed the maximum speed. However, if the robot fails to follow these commands and a speed overshoot occurs, a maximum speed exceeded error may be triggered.
 
-로봇 축의 속도가 최고속을 초과하여 동작하였습니다. 로봇이 정상적으로 제어되지 않는 상태이므로 에러로 처리하여 로봇을 정지시킵니다.
-
-메인보드에서 서보보드로 지령을 보낼 때에는 최고속을 초과하지 않도록 제한된 지령을 보냅니다. 이렇게 만들어진 지령을 로봇이 쫓아가지 못하다가 속도에 overshoot가 발생할 때 최고속 초과 에러가 발생할 수 있습니다.
-
-
-### 2. 원인 및 점검
+### 2. Cause and Inspection
 
 {% hint style="info" %}
 
-(1)	툴 데이터가 정확히 입력되어 있는지 확인하십시오.
+(1)	Verify that the tool data is entered correctly.
 
-(2)	로봇 기종이 맞게 설정되어 있는지 확인하십시오.
+(2)	Verify that the robot model is configured correctly.
 
-(3)	서보 보드(BD640)와 main com의 버전을 확인하십시오.
+(3)	Check the versions of the servo board (BD640) and the main com.
 
-(4)	로봇 자세가 특이점 근방인지 확인하십시오.
+(4)	Check if the robot's posture is near a singularity.
 
-(5)	부가축은 가감속 파라미터 설정값과 동작중 부하율을 확인하십시오.
+(5)	For additional axes, check the acceleration/deceleration parameter settings and the load factor during operation.
 
-(6)	작업 프로그램을 조정하십시오.
+(6)	Adjust the work program.
 
 {% endhint %}
 
-(1)	툴 데이터가 정확히 입력되어 있는지 확인하십시오. 
+(1)	Verify that the tool data is entered correctly. 
 
-툴 중량이나 이너셔가 제어기에 등록되어 있는 값과 크게 다르면 로봇 제어 성능이 악화되면서 최고속 초과에러가 발생할 수 있습니다. 툴중량과 이너셔는 아래 메뉴에서 툴 번호에 따라 등록할 수 있습니다.
+If the tool weight or inertia differs significantly from the values registered in the controller, robot control performance may deteriorate, leading to a maximum speed exceeded error. The tool weight and inertia can be registered for each tool number in the menu below:
 
-                시스템 -> 3. 로봇파라미터 -> 툴 데이터
+                System -> 3. Robot Parameters -> Tool Data
 
 ![](../_assets/4.서보보드/툴데이터.png)
 
-                    (그림 4.120 툴 데이터 확인)
+                    (Figure 4.120 Checking Tool Data)
 
-툴 중량이나 이너셔를 자동으로 설정하기 위해서는 아래의 메뉴에서 부하추정 기능을 사용할 수 있습니다. 
+To automatically set the tool weight or inertia, you can use the load estimation function in the following menu:
 
-* 부하추정 기능으로 들어갑니다.
+* Enter the load estimation function.
 
-        시스템 -> 6. 자동 캘리브레이션 -> 4. 부하추정 기능
+        System -> 6. Auto Calibration -> 4. Load Estimation
 
 ![](../_assets/4.서보보드/부하추정1.png)
 
-                    (그림 4.121 부하 추정 기능1)
+                    (Figure 4.121 Load Estimation 1)
 
 ![](../_assets/4.서보보드/부하추정2.png)
 
-                    (그림 4.122 부하 추정 기능2)
+                    (Figure 4.122 Load Estimation 2)
 
 ![](../_assets/4.서보보드/부하추정3.png)
 
-                    (그림 4.123 부하 추정 기능3)
+                    (Figure 4.123 Load Estimation 3)
 
- * 부하추정 기능을 사용하여 부하 추정 후 저장할 툴 번호를 선택합니다.
+ * Use the load estimation function to select the tool number to save after estimation.
 
 ![](../_assets/4.서보보드/부하추정4.png)
 
-                    (그림 4.124 부하 추정 기능4)
+                    (Figure 4.124 Load Estimation 4)
 
- * 정상 운전을 클릭하여 수행합니다.
+ * Click "Normal Operation" to perform the task.
 
-    모터 On 스위치를 누르고 데드맨을 잡은 후 정상운전을 클릭합니다.
+    Press the Motor On switch, hold the deadman switch, and then click "Normal Operation."
 
 ![](../_assets/4.서보보드/부하추정5.png)
 
-                    (그림 4.125 부하 추정 기능5)
+                    (Figure 4.125 Load Estimation 5)
 
-* 부하 추정 운전이 완료되면 추정 결과가 화면에 보여집니다.
+* Once the load estimation operation is complete, the estimated results will be displayed on the screen.
 
 ![](../_assets/4.서보보드/부하추정6.png)
 
-                    (그림 4.126 부하 추정 기능6)
+                    (Figure 4.126 Load Estimation 6)
 
-(2)	로봇 기종이 맞게 설정되어 있는지 확인하십시오.
+(2)	Verify that the robot model is configured correctly.
 
 ![](../_assets/4.서보보드/로봇모델확인.png)
 
-                    (그림 4.127 로봇 모델 확인)
+                    (Figure 4.127 Checking Robot Model)
 
-    TP화면상의 등록된 로봇기종과 실제 설치된 로봇이 일치하는지 확인하십시오.
+    Verify that the robot model registered on the TP screen matches the actually installed robot.
 
-(3)	서보 보드(BD640)와 main com의 버전을 확인하십시오. 
+(3)	Check the versions of the servo board (BD640) and the main com. 
 
-서보 보드(BD640)와 main com버전의 호환성이 깨져 발생할 수 있습니다. 특히 모듈을 교체한 상황이라면 버전업을 진행하여 각 모듈의 버전을 현재 메인 com 버전에 맞춰주십시오.
+This error may occur if the compatibility between the servo board (BD640) and the main com version is compromised. Especially if a module has been replaced, perform a version update to match the version of each module with the current main com version.
 
-각 모듈의 버전은 아래 경로에서 확인할 수 있습니다.
+The version of each module can be checked at the following path:
 
-                서비스 -> 7. 시스템 진단 -> 1. 시스템 버전
-
+                Service -> 7. System Diagnosis -> 1. System Version
 
 ![](../_assets/4.서보보드/TP버전확인.png)
 
-                    (그림 4.127 모듈 버전 확인)
+                    (Figure 4.128 Checking Module Version)
 
 
-(4)	로봇 자세가 특이점 근방인지 확인하십시오. 
+(4)	Check if the robot's posture is near a singularity. 
 
-특이점 근방의 자세에서 PtP 보간이 아닌 L 보간이나 C 보간을 실행하면 에러가 발생할 수 있습니다. 특이점은 B축이 0deg에 가까운 경우와 손목부 중심이 S축 회전 중심축과 가까울 때 발생합니다. 특이점 근방을 지나야 할 때에는 해당 스텝을 PtP 보간으로 변경하여 주십시오.
+An error may occur if L-interpolation or C-interpolation is executed instead of PtP-interpolation in a posture near a singularity. Singularities occur when the B-axis is close to 0 degrees or when the center of the wrist is close to the rotation axis of the S-axis. If the robot must pass near a singularity, change the corresponding step to PtP-interpolation.
 
 ![](../_assets/4.서보보드/로봇특이자세.png)
 
-                    (그림 4.128 특이점 자세 확인)
+                    (Figure 4.129 Identifying Singularity Postures)
 
-(5)	부가축은 가감속 파라미터 설정값과 동작중 부하율을 확인하십시오. 
+(5)	For additional axes, check the acceleration/deceleration parameter settings and the load factor during operation. 
 
-부가축 가감속 파라미터의 최고속이 너무 높거나 가속시간이 너무 짧아서 모터토크가 부족할 수 있습니다. 로봇 동작중 부하율을 관찰하면서 I/Ip 최고속을 낮추거나 가속시간을 크게 조정해야 합니다.
+The motor torque may be insufficient if the maximum speed in the additional axis acceleration/deceleration parameters is too high or if the acceleration time is too short. While monitoring the load factor during robot operation, you should lower the I/Ip maximum speed or increase the acceleration time.
 
-                시스템 -> 3. 로봇 파라미터 -> 34. 가감속 파라미터
+                System -> 3. Robot Parameters -> 34. Accel/Decel Parameters
 
 ![](../_assets/4.서보보드/부가축가감속.png)
 
-                    (그림 4.129 부가축 가감속 확인)
+                    (Figure 4.130 Checking Additional Axis Accel/Decel)
 
-(6)	작업 프로그램을 조정하십시오. 
+(6)	Adjust the work program. 
 
-작업 프로그램의 해당 스텝 혹은 직전 스텝의 스텝 조건을 변경하십시오. 첫 번째로 “Acc=0”으로 변경해 보고, 두 번째는 스텝의 속도를 낮춰 보고, 세 번째는 이동 경로에 스텝을 하나 추가해 보는 방식으로 프로그램의 조건을 변경하십시오.
+Modify the step conditions of the corresponding step or the immediately preceding step in the work program. Change the program conditions by first trying to change to "Acc=0," second by lowering the step speed, and third by adding an additional step to the movement path.
+# 4.25. E02780. (O Axis) Servo Lock Cannot Be Maintained – Current Generation Error
 
+### 1. Overview
 
-[__SOURCE](4-servo-board-part/E02780.md)
-# 4.25. E02780. (O축) 서보락 유지 불가 - 전류 생성 이상
+Current for driving the motor or drive unit is not being supplied. The current generated to operate the robot or drive unit is failing to be delivered normally. In such cases, the controller detects an error, prevents the brake from releasing, and cuts off the current supplied to the motor or drive unit. This can be attributed to connection abnormalities between the motor and controller, wiring defects, or issues in the current generation circuit. Additionally, an error may occur if the parameters required for motor control (Gain and maximum current) do not match the actual motor due to an incorrect robot model registration.
 
-### 1. 개요
-
-모터 또는 구동장치에 구동을 위한 전류가 공급되지 못하고 있습니다. 로봇 또는 구동장치를 동작시키기 위해 만들어진 전류가 정상적으로 공급되지 못하고 있습니다. 이와 같은 경우 제어기에서는 에러를 감지하며 브레이크 해제를 막고 모터 또는 구동장치에 공급되는 전류를 차단합니다. 모터와 제어기 간의 연결 이상, 배선 불량, 또는 전류 생성 회로의 문제로 판단할 수 있습니다. 또한 로봇 기종 등록 오류로 인해 모터 제어에 필요한 파라미터(Gain 및 최대 전류)가 실제 모터와 일치하지 않아 에러가 발생할 수 있습니다.
-
-### 2. 원인 및 점검
+### 2. Cause and Inspection
 
 {% hint style="info" %}
 
-(1)	로봇 기종이 맞게 설정되어 있는지 확인하십시오.
+(1)	Verify that the robot model is configured correctly.
 
-(2)	모터 파워 라인 및 엔코더 통신 라인을 점검하십시오.
+(2)	Inspect the motor power lines and encoder communication lines.
 
-    * 로봇과 제어기를 연결하는 배선을 확인하십시오.
-    * 로봇 기내 배선을 확인하십시오.
-    * 제어기 내부 배선을 확인하십시오.
+* Check the wiring connecting the robot and the controller.
+* Check the internal wiring of the robot.
+* Check the internal wiring of the controller.
 
-(3) 제어기 내부 서보보드와 앰프보드간의 케이블을 점검하십시오.
+(3) Inspect the cables between the servo board and the amplifier board inside the controller.
 
-(4) 기타의 부품을 교체하십시오.
+(4) Replace other components.
 
-(5) BD640 전원 계통 라인 점검(노이즈, 배선 short 등의 이슈)
+(5) Inspect the BD640 power system lines (Issues such as noise, wiring shorts, etc.).
 
 {% endhint %}
 
-(1)	로봇 기종이 맞게 설정되어 있는지 확인하십시오.
+(1)	Verify that the robot model is configured correctly.
 
-TP화면상의 등록된 로봇기종과 실제 설치된 로봇이 일치하는지 확인하십시오.
+Check whether the robot model registered on the TP screen matches the actually installed robot.
 
 ![](../_assets/4.서보보드/로봇모델확인.png)
 
-                    (그림 4.130 로봇 모델 확인)
+                    (Figure 4.130 Checking Robot Model)
 
-(2)	모터 파워 및 엔코더 통신 라인을 점검하십시오.
+(2)	Inspect the motor power and encoder communication lines.
 
-제어기 전원을 Off하고 해당축 구동장치의 U, V, W를 분리하여 각 상의 단락 및 단선 유무를 점검하십시오. 멀티미터(테스터기)와 같은 장비를 이용하여 각 상의 배선을 1:1로 체크하십시오. 엔코더 통신 선의 단선 여부를 확인하십시오.
+Turn off the controller power and disconnect the U, V, and W phases of the corresponding axis drive unit to check for any short circuits or open circuits. Perform a 1:1 check of the wiring for each phase using equipment such as a multimeter (tester). Also, verify whether there is any disconnection in the encoder communication lines.
 
 ---
 
 <div style="border: 2px solid #f5c542; background-color: #fff8e1; padding: 1em; border-radius: 8px;">
 
-### ⚠️ 경고(Warning)
+### ⚠️ Warning
 
-**전원이 투입된 상태에서 점검시 감전의 위험이 있으므로 주의하십시오**
+**Exercise extreme caution when inspecting while the power is on, as there is a risk of electric shock.**
 
 </div>
 
 ---
 
-    * 로봇과 제어기를 연결하는 배선을 확인하십시오
-        제어기와 로봇 또는 구동장치를 연결하는 배선을 제거하여 각 상(U상, V상, W상)이 서로 또는 접지와 단락된 곳이 있는지 확인하시고, 단락된 곳이 있으면 해당하는 배선을 교체하셔야 합니다.
+* Check the wiring connecting the robot and the controller.
+        Remove the wiring connecting the controller to the robot or drive unit. Check if there are any short circuits between the phases (U, V, W) or between a phase and the ground. If a short circuit is found, the corresponding wiring must be replaced.
+
 
 
 ![](../_assets/4.서보보드/N제어기_로봇_제어기_브레이크_배선.png)
 
-                    (그림 4.131 N제어기 로봇 간 배선)
+                    (Figure 4.131 Wiring between N Controller and Robot)
 
 ![](../_assets/4.서보보드/T제어기_로봇_제어기_브레이크배선.png)
 
-                    (그림 4.132 T제어기 로봇 간 배선)
+                    (Figure 4.132 Wiring between T Controller and Robot)
 
-    * 로봇 내부의 기내배선을 점검하십시오.
-        로봇 내부에 모터와 연결되어 있는 배선에 단락 또는 잘못 배선된 곳이 있는지 점검이 필요합니다.
+ * Inspect the internal wiring of the robot.
+        It is necessary to inspect the wiring connected to the motor inside the robot for any short circuits or incorrect wiring.
 
 ![](../_assets/4.서보보드/로봇기내배선.png)
 
-                    (그림 4.133 로봇 기내 배선)
+                    (Figure 4.133 Internal Robot Wiring)
 
 
-    * 제어기 내부 배선을 점검하십시오.
-        제어기 내부에 앰프와 설치되어 있는 배선 점검이 필요합니다.
+ * Inspect the internal wiring of the controller.
+        It is necessary to inspect the wiring installed with the amplifiers inside the controller.
 
 ![](../_assets/4.서보보드/N제어기_브레이크_출력_배선_en.png)
 
-                    (그림 4.134 N제어기 내부 배선 점검)
+                    (Figure 4.134 Inspecting Internal Wiring of N Controller)
 
 ![](../_assets/4.서보보드/T제어기_브레이크_출력_배선.png)
 
-                    (그림 4.135 T제어기 내부 배선 점검)
+                    (Figure 4.135 Inspecting Internal Wiring of T Controller)
 
 
-(2)	제어기 내부 서보 보드와 앰프보드 간의 커넥터(Board to Board)을 점검하십시오.
+(2)	Inspect the Board-to-Board connectors between the servo board and the amplifier board inside the controller.
 
-서보보드와 앰프보드 간의 연결 및 체결되는 커넥터(보드 to 보드)의 설치가 올바른지 점검하십시오. 체결 상태가 불량일 경우 해당 에러가 발생할 수 있습니다.
+Check whether the connectors (Board-to-Board) that link and secure the servo board to the amplifier board are installed correctly. If the connection is poor, this error may occur.
 
 ![](../_assets/4.서보보드/서보보드_앰프보드_b2b_en.png)
 
-                    (그림 4.136 N제어기 서보 보드와 앰프보드의 연결)
+                    (Figure 4.136 Connection between Servo Board and Amplifier Board in N Controller)
 
 ![](../_assets/4.서보보드/T제어기_서보보드_앰프보드_en.png)
 
-                    (그림 4.137 T제어기 서보 보드와 앰프보드의 연결)
+                    (Figure 4.137 Connection between Servo Board and Amplifier Board in T Controller)
 
-(3)	기타의 부품을 교체하십시오.
+(3)	Replace other components.
 
-서보보드(BD640) → 앰프 보드 → 와이어 하네스 → 모터 → PSM의 순으로 교체하여 에러발생 여부를 확인하십시오.
+Check for errors by replacing components in the following order: Servo Board (BD640) → Amplifier Board → Wire Harness → Motor → PSM (Power Supply Module).
 
 ![](../_assets/4.서보보드/N제어기_모터및구동장치_en.png)
 
-                    (그림 4.138 N제어기 구동 부품)
+                    (Figure 4.138 Drive Components for N Controller)
 
 ![](../_assets/4.서보보드/T제어기_모터및구동장치_en.png)
 
-                    (그림 4.138 T제어기 구동 부품)
+                    (Figure 4.139 Drive Components for T Controller)
 
-(5) BD640 전원 계통 라인을 점검하십시오.
+(5) Inspect the BD640 power system lines.
 
-해당에러와 함께 E64003 서보 보드(BD640) 상태 이상 검지, E02764 세이프티 보드(BD632)에러, E02500 회생방전 저항 과열, E02504 AC 입력 전압 초과, E02505 AMP PN 과전압 또는 방전 이상, E02506 AMP PN 저전압, E62850 MCON1 입력 배선 노이즈, E62851 MCON2 입력 배선 노이즈 등의 에러가 같이 발생한다면 BD640 및 BD632의 전원 계통(노이즈, 와이어하네스 배선 상태 등)을 점검하여야 합니다.
+If this error occurs simultaneously with other errors such as E64003 (Servo board (BD640) status abnormality detected), E02764 (Safety board (BD632) error), E02500 (Regenerative discharge resistor overheat), E02504 (AC input voltage exceeded), E02505 (AMP PN overvoltage or discharge abnormality), E02506 (AMP PN undervoltage), E62850 (MCON1 input wiring noise), or E62851 (MCON2 input wiring noise), you must inspect the power systems of the BD640 and BD632 (checking for noise, wire harness wiring status, etc.).
 
-공정 내 배선 Short 발생으로 보드 24V 전원 및 그라운드 상태 이상으로 IO 신호들에 대한 에러가 다발로 발생할 수 있습니다. BD640 및 BD632의 전원 계통 (노이즈, 와이어하네스 배선 상태 등)의 점검이 필요합니다. 
-[__SOURCE](4-servo-board-part/E02781.md)
-# 4.26. E02781. (O축) 서보락 유지 불가 - 파라미터 이상
+[Image of a wiring diagram showing the 24V DC power distribution system and ground connections for an industrial robot controller]
 
-### 1. 개요
+A short circuit in the factory wiring can cause abnormalities in the 24V power supply and ground status of the boards, leading to multiple errors related to I/O signals. It is necessary to inspect the power systems (noise, wire harness wiring status, etc.) of the BD640 and BD632.# 4.26. E02781. (O Axis) Servo Lock Cannot Be Maintained – Parameter Error
 
-모터 또는 구동장치에 구동을 위한 전류가 공급되지 못하고 있습니다. 로봇 또는 구동장치를 동작시키기 위해 만들어진 전류가 정상적으로 공급되지 못하고 있습니다. 이와 같은 경우 제어기에서는 에러를 감지하며 브레이크 해제를 막고 모터 또는 구동장치에 공급되는 전류를 차단합니다. 모터와 제어기 간의 연결 이상, 배선 불량, 또는 전류 생성 회로의 문제로 판단할 수 있습니다. 또한 로봇 기종 등록 오류로 인해 모터 제어에 필요한 파라미터(Gain 및 최대 전류)가 실제 모터와 일치하지 않아 에러가 발생할 수 있습니다.
+### 1. Overview
 
-### 2. 원인 및 점검
+Current for driving the motor or drive unit is not being supplied. The current generated to operate the robot or drive unit is failing to be delivered normally. In such cases, the controller detects the error, prevents the brake from releasing, and cuts off the current supplied to the motor or drive unit. This can be attributed to connection abnormalities between the motor and the controller, wiring defects, or issues in the current generation circuit. Additionally, an error may occur if the parameters required for motor control (Gain and maximum current) do not match the actual motor due to an incorrect robot model registration.
+
+### 2. Cause and Inspection
 
 {% hint style="info" %}
 
-(1)	로봇 기종이 맞게 설정되어 있는지 확인하십시오.
+(1)	Verify that the robot model is configured correctly.
 
-(2)	모터 파워 라인 및 엔코더 통신 라인을 점검하십시오.
+(2)	Inspect the motor power lines and encoder communication lines.
 
-    * 로봇과 제어기를 연결하는 배선을 확인하십시오.
-    * 로봇 기내 배선을 확인하십시오.
-    * 제어기 내부 배선을 확인하십시오.
+* Check the wiring connecting the robot and the controller.
+* Check the internal wiring of the robot.
+* Check the internal wiring of the controller.
 
-(3) 제어기 내부 서보보드와 앰프보드간의 케이블을 점검하십시오.
+(3) Inspect the cables between the servo board and the amplifier board inside the controller.
 
-(4) 기타의 부품을 교체하십시오.
+(4) Replace other components.
 
 {% endhint %}
 
-(1)	로봇 기종이 맞게 설정되어 있는지 확인하십시오.
+(1)	Verify that the robot model is configured correctly.
 
-TP화면상의 등록된 로봇기종과 실제 설치된 로봇이 일치하는지 확인하십시오.
+Check whether the robot model registered on the TP screen matches the actually installed robot.
 
 ![](../_assets/4.서보보드/로봇모델확인.png)
 
-                    (그림 4.130 로봇 모델 확인)
+                    (Figure 4.130 Checking Robot Model)
 
-(2)	모터 파워 및 엔코더 통신 라인을 점검하십시오.
+(2)	Inspect the motor power and encoder communication lines.
 
-제어기 전원을 Off하고 해당축 구동장치의 U, V, W를 분리하여 각 상의 단락 및 단선 유무를 점검하십시오. 멀티미터(테스터기)와 같은 장비를 이용하여 각 상의 배선을 1:1로 체크하십시오. 엔코더 통신 선의 단선 여부를 확인하십시오.
+Turn off the controller power and disconnect the U, V, and W phases of the corresponding axis drive unit to check for any short circuits or open circuits. Perform a 1:1 check of the wiring for each phase using equipment such as a multimeter (tester). Also, verify whether there is any disconnection in the encoder communication lines.
 
 ---
 
 <div style="border: 2px solid #f5c542; background-color: #fff8e1; padding: 1em; border-radius: 8px;">
 
-### ⚠️ 경고(Warning)
+### ⚠️ Warning
 
-**전원이 투입된 상태에서 점검시 감전의 위험이 있으므로 주의하십시오**
+**Exercise extreme caution when inspecting while the power is on, as there is a risk of electric shock.**
 
 </div>
 
 ---
 
-    * 로봇과 제어기를 연결하는 배선을 확인하십시오
-        제어기와 로봇 또는 구동장치를 연결하는 배선을 제거하여 각 상(U상, V상, W상)이 서로 또는 접지와 단락된 곳이 있는지 확인하시고, 단락된 곳이 있으면 해당하는 배선을 교체하셔야 합니다.
+* Check the wiring connecting the robot and the controller.
+        Remove the wiring connecting the controller to the robot or drive unit. Check if there are any short circuits between the phases (U, V, W) or between a phase and the ground. If a short circuit is found, the corresponding wiring must be replaced.
 
 
 ![](../_assets/4.서보보드/N제어기_로봇_제어기_브레이크_배선.png)
 
-                    (그림 4.131 N제어기 로봇 간 배선)
+                    (Figure 4.131 Wiring between N Controller and Robot)
 
 ![](../_assets/4.서보보드/T제어기_로봇_제어기_브레이크배선.png)
 
-                    (그림 4.132 T제어기 로봇 간 배선)
+                    (Figure 4.132 Wiring between T Controller and Robot)
 
-    * 로봇 내부의 기내배선을 점검하십시오.
-        로봇 내부에 모터와 연결되어 있는 배선에 단락 또는 잘못 배선된 곳이 있는지 점검이 필요합니다.
+* Inspect the internal wiring of the robot.
+        It is necessary to inspect the wiring connected to the motor inside the robot for any short circuits or incorrect wiring.
 
 ![](../_assets/4.서보보드/로봇기내배선.png)
 
-                    (그림 4.133 로봇 기내 배선)
+                    (Figure 4.133 Internal Robot Wiring)
 
 
-    * 제어기 내부 배선을 점검하십시오.
-        제어기 내부에 앰프와 설치되어 있는 배선 점검이 필요합니다.
+* Inspect the internal wiring of the controller.
+        It is necessary to inspect the wiring installed with the amplifiers inside the controller.
 
 ![](../_assets/4.서보보드/N제어기_브레이크_출력_배선_en.png)
 
-                    (그림 4.134 N제어기 내부 배선 점검)
+                    (Figure 4.134 Inspecting Internal Wiring of N Controller)
 
 ![](../_assets/4.서보보드/T제어기_브레이크_출력_배선.png)
 
-                    (그림 4.135 T제어기 내부 배선 점검)
+                    (Figure 4.135 Inspecting Internal Wiring of T Controller)
 
 
-(2)	제어기 내부 서보 보드와 앰프보드 간의 커넥터(Board to Board)을 점검하십시오.
+(2)	Inspect the Board-to-Board connectors between the servo board and the amplifier board inside the controller.
 
-서보보드와 앰프보드 간의 연결 및 체결되는 커넥터(보드 to 보드)의 설치가 올바른지 점검하십시오. 체결 상태가 불량일 경우 해당 에러가 발생할 수 있습니다.
+Check whether the connectors (Board-to-Board) that link and secure the servo board to the amplifier board are installed correctly. If the connection is poor, this error may occur.
 
 ![](../_assets/4.서보보드/서보보드_앰프보드_b2b_en.png)
 
-                    (그림 4.136 N제어기 서보 보드와 앰프보드의 연결)
+                    (Figure 4.136 Connection between Servo Board and Amplifier Board in N Controller)
 
 ![](../_assets/4.서보보드/T제어기_서보보드_앰프보드_en.png)
 
-                    (그림 4.137 T제어기 서보 보드와 앰프보드의 연결)
+                    (Figure 4.137 Connection between Servo Board and Amplifier Board in T Controller)
 
-(3)	기타의 부품을 교체하십시오.
+(3)	Replace other components.
 
-서보보드(BD640) → 앰프 보드 → 와이어 하네스 → 모터 → PSM의 순으로 교체하여 에러발생 여부를 확인하십시오.
+Check for errors by replacing components in the following order: Servo Board (BD640) → Amplifier Board → Wire Harness → Motor → PSM (Power Supply Module).
+
+[Image of a flowchart showing the component replacement sequence for troubleshooting a robot servo system: Servo Board to Amplifier Board to Wire Harness to Motor to Power Supply Module]
 
 ![](../_assets/4.서보보드/N제어기_모터및구동장치_en.png)
 
-                    (그림 4.138 N제어기 구동 부품)
+                    (Figure 4.138 Drive Components for N Controller)
 
 ![](../_assets/4.서보보드/T제어기_모터및구동장치_en.png)
 
-                    (그림 4.138 T제어기 구동 부품)
+                    (Figure 4.139 Drive Components for T Controller)
+# 4.27. E02472. (O Axis) Encoder Overheat Detected (OH Bit Set)
 
-[__SOURCE](4-servo-board-part/E02472.md)
-# 4.27. E02472. (O축) 엔코더 과열 검지 (OH 비트 감지)
+### 1. Overview
 
-### 1. 개요
+The servo board performs serial communication with the encoder to control the servo motor and receives encoder data periodically; this error occurs when the OH bit is detected from the encoder.
 
-서보보드에서는 서보 모터의 제어를 수행하기 위해 엔코더와 시리얼통신을 하여 주기적으로 엔코더 데이터를 수신합니다, 해당 에러는 엔코더로부터 OH 비트를 감지하였을 때 발생합니다.
-
-OH비트는 엔코더 내부 온도가 허용 범위를 초과하였을 때 세트 됩니다. 임계값이 되는 기준 온도는 약 90도 에서 100도 이며 이는 엔코더 모델 별로 사양이 상이하기 때문에 제조사 매뉴얼을 확인하십시오. 
+The OH bit is set when the internal temperature of the encoder exceeds the allowable range. The threshold reference temperature is approximately 90°C to 100°C; however, since specifications vary by encoder model, please check the manufacturer's manual.
 
 
-### 2. 원인 및 점검
+### 2. Cause and Inspection
 
 {% hint style="info" %}
 
-(1)	모터(엔코더)를 교체 시험하십시오
+(1)	Perform a replacement test of the motor (encoder)
 
-(2)	운전 조건(속도, 부하 등)을 확인하십시오
+(2)	Check the operating conditions (speed, load, etc.)
 
-(3)	엔코더 주변 환경 온도를 점검하십시오
+(3)	Inspect the ambient temperature around the encoder
 
-(4)	서보 보드(BD640)를 교체하십시오.
+(4)	Replace the servo board (BD640)
 
 {% endhint %}
 
-(1)	모터(엔코더)를 교체 시험하십시오.
+((1)	Perform a replacement test of the motor (encoder).
 
-서보 모터를 교체한 후 에러가 발생하지 않으면 서보모터의 불량입니다. 서보 모터를 정상품으로 교체하여 주십시오. 아래 그림은 HS165 로봇의 각 축 모터의 위치를 나타내고 있으며, 다른 로봇은 해당 기구 보수설명서를 참고하여 교체하시기 바랍니다.
+If the error does not occur after replacing the servo motor, the servo motor is defective. Please replace the servo motor with a normal one. The figure below shows the positions of the motors for each axis of the HS165 robot; for other robots, please refer to the corresponding mechanical maintenance manual for replacement.
 
 ![](../_assets/4.서보보드/로봇_모터_위치.png)
 
-                    (그림 4.36 모터(엔코더) 교체 위치)
+    (Figure 4.36 Motor (Encoder) Replacement Position)
 
-(2)	운전 조건(속도, 부하 등)을 확인하십시오.
+(2)	Check the operating conditions (speed, load, etc.).
 
-Job 프로그램을 동작시키면서 포화되는 엔코더 온도를 확인하십시오. 엔코더 온도는 아래와 같이 확인할 수 있습니다.
+Check the saturated encoder temperature while running the Job program. The encoder temperature can be checked as follows:
 
-            엔지니어링 모드 -> 창조정 -> 시스템 특성 -> 시스템 특성 리스트 - 모터/엔코더
+    Engineering Mode -> Window Adjustment -> System Characteristics -> System Characteristics List - Motor/Encoder
 
 ![](../_assets/4.서보보드/엔코더온도.png)
 
-                    (그림 4.37 엔코더 온도 확인)
+    (Figure 4.37 Checking Encoder Temperature)
 
-(3)	엔코더 주변 환경 온도를 점검하십시오.
+(3)	Inspect the ambient temperature around the encoder.
 
-외부 온도로 인하여 엔코더 내부 온도가 증가하여 에러가 발생할 수 있습니다.
+The internal temperature of the encoder may increase due to the external temperature, causing an error.
 
-(4)	서보보드를 교체 시험하십시오. 
+(4)	Perform a replacement test of the servo board. 
 
-서보 보드를 교체한 후 에러가 발생하지 않으면 서보 보드의 엔코더 데이터 수신부의 고장으로 판단할 수 있습니다.
+If the error does not occur after replacing the servo board, it can be determined as a failure in the encoder data receiving unit of the servo board.
 
 ![](../_assets/4.서보보드/N제어기_서보보드_교체_en.png)
 
-                    (그림 4.38 N제어기 서보보드 교체)
+    (Figure 4.38 Replacing N Controller Servo Board)
 
 ![](../_assets/4.서보보드/T제어기_서보보드_교체_en.png)
 
-                    (그림 4.39 T제어기 서보보드 교체)
+    (Figure 4.39 Replacing T Controller Servo Board)
+# 4.28. E02554. Initial Pre-Charge Relay Operation Failure
 
-[__SOURCE](4-servo-board-part/E02554.md)
-# 4.28. E02554. 초기 충전 릴레이 동작 이상
+### 1. Overview
 
-### 1. 개요
+The servo board (BD640) operates the initial charge relay during the motor power-on process and generates an error by monitoring the operating status of the initial charge relay. Since the initial charge relay functions to suppress inrush current, if a relay operation abnormality occurs, an error is generated for safety and the motor power application is cut off.
 
-서보 보드(BD640)에서는 모터 전원 인가 과정에서 초기 충전 릴레이를 동작시키고 초기 충전 릴레이의 동작상태를 감시하여 에러를 발생시킵니다. 초기 충전 릴레이는 돌입 전류를 억제하는 기능을 하므로, 릴레이 동작 이상 시 안전을 위하여 에러가 발생하고 모터 전원 인가를 차단합니다.
-
-### 2. 원인 및 점검
+### 2. Cause and Inspection
 
 {% hint style="info" %}
 
-(1)	모니터링 계통을 점검하십시오.
+(1)	Inspect the monitoring system.
 
-(2)	전장 보드를 점검 하십시오.
+(2)	Inspect the electronic boards.
 
-(3)	서보보드(BD640)을 점검 하십시오.
+(3)	Inspect the servo board (BD640).
 
 {% endhint %}
 
-(1)	모니터링 계통을 점검하십시오.
+(1)	Inspect the monitoring system.
 
-초기 충전 저항과 릴레이가 설치되어 있는 전장모듈(PSM or PDM)과 모니터링 신호를 수집하는 서보보드(BD640) 간의 케이블링을 확인합니다. 케이블 이름은 CNPRC 이고 서보보드 하단 왼쪽면을 통하여 전장 모듈로 들어 갑니다. 이 케이블의 커넥터 접속상태를 점검하십시오. Hi6-T 제어기의 경우, 해당 케이블배선이 없으므로 해당 사항 없습니다.
+Check the cabling between the electronic module (PSM or PDM), where the initial charge resistor and relay are installed, and the servo board (BD640), which collects monitoring signals. The cable name is CNPRC, and it enters the electronic module through the bottom left side of the servo board. Inspect the connector connection status of this cable. In the case of the Hi6-T controller, this is not applicable as there is no such cable wiring.
 
 ![](../_assets/4.서보보드/CNPRC케이블.png)
 
-                     (그림 4.40 CNPRC 케이블 연결)
+    (Figure 4.40 CNPRC Cable Connection)
 
-(2)	전장보드를 점검하십시오
+(2)	Inspect the electronic boards
 
-Hi6-N 제어기의 경우, 서보보드와 전장보드, 케이블 배선에 문제가 있을 수 있으므로 점검 또는 교체하십시오. Hi6-T 제어기의 경우, 해당 케이블배선이 없으므로 해당 사항 없습니다.
+In the case of the Hi6-N controller, there may be problems with the servo board, electronic board, or cable wiring, so please inspect or replace them. In the case of the Hi6-T controller, this is not applicable as there is no such cable wiring.
 
 ![](../_assets/4.서보보드/전장모듈내부_전장보드.png)
 
-                    (그림 4.41 전장모듈 내부 전장보드)
+    (그림 4.41 전장모듈 내부 전장보드)
 
-(3)	서보보드를 교체 시험하십시오. 
+(3)	Perform a replacement test of the servo board. 
 
-서보 보드를 교체한 후 에러가 발생하지 않으면 서보 보드의 엔코더 데이터 수신부의 고장으로 판단할 수 있습니다.
+If the error does not occur after replacing the servo board, it can be determined as a failure in the encoder data receiving unit of the servo board.
 
 ![](../_assets/4.서보보드/N제어기_서보보드_교체_en.png)
 
-                    (그림 4.42 N제어기 서보보드 교체)
+                    (Figure 4.42 Replacing N Controller Servo Board)
 
 ![](../_assets/4.서보보드/T제어기_서보보드_교체_en.png)
 
-                    (그림 4.43 T제어기 서보보드 교체)
+                    (Figure 4.43 Replacing T Controller Servo Board)
     
+# 4.29. E02560. Brake Power Supply Error
 
-[__SOURCE](4-servo-board-part/E02560.md)
-# 4.29. E02560. 브레이크 전원 이상
+### 1. Overview
 
-### 1. 개요
+While the servo board is monitoring the brake power (24V), an error is generated if the voltage falls outside the set normal range. If the brake power is not supplied normally, the fixation of the robot axes may become unstable; therefore, the servo controller detects this, generates an error, and stops the robot safely.
 
-브레이크용 전원(24V)를 서보보드에서 감시하는 중, 설정된 정상 전압 범위를 벗어나는 경우 에러를 발생시킵니다.브레이크 전원이 정상적으로 공급되지 않으면, 로봇 축 고정이 불안정해질 수 있으므로 서보 제어기는 이를 감지하여 에러를 발생시키고 로봇을 안전하게 정지시킵니다.
-
-### 2. 원인 및 점검
+### 2. Cause and Inspection
 
 {% hint style="info" %}
 
-(1)	브레이크 전원(24V)가 정상적으로 공급되고 있는지 확인하십시오
+(1)	Verify that the brake power (24V) is being supplied normally
 
-(2)	브레이크 전원 케이블의 단선 또는 접촉 불량 상태를 확인하십시오
+(2)	Check for any disconnection or poor contact in the brake power cable
 
-(3)	서보 보드(BD640)을 교체 하십시오.
+(3)	Replace the servo board (BD640)
 
 {% endhint %}
 
-(1)	브레이크 전원(24V)가 정상적으로 공급되고 있는지 확인하십시오
+(1)	Verify that the brake power (24V) is being supplied normally
 
-브레이크 전원 배선점검 순서는 다음과 같습니다.
+The inspection sequence for the brake power wiring is as follows:
 
-1차: 브레이크 전원 배선에 관련된 커넥터들의 접촉 불량여부를 점거하십시오.
+Step 1: Inspect the connectors related to the brake power wiring for any poor contact.
 
-2차: 브레이크 전원 배선의 단락 유무를 점검하십시오. 멀티미터(테스터기)와 같은 장비를 이용하여 1:1로 체크하십시오.
+Step 2: Check the brake power wiring for short circuits. Perform a 1:1 check using equipment such as a multimeter (tester).
 
-    * 파워전장모듈 내부 배선을 점검하십시오.
-        Hi6-T15 제어기는 파워전장모듈이 없으므로 해당 사항이 없습니다.
+    * Inspect the internal wiring of the power electronic module.
+        The Hi6-T15 controller is not applicable as it does not have a power electronic module.
 
 ![](../_assets/4.서보보드/전장모듈내부_전장보드.png)
 
-                    (그림 4.44 파워 전장 모듈)
+                    (Figure 4.44 Power Electronic Module)
 
-(2)	브레이크 전원 케이블의 단선 또는 접촉 불량 상태를 확인하십시오.
+(2)	Check for any disconnection or poor contact in the brake power cable.
 
-제어기 내부 배선을 점검 하십시오. Hi6-N 제어기의 경우, CNPB1(BD640) 커넥터와 CNPB1(전장보드) 커넥터 간의 배선을 점검하십시오. Hi6-T15제어기의 경우, CNPB1(BD602T) 커넥터와 브레이크 SMPS 출력 간의 배선을 점검하십시오.
+Inspect the internal wiring of the controller. For the Hi6-N controller, inspect the wiring between the CNPB1 (BD640) connector and the CNPB1 (electronic board) connector. For the Hi6-T15 controller, inspect the wiring between the CNPB1 (BD602T) connector and the brake SMPS output.
 
 ![](../_assets/4.서보보드/N제어기_브레이크_전원케이블.png)
 
-                    (그림 4.45 N제어기 브레이크 전원 점검)
+                    (Figure 4.45 N Controller Brake Power Inspection)
 
 ![](../_assets/4.서보보드/T제어기_브레이크전원.png)
 
-                    (그림 4.45 T제어기 브레이크 전원 점검)
+                    (Figure 4.45 T Controller Brake Power Inspection)
 
-(3)	서보보드를 교체 시험하십시오. 
+(3)	Perform a replacement test of the servo board. 
 
-서보 보드를 교체한 후 에러가 발생하지 않으면 서보 보드의 엔코더 데이터 수신부의 고장으로 판단할 수 있습니다.
+If the error does not occur after replacing the servo board, it can be determined as a failure in the servo board's monitoring circuit.
 
 ![](../_assets/4.서보보드/N제어기_서보보드_교체_en.png)
 
-                    (그림 4.46 N제어기 서보보드 교체)
+                    (Figure 4.46 Replacing N Controller Servo Board)
 
 ![](../_assets/4.서보보드/T제어기_서보보드_교체_en.png)
 
-                 (그림 4.47 T제어기 서보보드 교체)
+                    (Figure 4.47 Replacing T Controller Servo Board)
+# 4.30. E02570. (O Axis) Brake Output Error
 
-[__SOURCE](4-servo-board-part/E02570.md)
-# 4.30. E02570. (O축) 브레이크 출력 이상
+### 1. Overview
 
-### 1. 개요
+The servo board (BD640) monitors the brake operation command and the signal from the brake feedback circuit; an error is generated if the two signals do not match. If the output of the brake circuit is not performed normally, brake operation may fail; therefore, the servo board detects this and stops the robot. 
 
-서보 보드(BD640)에서는 브레이크 작동 명령과 브레이크 피드백 회로의 신호를 감시하는 중, 두 신호가 불일치 할 경우 에러를 발생시킵니다. 브레이크 회로의 출력이 정상적으로 이루어지지 않으면 브레이크 작동에 실패할 수 있으므로 서보 보드에서는 이를 감지하여 로봇을 정지시킵니다. 
-
-### 2. 원인 및 점검
+### 2. Cause and Inspection
 
 {% hint style="info" %}
 
-(1)	브레이크 배선을 점검하십시오.
+(1)	Inspect the brake wiring.
 
-(2)	서보보드(BD640)를 점검 하십시오.
+(2)	Inspect the servo board (BD640).
 
 {% endhint %}
 
-(1)	브레이크 배선을 점검하십시오.
+(1)	Inspect the brake wiring.
 
-브레이크 배선점검 순서는 다음과 같습니다.
+The inspection sequence for the brake wiring is as follows:
 
-1차: 브레이크 배선에 관련된 커넥터들의 접촉 불량여부를 점검하십시오.
+Step 1: Inspect the connectors related to the brake wiring for any poor contact.
 
-2차: 브레이크 배선의 단락 유무를 점검하십시오. 멀티미터(테스터기)와 같은 장비를 이용하여 각 축의 배선을 1:1로 체크하십시오.
+Step 2: Check the brake wiring for short circuits. Perform a 1:1 check for each axis's wiring using equipment such as a multimeter (tester).
 
-3차: 브레이크 배선을 교체시험 하십시오.
+Step 3: Perform a replacement test of the brake wiring.
 
-브레이크 배선이 단선되지 않고 접촉불량, 브레이크 파워선과 타 전력선 또는 로봇 본체 금속부위와의 접촉 등의 현상이 있을 경우에는 단락유무 검사로는 검사할 수 없으므로 배선 교체시험을 하여 주십시요.
+If there are phenomena such as poor contact, or contact between the brake power line and other power lines or metal parts of the robot body even though the brake wiring is not disconnected, it cannot be detected through a short-circuit test; therefore, please perform a wiring replacement test.
 
-    * 제어기 내부 배선을 점검하십시오.
-        Hi6-N 제어기의 경우, CNB1(BD640) 커넥터와 CMC1, CMC2 간의 배선을 점검하십시오.
+    * Inspect the internal wiring of the controller.
+        For the Hi6-N controller, inspect the wiring between the CNB1 (BD640) connector and CMC1, CMC2.
 
 ![](../_assets/4.서보보드/N제어기_브레이크_출력_배선_en.png)
 
-                    (그림 4.54 N제어기 브레이크 출력 배선)
+                    (Figure 4.54 N Controller Brake Output Wiring)
 
 ![](../_assets/4.서보보드/T제어기_브레이크_출력_배선.png)
 
-                    (그림 4.55 T제어기 브레이크 출력 배선)
+                    (Figure 4.55 T Controller Brake Output Wiring)
     
-    * 제어기와 로봇간의 배선을 점검하십시오.
-        Hi6-N제어기의 경우, CMC1과 CMR1 그리고 CMC2와 CMR2 간의 배선을 Hi6-T15제어기의 경우, CMEC1과 CMER1 간의 배선을 점검하십시오.
+    * Inspect the wiring between the controller and the robot.
+        For the Hi6-N controller, inspect the wiring between CMC1 and CMR1, and between CMC2 and CMR2. For the Hi6-T15 controller, inspect the wiring between CMEC1 and CMER1.
 
 ![](../_assets/4.서보보드/N제어기_로봇_제어기_브레이크_배선.png)
 
-                    (그림 4.56 N제어기 브레이크 출력 배선)
+                    (Figure 4.56 N Controller Brake Output Wiring)
 
 ![](../_assets/4.서보보드/T제어기_로봇_제어기_브레이크배선.png)
 
-                    (그림 4.57 T제어기 브레이크 출력 배선)
+                    (Figure 4.57 T Controller Brake Output Wiring)
 
-(2)	서보보드를 교체 시험하십시오. 
+(2)	Perform a replacement test of the servo board. 
 
-서보 보드를 교체한 후 에러가 발생하지 않으면 서보 보드의 엔코더 데이터 수신부의 고장으로 판단할 수 있습니다.
+If the error does not occur after replacing the servo board, it can be determined as a failure in the servo board's monitoring circuit.
 
 ![](../_assets/4.서보보드/N제어기_서보보드_교체_en.png)
 
-                    (그림 4.58 N제어기 서보보드 교체)
+                    (Figure 4.58 Replacing N Controller Servo Board)
 
 ![](../_assets/4.서보보드/T제어기_서보보드_교체_en.png)
 
-                    (그림 4.59 T제어기 서보보드 교체)
+                    (Figure 4.59 Replacing T Controller Servo Board)
+# 4.31. E02564. (O Axis) Brake Output Overcurrent Detected
 
-[__SOURCE](4-servo-board-part/E02564.md)
-# 4.31. E02564. (O축) 브레이크 출력 과전류 검지
+### 1. Overview
 
-### 1. 개요
+The servo board (BD640) monitors the overcurrent status of the brake output circuit; if a Fault signal is detected from the protection circuit (IC) connected to the output circuit, it is determined as an overcurrent situation and generates an error. If such an abnormal condition occurs, the reliability of the brake control cannot be guaranteed; therefore, the servo board immediately detects this and stops the robot safely.
 
-서보 보드(BD640)에서는 브레이크 출력 회로의 과전류 상태를 감시하고 있으며, 출력 회로에 연결된 보호 회로(IC)로부터 Fault 신호가 감지되면 과전류 상황으로 판단하여 에러를 발생시킵니다. 이러한 이상 상태가 발생하면 브레이크 제어의 신뢰성을 보장할 수 없기 때문에, 서보 보드는 즉시 이를 감지하고 로봇을 안전하게 정지시킵니다.
-
-### 2. 원인 및 점검
+### 2. Cause and Inspection
 
 {% hint style="info" %}
 
-(1)	브레이크 배선을 점검하십시오.
+(1)	Inspect the brake wiring.
 
-(2)	서보보드(BD640)를 점검 하십시오.
+(2)	Inspect the servo board (BD640).
 
 {% endhint %}
 
-(1)	브레이크 배선을 점검하십시오.
+(1)	Inspect the brake wiring.
 
-브레이크 배선점검 순서는 다음과 같습니다.
+The inspection sequence for the brake wiring is as follows:
 
-1차: 브레이크 배선에 관련된 커넥터들의 접촉 불량여부를 점검하십시오.
+Step 1: Inspect the connectors related to the brake wiring for any poor contact.
 
-2차: 브레이크 배선의 단락 유무를 점검하십시오. 멀티미터(테스터기)와 같은 장비를 이용하여 각 축의 배선을 1:1로 체크하십시오.
+Step 2: Check the brake wiring for short circuits. Perform a 1:1 check for each axis's wiring using equipment such as a multimeter (tester).
 
-3차: 브레이크 배선을 교체시험 하십시오.
+Step 3: Perform a replacement test of the brake wiring.
 
-브레이크 배선이 단선되지 않고 접촉불량, 브레이크 파워선과 타 전력선 또는 로봇 본체 금속부위와의 접촉 등의 현상이 있을 경우에는 단락유무 검사로는 검사할 수 없으므로 배선 교체시험을 하여 주십시요.
+If there are phenomena such as poor contact, or contact between the brake power line and other power lines or metal parts of the robot body even though the brake wiring is not disconnected, it cannot be detected through a short-circuit test; therefore, please perform a wiring replacement test.
 
-    * 제어기 내부 배선을 점검하십시오.
-        Hi6-N 제어기의 경우, CNB1(BD640) 커넥터와 CMC1, CMC2 간의 배선을 점검하십시오.
+    * Inspect the internal wiring of the controller.
+        For the Hi6-N controller, inspect the wiring between the CNB1 (BD640) connector and CMC1, CMC2.
 
 ![](../_assets/4.서보보드/N제어기_브레이크_출력_배선_en.png)
 
-                    (그림 4.48 N제어기 브레이크 출력 배선)
+                    (Figure 4.48 N Controller Brake Output Wiring)
 
 ![](../_assets/4.서보보드/T제어기_브레이크_출력_배선.png)
 
-                    (그림 4.49 T제어기 브레이크 출력 배선)
+                    (Figure 4.49 T Controller Brake Output Wiring)
     
-    * 제어기와 로봇간의 배선을 점검하십시오.
-        Hi6-N제어기의 경우, CMC1과 CMR1 그리고 CMC2와 CMR2 간의 배선을 Hi6-T15제어기의 경우, CMEC1과 CMER1 간의 배선을 점검하십시오.
+* Inspect the wiring between the controller and the robot.
+        For the Hi6-N controller, inspect the wiring between CMC1 and CMR1, and between CMC2 and CMR2. For the Hi6-T15 controller, inspect the wiring between CMEC1 and CMER1.
 
 ![](../_assets/4.서보보드/N제어기_로봇_제어기_브레이크_배선.png)
 
-                    (그림 4.50 N제어기 브레이크 출력 배선)
+                    (Figure 4.50 N Controller Brake Output Wiring)
 
 ![](../_assets/4.서보보드/T제어기_로봇_제어기_브레이크배선.png)
 
-                    (그림 4.51 T제어기 브레이크 출력 배선)
+                    (Figure 4.51 T Controller Brake Output Wiring)
 
-(2)	서보보드를 교체 시험하십시오. 
+(2)	Perform a replacement test of the servo board. 
 
-서보 보드를 교체한 후 에러가 발생하지 않으면 서보 보드의 엔코더 데이터 수신부의 고장으로 판단할 수 있습니다.
+If the error does not occur after replacing the servo board, it can be determined as a failure in the servo board's monitoring circuit.
 
-![](../_assets/4.서보보드/N제어기_서보보드_교체_en.png)
+![](../_assets/4.assets/4.서보보드/N제어기_서보보드_교체_en.png)
 
-                    (그림 4.52 N제어기 서보보드 교체)
+                    (Figure 4.52 Replacing N Controller Servo Board)
 
 ![](../_assets/4.서보보드/T제어기_서보보드_교체_en.png)
 
-                    (그림 4.53 T제어기 서보보드 교체)
-[__SOURCE](5-communication/README.md)
-# 5. 통신
-[__SOURCE](5-communication/E29003.md)
-# 5.1. E29003 전장 보드 통신 오류 (EtherCAT 연결 끊김)
+                    (Figure 4.53 Replacing T Controller Servo Board)# 5. 통신# 5.1. E29003 전장 보드 통신 오류 (EtherCAT 연결 끊김)
 
 ### 1. 개요
 
@@ -4444,8 +4317,6 @@ C.	안전보드(BD632) 접지 상태 점검 (접지 케이블, 접지 단자 체
 A.	메인제어모듈 (H6COM-T)이 완전히 부팅되고 난 후(전원투입후 약 50초 정도 소요)<br> 7-Segment의 표시가 ‘S’자로 2개가 표시 되어야 함.<br>
 
 5)	1)~4)의 점검사항이 모두 이상이 없는 경우에도 통신에 문제가 있다면 안전보드(BD632)를 교체하십시오.<br>
-
-[__SOURCE](5-communication/E29016.md)
 # 5.2. E29016 전장보드 통신(EtherCAT) 마스터 연결 끊김 발생
 
 ### 1. 개요
@@ -4499,21 +4370,15 @@ C.	이더넷 커넥터(PCB 단자부) 손상 가능성도 점검<br>
    7-Segment에 P002로 표기되어야함.<br>
 
 1-2) 가 모두 정상임에도 이더캣 통신 연결에 문제가 있는 경우 보드를 교체 하십시오.
-
-[__SOURCE](appendices/README.md)
 # Appendices
 
   
 
 
-
-[__SOURCE](appendices/rules-occupational-safety.md)
 # Rules on Occupational Safety and Health Standards and Safety Inspection Notification
 This industrial robot shall be installed in consideration of the inspection requirements specified in the Rules on Occupational Safety and Health Standards and the Safety Inspection Notification, where applicable.
 
 "[Rules on Occupational Safety and Health Standards](https://hrbook-hrc.web.app/#/view/rules-on-occupational-safety-and-health-standards/korean/README)"
-
-[__SOURCE](quality-assurance.md)
 # Quality Assurance
 
 "[Quality Assurance](https://hrbook-hrc.web.app/#/view/quality-assurance/korean/README)"
