@@ -1,10 +1,16 @@
-﻿# Maintenance Manual – Troubleshooting
+﻿
+[__SOURCE](README.md)
+# Maintenance Manual – Troubleshooting
 The controller is designed with a primary focus on high precision and high-speed performance. In the event of a malfunction, the system is structured to allow easy identification of the cause and rapid recovery. Please ensure that you fully understand this manual and use it effectively for smooth and efficient troubleshooting.
 
 ## Troubleshooting Procedure
 This section describes the troubleshooting methods for each error code that may occur in the Hi6-N and Hi6-T controllers.
 
-# 1. Electrical Components# 1.1. Voltage Check1 - Hi6-N Controller Internal 3-Phase Voltage Check Procedure
+
+[__SOURCE](1-elec/README.md)
+# 1. Electrical Components
+[__SOURCE](1-elec/VOLTAGE_1.md)
+# 1.1. Voltage Check1 - Hi6-N Controller Internal 3-Phase Voltage Check Procedure
 
 (1) Check the 3-phase power voltage inside the controller.
 
@@ -22,6 +28,8 @@ If the controller input voltage is AC 220V, the voltage input from the external 
 
 2) If the voltage on the controller nameplate is not AC 220V<br>
 If the controller input power is not AC 220V, the built-in transformer converts the three-phase power to AC 220V and connects it to the control module. Check that the voltage measured at the control module is within a 10% tolerance of AC 220V. If the measured voltage is outside the tolerance range, check the connection between the input and output terminals of the built-in transformer. The primary terminal of the built-in transformer must be connected to the voltage indicated on the controller nameplate.
+
+[__SOURCE](1-elec/VOLTAGE_2.md)
 # 1.2. Voltage Check2 – Hi6-N Controller 3-Phase Voltage Check Procedure
 
 (1)	Check the voltage on the nameplate attached to the controller against the actual input voltage.
@@ -39,6 +47,8 @@ Figure 1.2. Measurement on the power line side of the power switch
 Be careful when measuring high voltages, as there is a risk of short circuits in surrounding components and between phases.
 {% endhint %}
 
+
+[__SOURCE](1-elec/VOLTAGE_3.md)
 # 1.3. Voltage Check3 – Hi6-T Controller Input Single-Phase Voltage Check Procedure
 
 (1) Check the voltage on the nameplate attached to the controller against the actual input voltage.<br>
@@ -50,6 +60,8 @@ Be careful when measuring high voltages, as there is a risk of short circuits be
 
 ![](../_assets/1.전장/전압점검/전압점검3_en.PNG)<br>
 Figure 1.3. H6-T15 Controller Single-Phase Power Input SMPS Terminal Block
+
+[__SOURCE](1-elec/Parts_replacement_tips.md)
 # 1.4. Component Replacement Guidelines
 This section describes the guidelines for replacing individual components and circuit boards during troubleshooting.
 
@@ -131,6 +143,8 @@ As it is a precision device, special care must be taken during handling.
 Do not insert the module suddenly or with excessive force, as this may result in injury.<br>
 ③ Reconnect all connectors to the module. For connectors secured with screws, use an appropriate screwdriver and tighten them carefully to avoid stressing the connectors.<br>
 ④ Double-check that all connectors are connected correctly and that no steps have been missed.<br>
+
+[__SOURCE](1-elec/Adjustment_tips.md)
 # 1.5. Adjustment Guidelines
 
 This controller is fully adjusted at the factory prior to shipment and normally requires no additional adjustment. However, if components are replaced, certain adjustments may be required. This section explains the locations and procedures for those adjustments. Do not perform any adjustments unless absolutely necessary. Even if a problem occurs, do not make any adjustments unless the cause has been clearly identified, as improper adjustment may result in malfunction or damage.
@@ -162,7 +176,11 @@ For the Hi6-N controller, the output voltage of the transformer(TR2) must be AC 
 
 The input power supply for this controller must be AC 220V, 3-phases. Controllers with other voltage specifications are factory-adjusted prior to shipment; therefore, the transformer taps must not be changed without authorization from the manufacturer’s service personnel.
 
-# 2. Servo AMP Board# 2.1. E02500 AMP Regenerative Discharge Resistor Overheat
+
+[__SOURCE](2-servo-control-board-part/README.md)
+# 2. Servo AMP Board
+[__SOURCE](2-servo-control-board-part/E02500.md)
+# 2.1. E02500 AMP Regenerative Discharge Resistor Overheat
 
 ### 1. Overview
 
@@ -242,7 +260,9 @@ If none of the fans are operating, please check the input voltage to the fans. T
 
 * Check for errors based on the robot's playback speed.
 
-If an overheat error occurs during continuous playback for more than 5 minutes, it is because the robot's repetitive movements have exceeded the controller's cooling capacity. Please verify if the error persists after lowering the robot's playback speed. If lowering the speed resolves the regenerative resistor overheat error but prevents you from achieving the required cycle time (operating speed), please contact our technical support department.# 2.2. E02501 AMP Regenerative Discharge Resistor Open Circuit, Resistor, or Circuit Error
+If an overheat error occurs during continuous playback for more than 5 minutes, it is because the robot's repetitive movements have exceeded the controller's cooling capacity. Please verify if the error persists after lowering the robot's playback speed. If lowering the speed resolves the regenerative resistor overheat error but prevents you from achieving the required cycle time (operating speed), please contact our technical support department.
+[__SOURCE](2-servo-control-board-part/E02501.md)
+# 2.2. E02501 AMP Regenerative Discharge Resistor Open Circuit, Resistor, or Circuit Error
 
 ### 1. Overview
 
@@ -319,6 +339,8 @@ Overheat errors can occur due to an open circuit in the resistor or an abnormali
 -> Servo Drive Unit Input Voltage Specification: 3-Phase AC 220V
 
 -> Allowable Range during Motor ON: 198V ~ 242V
+
+[__SOURCE](2-servo-control-board-part/E02502.md)
 # 2.3. E02501 AMP Regenerative Discharge Resistor Detection Circuit Error
 
 ### 1. Overview
@@ -397,6 +419,8 @@ The modules responsible for detecting regenerative discharge resistor overheat e
 -> Hi6-T Controller: BD667T
 
 Please identify the components of the controller currently in use before proceeding with the inspection. Verify whether the error recurs after replacing the suspected part with a known functional unit.
+
+[__SOURCE](2-servo-control-board-part/E02503.md)
 # 2.4. E02503 AMP PN Overvoltage Occurred
 
 ### 1. Overview
@@ -448,7 +472,9 @@ If the regenerative resistance value is higher than the specified value, regener
 
 (b) Hi6-T Controller
 
-Figure 1.1 Measuring the resistance value at CNDR# 2.5. E02504 AMP Diode Module Error or AC Input Voltage Exceeded
+Figure 1.1 Measuring the resistance value at CNDR
+[__SOURCE](2-servo-control-board-part/E02504.md)
+# 2.5. E02504 AMP Diode Module Error or AC Input Voltage Exceeded
 
 ### 1. Overview
 
@@ -508,6 +534,8 @@ If a voltage of AC 242V or higher is input to the servo drive unit, an overvolta
 
 -> Allowable Range (Motor ON): 198V ~ 242V
 
+
+[__SOURCE](2-servo-control-board-part/E02505.md)
 # 2.6. E02505 AMP PN Overvoltage Detection Path Error or Discharge Error
 
 Previous Error Code: E0011 AMP Overvoltage (P-N) Occurred
@@ -582,7 +610,9 @@ Please check the components of the controller currently in use before proceeding
 
 ![](../_assets/2.서보AMP/E02505/E02505_과전압_부품교체_T제어기.PNG)
 
-Figure 1.2 Component Layout for Overvoltage Errors in Hi6-T Controllers# E02506 AMP PN Under-voltage Occurred
+Figure 1.2 Component Layout for Overvoltage Errors in Hi6-T Controllers
+[__SOURCE](2-servo-control-board-part/E02506.md)
+# E02506 AMP PN Under-voltage Occurred
 
 ### 1. Overview
 
@@ -633,6 +663,8 @@ An AMP under-voltage error is triggered at approximately DC 142V (or 210V). The 
 -> Servo Drive Input Voltage Specification: Single-Phase AC 220V
 
 -> Allowable Range (Motor ON): AC 198V ~ 242V
+
+[__SOURCE](2-servo-control-board-part/E02507.md)
 # 2.8. E02507 AMP Diode Module Error or AC Input Voltage Insufficient
 
 
@@ -733,6 +765,8 @@ An AMP under-voltage error is triggered at approximately DC 142V. The error may 
 
 
 
+
+[__SOURCE](2-servo-control-board-part/E02508.md)
 # 2.9. E02508 AMP PN Under-voltage Detection Path Error or Discharge Error
 
 
@@ -817,6 +851,8 @@ Figure 1.1 Replacement of BD640 and Servo Drive Unit
 ![](../_assets/2.서보AMP/E02508/E02508_과전압_부품교체_T제어기.PNG)
 
 Figure 1.1 Replacement of BD641T, BD602T, and BD667T
+
+[__SOURCE](2-servo-control-board-part/E02520.md)
 # 2.10. E02520 (Axis ○) IPM Fault
 
 ### 1. Overview
@@ -968,6 +1004,8 @@ If a fan is not rotating or its speed is abnormally low, please replace the corr
 ->	Inspection of Fan Power Supply Voltage
 
 If all fans are inoperative, please verify the fan input voltage. The fan input voltage is set to AC 220V, with an allowable range within 10% of the rated voltage. If the voltage is more than 10% below the rating, the cooling efficiency will decrease due to the reduced fan rotation speed. If the voltage is low, please inspect the power connectors for the rear cooling fans and the overall input voltage of the controller.
+
+[__SOURCE](2-servo-control-board-part/E02521.md)
 # 2.11. E02521 (Axis ○) IPM Fault - Gate Drive Power Under-voltage
 
 ### 1. Overview
@@ -1031,7 +1069,9 @@ If the error does not recur after replacing the servo drive unit, the original u
 If the error does not recur after replacing the servo board, the original board is defective. Please replace the servo board with a known functional unit.
 
 *   Hi6-N Controller: BD640
-*   Hi6-T15 Controller: BD641T# 2.12. E02522 (Axis ○) IPM Fault – Specific Step
+*   Hi6-T15 Controller: BD641T
+[__SOURCE](2-servo-control-board-part/E02522.md)
+# 2.12. E02522 (Axis ○) IPM Fault – Specific Step
 
 ### 1. Overview
 
@@ -1075,6 +1115,8 @@ If the error occurs at a step where a posture transition causes a sudden change 
 ->  Verify the error by changing the interpolation of the taught step
 
 If axis speed fluctuations remain extreme even after reducing the playback speed below 75%, change the interpolation of the taught step to 'P' (Point-to-Point) and verify the error. If the error is resolved by changing the interpolation at the same playback speed, please modify the teaching points.
+
+[__SOURCE](2-servo-control-board-part/E02541.md)
 # 2.13. E02541 Drive Unit Control Voltage Drop
 
 ### 1. Overview
@@ -1206,7 +1248,11 @@ Figure 1.1 Locations of Controller Power Status LEDs
 *   Replace the backplane board (BD602T) and check the LED status.
 
 
-# 3. Safety Signal Board# 3.1. E00002. Hardware Limit Switch Triggered
+
+[__SOURCE](3-safety-board-part/README.md)
+# 3. Safety Signal Board
+[__SOURCE](3-safety-board-part/E00002.md)
+# 3.1. E00002. Hardware Limit Switch Triggered
 
 ### 1. Overview
 
@@ -1365,6 +1411,8 @@ C. Check the grounding condition of the Safety Board (BD632) <br>
 (ground cable and grounding terminal connection status).<br>
 
 
+
+[__SOURCE](3-safety-board-part/E00014.md)
 # 3.2. E0014. Momentary Contact of Safety Switches (EM, OTR, TS, etc.)
 
 ### 1. Overview
@@ -1494,6 +1542,8 @@ replace the entire electrical module.
 
 ![](../_assets/3-Safety-io/E00014/그림16_en.png)<br>
 **Figure 6** Electrical Module Structure and Nomenclature for the Hi6-N Controller
+
+[__SOURCE](3-safety-board-part/E00043.md)
 # 3.3. E0043. Auto Mode Safety Guard (Auto Guard) Switch Connection Error
 
 ### 1. Overview
@@ -1562,6 +1612,8 @@ C. Check the grounding condition of the Safety Board (BD632, ground cable and gr
 – Ground terminal connection status
 
 
+
+[__SOURCE](3-safety-board-part/E02200.md)
 # 3.4. E02200. Main Unit Limit Switch Activated
 
 ### 1. Overview
@@ -1615,6 +1667,8 @@ B) Hold the **Enabling Switch** on the Teaching Pendant (TP).<br>
 
 C) In this state, turn the **Motor ON**.<br>
 D) Use the **Jog keys** to move the robot back into the operating range.<br>
+
+[__SOURCE](3-safety-board-part/E02201_E2208.md)
 # 3.5. E02001 ~ E02208 Hardware Limit Switch Inspection Method
 
 ### 1. Causes and Inspection Methods
@@ -1737,6 +1791,8 @@ A fault exists in another area. Further troubleshooting is required. Please cont
 
 Figure 5 Structure of the Hardware Limit SW Harness C(M)ER1
 
+
+[__SOURCE](3-safety-board-part/E02201.md)
 # 3.6. E02201. Body Limit SW Input Mismatch (Safety Chain 1 OFF)
 
 ### 1. Overview
@@ -1788,6 +1844,8 @@ This condition may be caused by the following reasons:
 * Connector: The connector is damaged, causing a short circuit between pins.
 
 For detailed inspection points, refer to the section “Hardware Limit Switch Inspection Method”.
+
+[__SOURCE](3-safety-board-part/E02202.md)
 # 3.7. E02202. Body Limit SW Input Mismatch (Safety Chain 2 OFF)
 
 ### 1. Overview
@@ -1841,6 +1899,8 @@ This condition may be caused by the following reasons:
 * Connector: The connector is damaged, causing a short circuit between pins.
 
 For detailed inspection points, refer to the section “Hardware Limit Switch Inspection Method”.
+
+[__SOURCE](3-safety-board-part/E02206.md)
 # 3.8. E02206. Body Limit SW Open Circuit or Not Connected
 
 ### 1. Overview
@@ -1868,6 +1928,8 @@ Since there may be a problem with the switch or wiring system, inspection is req
 * Connector: The connector is disconnected or damaged, resulting in an open-circuit due to poor connection.
 
 For detailed inspection points, refer to the section “Hardware Limit Switch Inspection Method”.
+
+[__SOURCE](3-safety-board-part/E02207.md)
 # 3.9. E02207. Body Limit SW Input Mismatch (Safety Chain 1 OFF)
 
 ### 1. Overview
@@ -1896,6 +1958,8 @@ The problem occurs because Safety Chain 1 is open. Inspect the related switches 
 * Connector: The connector is disconnected or damaged, resulting in an open-circuit or contact failure.
 
 For detailed inspection points, refer to the section **“Hardware Limit Switch Inspection Method.”**
+
+[__SOURCE](3-safety-board-part/E02208.md)
 # 3.10. E02208. Body Limit SW Input Mismatch (Safety Chain 2 OFF)
 
 ### 1. Overview
@@ -1924,7 +1988,9 @@ Inspect the related switches and wiring system.
 * Wiring: The wiring is broken or damaged, causing poor contact.
 * Connector: The connector is disconnected or damaged, resulting in an open-circuit due to poor contact.
 
-For detailed inspection points, refer to the section “Hardware Limit Switch Inspection Method”.# 3.11. E02260. Magnetic Contactor (MC2) Failure / Detection Error During Servo ON Attempt
+For detailed inspection points, refer to the section “Hardware Limit Switch Inspection Method”.
+[__SOURCE](3-safety-board-part/E02260.md)
+# 3.11. E02260. Magnetic Contactor (MC2) Failure / Detection Error During Servo ON Attempt
 
 ### 1. Overview
 
@@ -2011,7 +2077,9 @@ If all four servo boards (BD640) are not connected, set the switches (SW1 to SW4
 * Set SW3 and SW4 to the ON position.
 
 ![](../_assets/3-Safety-io/E02260/picture6.png)<br>
-Figure 7. DIP switch settings of the Extended Axis Safety Interface Board (BD6H0) # 3.12. E02261. MC2 Magnetic Contactor Failure/Detection Abnormality During Servo ON
+Figure 7. DIP switch settings of the Extended Axis Safety Interface Board (BD6H0) 
+[__SOURCE](3-safety-board-part/E02261.md)
+# 3.12. E02261. MC2 Magnetic Contactor Failure/Detection Abnormality During Servo ON
 
 ### 1. Overview
 
@@ -2029,6 +2097,8 @@ While the servo is ON, the magnetic contactor MC2 turned OFF abnormally.
 {% endhint %}
 
 For detailed inspection procedures, refer to **“E02260 MC2 Magnetic Contactor Failure/Detection Abnormality During Servo ON Attempt”**.
+
+[__SOURCE](3-safety-board-part/E02280.md)
 # 3.13. E02280. MC1 Magnetic Contactor Failure/Detection Abnormality During Servo ON Attempt
 
 ### 1. Overview
@@ -2082,6 +2152,8 @@ For Hi6-T controller, this wiring does not exist, so no action is required.
 ### (4) Inspect the System Board
 
 If there are no issues in the monitoring system, magnetic contactors, or power board, replace the system board.
+
+[__SOURCE](3-safety-board-part/E02281.md)
 # 3.14. E02281. MC1 Magnetic Contactor Fault/Detection Error During Servo ON
 
 ### 1. Overview
@@ -2100,6 +2172,8 @@ During Servo ON, the MC1 magnetic contactor is abnormally turned OFF.
 {% endhint %}
 
 For detailed inspection procedures, refer to “E02280 MC1 Magnetic Contactor Fault/Detection Error During Servo ON.”
+
+[__SOURCE](3-safety-board-part/E02301.md)
 # 3.15. E2301. CPUERR Signal Mismatch (H6COM Task Error)
 
 ### 1. Overview
@@ -2165,6 +2239,8 @@ A. Check the connection status of the IO power connector.
 B. Inspect the IO power cable.  
 C. Check the grounding status of the safety board (BD632), including the grounding cable and grounding terminal connections.
 
+
+[__SOURCE](3-safety-board-part/E64002.md)
 # 3.16. E64002 H6COM-T Heartbeat Update Stopped Error
 
 ### 1. Overview
@@ -2270,6 +2346,8 @@ B. The ECAT LED should not show any red blinking or steady ON
 
 5) If all checks from 1) to 4) show no abnormalities but communication issues persist, replace the Safety Board (BD632)
 `
+
+[__SOURCE](3-safety-board-part/E64003.md)
 # 3.17. E64003 Servo Board (BD640) Status Input Error
 
 ### 1. Overview
@@ -2328,6 +2406,8 @@ B. If the LED turns red or goes off at the moment the motor is ON, the IO power 
 A. Check the connection status of the IO power connector.  
 B. Inspect the IO power cable.  
 C. Verify the grounding of the Safety Board (BD632), including grounding cables and terminal connections.
+
+[__SOURCE](3-safety-board-part/E64035.md)
 # 3.18. E64035. Safety Module Status Output (SFST) Mismatch (Safety Chain 2 OFF)
 
 ### 1. Overview
@@ -2361,7 +2441,11 @@ A.	Check the connection of the IO power connector.<br>
 B.	Inspect the IO power cable.<br>
 C.	Check the grounding of the Safety Board (BD632) (ground cable and ground terminal connection status).<br>
 `
-# 4. Servo Board# 4.1. E02450. (O Axis) No Encoder Response
+
+[__SOURCE](4-servo-board-part/README.md)
+# 4. Servo Board
+[__SOURCE](4-servo-board-part/E02450.md)
+# 4.1. E02450. (O Axis) No Encoder Response
 
 ### 1. Overview
 
@@ -2477,6 +2561,8 @@ After the measures for the problematic part are completed, please refer to the "
 
 ![](../_assets/4.서보보드/엔코더_통신실패_횟수_en.png)
 
+
+[__SOURCE](4-servo-board-part/E02451.md)
 # 4.2. E02451. (O Axis) Abnormal Number of Encoder Data Received
 
 ### 1. Overview
@@ -2583,6 +2669,8 @@ After the measures for the problematic part are completed, please refer to the "
 
 ![](../_assets/4.서보보드/엔코더_통신실패_횟수_en.png)
 
+
+[__SOURCE](4-servo-board-part/E02452.md)
 # 4.3. E02452. (O Axis) Encoder End Signal (Ser_End) Not Received
 
 ### 1. Overview
@@ -2605,7 +2693,9 @@ Failure to receive the signal indicating the end of the data frame from the enco
 
 {% endhint %}
 
-For detailed inspection methods, please refer to "E02450 (O Axis) No Encoder Response".# 4.4. E02453. (O Axis) Encoder Data Error (CRC Error Detected)
+For detailed inspection methods, please refer to "E02450 (O Axis) No Encoder Response".
+[__SOURCE](4-servo-board-part/E02453.md)
+# 4.4. E02453. (O Axis) Encoder Data Error (CRC Error Detected)
 
 ### 1. Overview
 
@@ -2629,6 +2719,8 @@ When a CRC error occurs in the data received from the encoder, it can primarily 
 {% endhint %}
 
 For detailed inspection methods, please refer to "E02450 (O Axis) No Encoder Response".
+
+[__SOURCE](4-servo-board-part/E02454.md)
 # 4.5. E02454. (O Axis) Encoder Disconnected or Contact Failure (Motor OFF State)
 
 ### 1. Overview
@@ -2648,7 +2740,9 @@ Cases where communication between the encoder and servo board is unstable or no 
 
 {% endhint %}
 
-For detailed inspection methods, please refer to "E02450 (O Axis) No Encoder Response".# 4.6. E02455. (O Axis) Abnormal Encoder Data (Irregular Value Detected)
+For detailed inspection methods, please refer to "E02450 (O Axis) No Encoder Response".
+[__SOURCE](4-servo-board-part/E02455.md)
+# 4.6. E02455. (O Axis) Abnormal Encoder Data (Irregular Value Detected)
 
 ### 1. Overview
 
@@ -2671,7 +2765,9 @@ Cases where the position value or speed value received from the encoder changes 
 
 {% endhint %}
 
-For detailed inspection methods, please refer to "E02450 (O Axis) No Encoder Response".# 4.7. E02459. (O Axis) Encoder Disconnected or Contact Failure (Motor ON State)
+For detailed inspection methods, please refer to "E02450 (O Axis) No Encoder Response".
+[__SOURCE](4-servo-board-part/E02459.md)
+# 4.7. E02459. (O Axis) Encoder Disconnected or Contact Failure (Motor ON State)
 
 ### 1. Overview
 
@@ -2696,7 +2792,9 @@ Cases where communication between the encoder and servo board is unstable or no 
 
 {% endhint %}
 
-For detailed inspection methods, please refer to "E02450 (O Axis) No Encoder Response".# 4.8. E02460. (O Axis) Encoder Internal Rotation Value Error (CE Bit Detected)
+For detailed inspection methods, please refer to "E02450 (O Axis) No Encoder Response".
+[__SOURCE](4-servo-board-part/E02460.md)
+# 4.8. E02460. (O Axis) Encoder Internal Rotation Value Error (CE Bit Detected)
 
 ### 1. Overview
 
@@ -2750,7 +2848,9 @@ If the error does not occur after replacing the servo motor, the servo motor is 
 
 ![](../_assets/4.서보보드/로봇_모터_위치.png)
 
-        (Figure 4.28 HS165 Robot Axis Motor Positions)# 4.9. E02461. (O Axis) Encoder Overspeed Error (OS Bit Detected)
+        (Figure 4.28 HS165 Robot Axis Motor Positions)
+[__SOURCE](4-servo-board-part/E02461.md)
+# 4.9. E02461. (O Axis) Encoder Overspeed Error (OS Bit Detected)
 
 ### 1. Overview
 The servo board performs serial communication with the encoder to control the servo motor and receives encoder data periodically; this error occurs when the encoder rotation speed exceeds the allowable range and the OS (OverSpeed) bit is set. This may be an actual overspeed situation or a false detection due to signal abnormality.
@@ -2769,6 +2869,8 @@ This can occur when the data received from the encoder is normal, but the encode
 {% endhint %}
 
 For detailed inspection methods, please refer to "E02460 (O Axis) Encoder Internal Rotation Value Error (CE Bit Detected)".
+
+[__SOURCE](4-servo-board-part/E02462.md)
 # 4.10. E02462. (O Axis) Encoder Position Not Initialized (FS Bit Detected)
 
 ### 1. Overview
@@ -2789,7 +2891,9 @@ FS (Full Absolute): If this bit is 0, it means the position data has not been in
 
 {% endhint %}
 
-For detailed inspection methods, please refer to "E02460 (O Axis) Encoder Internal Rotation Value Error (CE Bit Detected)".# 4.11. E02463. (O Axis) Encoder Multiturn Storage Error (ME Bit Detected)
+For detailed inspection methods, please refer to "E02460 (O Axis) Encoder Internal Rotation Value Error (CE Bit Detected)".
+[__SOURCE](4-servo-board-part/E02463.md)
+# 4.11. E02463. (O Axis) Encoder Multiturn Storage Error (ME Bit Detected)
 
 ### 1. Overview
 
@@ -2807,6 +2911,8 @@ This can occur when the data received from the encoder is normal, but the encode
 {% endhint %}
 
 For detailed inspection methods, please refer to "E02460 (O Axis) Encoder Internal Rotation Value Error (CE Bit Detected)".
+
+[__SOURCE](4-servo-board-part/E02464.md)
 # 4.12. E02464. (O Axis) Encoder Battery Error (BE Bit Detected)
 
 ### 1. Overview
@@ -2871,6 +2977,8 @@ If the error persists when turning the main power OFF/ON after resetting the err
 
                         (Figure 4.32 HS165 Robot Axis Motor Positions)
 
+
+[__SOURCE](4-servo-board-part/E02470.md)
 # 4.13. E02470. (O Axis) Encoder Error: Reset Required
 
 ### 1. Overview
@@ -2919,6 +3027,8 @@ Check the condition of the battery wiring connected from the encoder battery loc
 If the problem is not resolved by the above measures, there is a high possibility that the encoder itself is defective. Perform a replacement test of the motor.
 
     
+
+[__SOURCE](4-servo-board-part/E02630.md)
 # 4.14. E02630. (O Axis) position deviation exceeded
 
 ### 1. Overview
@@ -3050,6 +3160,8 @@ Check if the error occurs by replacing components in the following order: Servo 
 
 
 
+
+[__SOURCE](4-servo-board-part/E02631.md)
 # 4.15. E02631. (O Axis) Speed-Based Position Deviation Excess
 
 ### 1. Overview
@@ -3078,7 +3190,9 @@ The position deviation occurring during jog operation or low-speed operation is 
 
 {% endhint %}
 
-For detailed inspection methods, please refer to "E02630 (Axis O) position deviation exceeded."# 4.16. E02632. (O Axis) position deviation exceeded (brake voltage lowered)
+For detailed inspection methods, please refer to "E02630 (Axis O) position deviation exceeded."
+[__SOURCE](4-servo-board-part/E02632.md)
+# 4.16. E02632. (O Axis) position deviation exceeded (brake voltage lowered)
 
 ### 1. Overview
 
@@ -3149,6 +3263,8 @@ If the power electronic module is normal, measure the brake power (DC24V) on the
                     (Figure 4.76 Servo Board Brake Power)
 
     
+
+[__SOURCE](4-servo-board-part/E02633.md)
 # 4.17. E02633. (O Axis) position deviation exceeded (load estimation not executed)
 
 ### 1. Overview
@@ -3214,7 +3330,9 @@ The load estimation procedure is as follows:
 
     Verify that the robot model registered on the TP screen matches the actually installed robot.
 
-    # 4.18. E02634. (O Axis) Position Deviation Excess (Increased Friction at Low Temperature)
+    
+[__SOURCE](4-servo-board-part/E02634.md)
+# 4.18. E02634. (O Axis) Position Deviation Excess (Increased Friction at Low Temperature)
 
 ### 1. Overview
 
@@ -3243,7 +3361,9 @@ Normally, at low temperatures (encoder at 5°C or below), the friction component
 
                     (Figure 4.85 Checking Robot Model)
 
- Verify that the robot model registered on the TP screen matches the actually installed robot.# 4.19. E02650. (O Axis) Motor Overload
+ Verify that the robot model registered on the TP screen matches the actually installed robot.
+[__SOURCE](4-servo-board-part/E02650.md)
+# 4.19. E02650. (O Axis) Motor Overload
 
 ### 1. Overview
 
@@ -3391,7 +3511,9 @@ Check whether the drive unit (motor, reducer) of the corresponding axis is opera
 
 ![](../_assets/4.서보보드/축구동부_en.png)
 
-                    (Figure 4.100 Verifying Normal Operation of the Drive Unit)# 4.20. E02651. (O Axis) Motor Overload (Brake Voltage Drop)
+                    (Figure 4.100 Verifying Normal Operation of the Drive Unit)
+[__SOURCE](4-servo-board-part/E02651.md)
+# 4.20. E02651. (O Axis) Motor Overload (Brake Voltage Drop)
 
 ### 1. Overview
 
@@ -3461,6 +3583,8 @@ If the power electronic module is normal, measure the brake power (DC24V) on the
 ![](../_assets/4.서보보드/서보보드_브레이크전원_측정.png)
 
                     (Figure 4.106 Servo Board Brake Power)
+
+[__SOURCE](4-servo-board-part/E02652.md)
 # 4.21. E02652. (O Axis) Motor Overload (Load Estimation Not Performed)
 
 ### 1. Overview
@@ -3516,6 +3640,8 @@ The load estimation procedure is as follows:
 ![](../_assets/4.서보보드/부하추정6.png)
 
                     (Figure 4.112 Load Estimation 6)
+
+[__SOURCE](4-servo-board-part/E02653.md)
 # 4.22. E02653. (O Axis) motor overloaded (low-temperature friction increased)
 
 ### 1. Overview
@@ -3538,6 +3664,8 @@ Normally, at low temperatures (encoder at 5°C or below), the friction component
 
                     (Figure 4.113 Encoder Temperature Check Screen)
 
+
+[__SOURCE](4-servo-board-part/E02670.md)
 # 4.23. E02670. (O Axis) command value abnormal
 
 ### 1. Overview
@@ -3623,6 +3751,8 @@ Verify whether the error occurs during segments where the motion changes rapidly
 If the error occurs during abrupt motion, the work program must be modified.
 
 The reasons for errors occurring during abrupt motions are as follows: When executing a work program, there are cases where the robot's posture inevitably changes significantly while moving through a short interval. In such instances, the axial speed of the robot increases suddenly. If the servo board cannot follow this command, an error is triggered. To resolve this, you should modify the teaching points at the location where the posture changes abruptly or adjust the robot's orientation.
+
+[__SOURCE](4-servo-board-part/E02680.md)
 # 4.24. E02680. (O Axis) Maximum Speed Exceeded
 
 ### 1. Overview
@@ -3739,6 +3869,8 @@ The motor torque may be insufficient if the maximum speed in the additional axis
 (6)	Adjust the work program. 
 
 Modify the step conditions of the corresponding step or the immediately preceding step in the work program. Change the program conditions by first trying to change to "Acc=0," second by lowering the step speed, and third by adding an additional step to the movement path.
+
+[__SOURCE](4-servo-board-part/E02780.md)
 # 4.25. E02780. (O Axis) Servo Lock Cannot Be Maintained – Current Generation Error
 
 ### 1. Overview
@@ -3852,7 +3984,9 @@ If this error occurs simultaneously with other errors such as E64003 (Servo boar
 
 [Image of a wiring diagram showing the 24V DC power distribution system and ground connections for an industrial robot controller]
 
-A short circuit in the factory wiring can cause abnormalities in the 24V power supply and ground status of the boards, leading to multiple errors related to I/O signals. It is necessary to inspect the power systems (noise, wire harness wiring status, etc.) of the BD640 and BD632.# 4.26. E02781. (O Axis) Servo Lock Cannot Be Maintained – Parameter Error
+A short circuit in the factory wiring can cause abnormalities in the 24V power supply and ground status of the boards, leading to multiple errors related to I/O signals. It is necessary to inspect the power systems (noise, wire harness wiring status, etc.) of the BD640 and BD632.
+[__SOURCE](4-servo-board-part/E02781.md)
+# 4.26. E02781. (O Axis) Servo Lock Cannot Be Maintained – Parameter Error
 
 ### 1. Overview
 
@@ -3957,6 +4091,8 @@ Check for errors by replacing components in the following order: Servo Board (BD
 ![](../_assets/4.서보보드/T제어기_모터및구동장치_en.png)
 
                     (Figure 4.139 Drive Components for T Controller)
+
+[__SOURCE](4-servo-board-part/E02472.md)
 # 4.27. E02472. (O Axis) Encoder Overheat Detected (OH Bit Set)
 
 ### 1. Overview
@@ -4013,6 +4149,8 @@ If the error does not occur after replacing the servo board, it can be determine
 ![](../_assets/4.서보보드/T제어기_서보보드_교체_en.png)
 
     (Figure 4.39 Replacing T Controller Servo Board)
+
+[__SOURCE](4-servo-board-part/E02554.md)
 # 4.28. E02554. Initial Pre-Charge Relay Operation Failure
 
 ### 1. Overview
@@ -4059,6 +4197,8 @@ If the error does not occur after replacing the servo board, it can be determine
 
                     (Figure 4.43 Replacing T Controller Servo Board)
     
+
+[__SOURCE](4-servo-board-part/E02560.md)
 # 4.29. E02560. Brake Power Supply Error
 
 ### 1. Overview
@@ -4115,6 +4255,8 @@ If the error does not occur after replacing the servo board, it can be determine
 ![](../_assets/4.서보보드/T제어기_서보보드_교체_en.png)
 
                     (Figure 4.47 Replacing T Controller Servo Board)
+
+[__SOURCE](4-servo-board-part/E02570.md)
 # 4.30. E02570. (O Axis) Brake Output Error
 
 ### 1. Overview
@@ -4176,6 +4318,8 @@ If the error does not occur after replacing the servo board, it can be determine
 ![](../_assets/4.서보보드/T제어기_서보보드_교체_en.png)
 
                     (Figure 4.59 Replacing T Controller Servo Board)
+
+[__SOURCE](4-servo-board-part/E02564.md)
 # 4.31. E02564. (O Axis) Brake Output Overcurrent Detected
 
 ### 1. Overview
@@ -4236,7 +4380,11 @@ If the error does not occur after replacing the servo board, it can be determine
 
 ![](../_assets/4.서보보드/T제어기_서보보드_교체_en.png)
 
-                    (Figure 4.53 Replacing T Controller Servo Board)# 5. 통신# 5.1. E29003 전장 보드 통신 오류 (EtherCAT 연결 끊김)
+                    (Figure 4.53 Replacing T Controller Servo Board)
+[__SOURCE](5-communication/README.md)
+# 5. 통신
+[__SOURCE](5-communication/E29003.md)
+# 5.1. E29003 전장 보드 통신 오류 (EtherCAT 연결 끊김)
 
 ### 1. 개요
 
@@ -4317,6 +4465,8 @@ C.	안전보드(BD632) 접지 상태 점검 (접지 케이블, 접지 단자 체
 A.	메인제어모듈 (H6COM-T)이 완전히 부팅되고 난 후(전원투입후 약 50초 정도 소요)<br> 7-Segment의 표시가 ‘S’자로 2개가 표시 되어야 함.<br>
 
 5)	1)~4)의 점검사항이 모두 이상이 없는 경우에도 통신에 문제가 있다면 안전보드(BD632)를 교체하십시오.<br>
+
+[__SOURCE](5-communication/E29016.md)
 # 5.2. E29016 전장보드 통신(EtherCAT) 마스터 연결 끊김 발생
 
 ### 1. 개요
@@ -4370,15 +4520,21 @@ C.	이더넷 커넥터(PCB 단자부) 손상 가능성도 점검<br>
    7-Segment에 P002로 표기되어야함.<br>
 
 1-2) 가 모두 정상임에도 이더캣 통신 연결에 문제가 있는 경우 보드를 교체 하십시오.
+
+[__SOURCE](appendices/README.md)
 # Appendices
 
   
 
 
+
+[__SOURCE](appendices/rules-occupational-safety.md)
 # Rules on Occupational Safety and Health Standards and Safety Inspection Notification
 This industrial robot shall be installed in consideration of the inspection requirements specified in the Rules on Occupational Safety and Health Standards and the Safety Inspection Notification, where applicable.
 
 "[Rules on Occupational Safety and Health Standards](https://hrbook-hrc.web.app/#/view/rules-on-occupational-safety-and-health-standards/korean/README)"
+
+[__SOURCE](quality-assurance.md)
 # Quality Assurance
 
 "[Quality Assurance](https://hrbook-hrc.web.app/#/view/quality-assurance/korean/README)"
