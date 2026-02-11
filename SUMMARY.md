@@ -1,6 +1,6 @@
 ﻿# Table of contents
 
-* [Hi6 Controller Maintenance Manual – Troubleshooting](README.md)
+* [Hi6-N Controller Maintenance Manual – Troubleshooting](README.md)
 
 * [1. Electrical Components](1-elec/README.md)
   * [1.1. Voltage Inspection 1 – Procedure for Checking Internal Three-Phase Voltage of the Hi6-N Controller](1-elec/VOLTAGE_1.md)
