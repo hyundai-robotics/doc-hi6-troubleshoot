@@ -1,10 +1,140 @@
 ﻿
 [__SOURCE](README.md)
 # Maintenance Manual – Troubleshooting
+
+
+[__SOURCE](0-about-this-manual/README.md)
+# About the Manual
+
+This section describes the troubleshooting methods for each error code that may occur in the HD Hyundai Robotics' Hi6-N and Hi6-T controllers.
+
 The controller is designed with a primary focus on high precision and high-speed performance. In the event of a malfunction, the system is structured to allow easy identification of the cause and rapid recovery. Please ensure that you fully understand this manual and use it effectively for smooth and efficient troubleshooting.
 
-## Troubleshooting Procedure
-This section describes the troubleshooting methods for each error code that may occur in the Hi6-N and Hi6-T controllers.
+
+This manual does not cover detailed application functions, such as direct teaching using a collaborative robot, methods of setting safety functions, spot welding, arc welding, positioner sync function, and sensor sync function. For details on relevant information, refer to the collaborative robot maintenance manual and individual application function manuals.
+
+You must fully understand the contents of the manual before using the product. Moreover, keep the manual nearby so that you can refer to it whenever you need it.
+
+This manual may be provided as reference material for customers who have purchased HD Hyundai Robotics products or may be used as internal training material.
+
+This manual has been created based on standard specifications, so some contents may differ depending on the model of the product you have purchased. In addition, the contents and specifications of this manual are subject to change without prior notice to improve the performance of the product, and HD Hyundai Robotics is not responsible for situations that could be caused by inaccuracies or typos in the manual. For detailed information on the revision of the manual, you need to visit our internet website [https://www.hd-hyundairobotics.com/en/main](https://www.hd-hyundairobotics.com/en/main).
+
+[__SOURCE](0-about-this-manual/precautions.md)
+# Precautions
+
+{% include url="https://hrcontentsrelay-bmgae5hdbzapc4bc.koreacentral-01.azurewebsites.net/api/proxy?path=doc-common-pages/en/precautions.md" %}
+
+[__SOURCE](0-about-this-manual/notation.md)
+## Notation Convention
+
+In this manual, the following notation conventions and safety instructions are used to help you understand the contents.
+
+### Description of Figures
+
+Figures are used to help you understand how to operate the product and illustrate what you can see on the screen. For the description of figures, numbers will be marked for the relevant parts, and the corresponding contents will be described as follows.
+
+![](../_assets/tp630/pane-prog-cmd-param.png)
+
+### GUI \(Graphical User Interface\)
+
+In the GUI, menu names and button names are enclosed in square brackets and displayed with a light background color.
+When multiple menus must be selected in sequence, their names are separated by a hyphen (-).
+
+* Single menu: On the initial screen in Manual or Automatic mode, touch the `[F1: Service]`W button.
+* Multiple menus: On the initial screen in Manual mode, touch `[F2: System] - 5: Initialization - 6: Mechanism setting`.
+
+
+### Notation Method for Operation Keys
+
+Keys that are to be pressed on the operation part of the teach pendant to operate functions will be enclosed in square brackets and displayed with a light background color.
+
+* If you press the `[Start]` key, the automatic operation of the program created in the robot will start.
+
+
+
+### Cross Reference 
+
+It provides shortcuts to relevant information within the manual. A cross-reference will be shown in double quotation marks (" ") as follows.
+
+* For details on how to change the date and time information, refer to "[4.5 Setting of Date and Time.](../4-service/5-date-time-setting.md)".
+
+### Note
+
+In this section are some helpful tips or additional information that could be useful when you use the product as follows.
+
+{% hint style="info" %}
+When the ![](../_assets/eng-mode.png)icon blinks in the status bar, it means that you are in engineer mode.
+{% endhint %}
+
+[__SOURCE](0-about-this-manual/safety-notice.md)
+# Safety Cautions
+
+Before using the product, you must read the following safety cautions for proper use, user safety, and prevention of property damage.
+
+### Danger
+
+{% hint style="danger" %}
+Imminent danger: Incompliance may cause the death of or serious injuries to the operator.
+{% endhint %}
+
+* Read the contents of the product installation in the manual and follow the instructions when installing the robot product and other devices.
+* If a fatal error occurs in the software, stop using it immediately, and contact our customer support team.
+* If there is a problem with the product, such as failure or damage, stop using it immediately and contact the customer support team for inquiry.
+
+
+
+### Warning
+
+{% hint style="warning" %}
+Potential danger: Incompliance may cause injuries to the operator or damage to property, such as significant damage to the product.
+{% endhint %}
+
+
+
+* The safety equipment to be used after being connected to the controller must be connected to the safety contact terminal or to the configurable digital I/O set, which is to be set as the safety I/O, in double signals. When the equipment is connected to common contact terminals or in a single signal, the regulated safety level cannot be satisfied.
+* Do not put your fingers or other body parts behind the controller's inner bracket. There is a risk of electric shock or injury.
+* 
+  If you are a robot application system manufacturer or a robot user, you should fully understand the contents of the manual and complete the product operation training.
+
+* For the safety of workers and users, you must prepare appropriate safety facilities, such as safety fences, before installing the product.
+* Check the specification information and perform fastening by using appropriate fixing screws. Loosened screws may lead to separation of the robot, causing it to fall or suffer damage.
+* Be careful not to let conductive foreign substances, such as liquid, dust, or metal powder, enter the connection sections \(power and cables\). Moreover, do not poke the connection parts with a pointed object or apply excessive force to them when connecting them. Corrosion or temporary short-circuiting of the connection terminals may cause the product to explode or suffer a fire.
+* Check the wiring information and connect the devices using the appropriate terminals corresponding to the type of individual devices. In particular, if a safety device is connected to a general terminal, the safety function cannot be guaranteed, so you must connect it to the terminal designed for safety devices.
+* Never use a damaged cable and do not disconnect the power while the product is in use. It may cause electric shock, fire, failure, or injury.
+* 
+  If the product is used for a long time, it may generate heat and cause injury, such as burns. If you need to touch the product, turn off the power and leave it for at least one hour to let it cool sufficiently before carrying out works.
+
+* 
+  Use the teach pendant while paying attention to the movement of the robot.
+
+* If the teach pendant warns of a fatal error, stop the robot with the emergency stop switch immediately, identify the cause, and resolve the error. If the error cannot be resolved, please contact our customer support team for an inquiry.
+* Never install, modify, disassemble, or repair the product without our permission. It may cause a failure or an accident. In addition, we are not responsible for any damage to or breaking of the product if you do not follow the instructions.
+
+
+
+### Caution
+
+{% hint style="warning" %}
+Low-level danger factor: Incompliance may result in minor injury to the operator or damage to property, such as damage to the product.
+{% endhint %}
+
+
+
+* Do not install, modify, disassemble, or repair the product arbitrarily as it is prohibited for anyone other than our experts to arbitrarily modify the product or attach parts. If the product fails because of such acts, our free service and warranty service will be forfeited.
+* A qualified installer should install the product in compliance with the related regulations and laws of the concerned country and region. When you want to install and repair the product, contact our customer support team, and ask an expert.
+* Do not install and use the product in a dusty or dirty place. Dust or foreign substances may cause failure or abnormal performance of the product.
+* Do not install and use the product in a place where magnetism exists or its influence reaches the product or there is electromagnetic interference. Magnetism may damage the product or cause abnormal performance.
+* When operating the product, do not wear loose clothing or jewelry, and if the hair is long, take precautions to tie it back so that the hair does not get caught in the joints of the robot.
+* Do not enter the operation range or touch the robot while the robot is in operation. Otherwise, there is a risk of injury.
+* Prevent the product from being damaged by transporting it in a packaged state and by storing it in a dry place with low humidity. Otherwise, the moisture inside the packaging material may cause the product to get damaged or to fail.
+* When it comes to storing the product, avoid places where temperature and humidity may change easily. Store the product in a clean, cool, and dry place.
+* When transporting the product, maintain proper posture, and two or more people should work together. Otherwise, you may suffer injury to parts of your body, including waist, arms, and legs.
+* If you use lifting equipment to transport the product, follow the safety regulations and equipment usage guidelines in the concerned country and region.
+* When transporting the product, fully understand the transportation-related contents of the manual and comply with the instructions. We are not responsible for any damage to or breaking of the product because of transportation by the customer.
+
+
+
+
 
 
 [__SOURCE](1-elec/README.md)
@@ -2555,7 +2685,7 @@ If the error does not occur after replacing the servo motor, the servo motor is 
 (5)	Inspect the communication status of the wiring after completing the measures.
 After the measures for the problematic part are completed, please refer to the "Encoder Communication Failure Count Display Function Manual" to check the communication status.
 
-![](../_assets/4.서보보드/엔코더통신실패.png)
+![](../_assets/4.서보보드/encoder_comm.png)
 
     (Figure 4.13 Encoder Communication Failure Monitoring)
 
@@ -2663,7 +2793,7 @@ If the error does not occur after replacing the servo board, the servo board is 
 
 After the measures for the problematic part are completed, please refer to the "Encoder Communication Failure Count Display Function Manual" to check the communication status.
 
-![](../_assets/4.서보보드/엔코더통신실패.png)
+![](../_assets/4.서보보드/encoder_comm.png)
 
     (Figure 4.24 Encoder Communication Failure Monitoring)
 
@@ -2838,7 +2968,7 @@ The error clearing is executed in the menu below.
 
         System -> 5. Initialization -> 4. Serial Encoder Reset - Error Reset
 
-![](../_assets/4.서보보드/엔코더_에러해제.png)
+![](../_assets/4.서보보드/enc_error_clear.png)
 
         (Figure 4.27 Serial Encoder Error Reset)
 
@@ -2945,7 +3075,7 @@ The error clearing is executed in the menu below.
         
         System -> 5. Initialization -> 4. Serial Encoder Reset - Error Reset
 
-![](../_assets/4.서보보드/엔코더_에러해제.png)
+![](../_assets/4.서보보드/enc_error_clear.png)
 
                         (Figure 4.29 Encoder Error Reset)
 
@@ -2962,7 +3092,7 @@ The encoder reset is executed in the menu below.
 
         System -> 5. Initialization -> 4. Serial Encoder Reset - Encoder Reset
 
-![](../_assets/4.서보보드/엔코더_리셋.png)
+![](../_assets/4.서보보드/enc_reset.png)
 
                          (Figure 4.31 Encoder Reset)
 
@@ -3014,7 +3144,7 @@ The encoder reset is executed in the menu below.
 
     System -> 5. Initialization -> 4. Serial Encoder Reset
 
-![](../_assets/4.서보보드/엔코더_리셋.png)
+![](../_assets/4.서보보드/enc_reset.png)
 
     (Figure 4.35 Serial Encoder Reset)
 
@@ -3056,7 +3186,7 @@ This error can occur if there is mechanical interference or a collision with the
 
 (2)	Verify that the robot model is configured correctly.
 
-![](../_assets/4.서보보드/로봇모델확인.png)
+![](../_assets/4.서보보드/robot_model.png)
 
                     (Figure 4.60 Checking Robot Model on TP)
     Verify that the robot model registered on the TP (Teach Pendant) screen matches the actually installed robot.
@@ -3073,15 +3203,15 @@ The procedure for using the Axis Lock function is as follows:
     
         System -> 5. Initialization -> 9. Axis Lock Setting -> OK -> Individual Axis Lock
 
-![](../_assets/4.서보보드/축잠금1.png)
+![](../_assets/4.서보보드/axis_lock1.png)
 
                     (Figure 4.61 Axis Lock Setting Screen 1)
 
-![](../_assets/4.서보보드/축잠금2.png)
+![](../_assets/4.서보보드/axis_lock2.png)
 
                     (Figure 4.62 Axis Lock Setting Screen 2)
 
-![](../_assets/4.서보보드/축잠금3.png)
+![](../_assets/4.서보보드/axis_lock3.png)
 
                     (Figure 4.63 Axis Lock Setting Screen 3)
 
@@ -3128,11 +3258,11 @@ If the total weight, including the workpiece, exceeds the rated load, adjust the
 If the position deviation setting value is smaller than the following measured maximum value, increase the setting value.
 
              Maximum measured position deviation after operating for a few cycles x 1.5
-![](../_assets/4.서보보드/위치편차_모니터링_화면.png)
+![](../_assets/4.서보보드/pos_dev.png)
 
                 (Figure 4.67 Monitoring screen for maximum measured position deviation)
 
-![](../_assets/4.서보보드/위치편차_설정_변경.png)
+![](../_assets/4.서보보드/pos_dev2.png)
 
                 (Figure 4.68 Position deviation setting change screen)
 
@@ -3140,9 +3270,9 @@ If the position deviation setting value is smaller than the following measured m
 
 This error can occur if the compatibility between the servo board (BD640) and the main COM version is broken. Especially in cases where a module has been replaced, perform a version upgrade to match the version of each module with the current main COM version. The version of each module can be checked at the following path.
 
-Service -> 7. System Diagnosis -> 1. System Version
+    Service -> 7. System Diagnosis -> 1. System Version
 
-![](../_assets/4.서보보드/TP버전확인.png)
+![](../_assets/4.서보보드/version.png)
 
                 (Figure 4.69 Version check window for each module on TP)
 
@@ -3221,15 +3351,15 @@ After performing an Axis Lock on all axes except the one you wish to check, repe
         
         System -> 5. Initialization -> 9. Axis Lock Setting -> OK -> Individual Axis Lock
 
-![](../_assets/4.서보보드/축잠금1.png)
+![](../_assets/4.서보보드/axis_lock1.png)
 
                     (Figure 4.71 Axis Lock Setting Screen 1)
 
-![](../_assets/4.서보보드/축잠금2.png)
+![](../_assets/4.서보보드/axis_lock2.png)
 
                     (Figure 4.72 Axis Lock Setting Screen 2)
 
-![](../_assets/4.서보보드/축잠금3.png)
+![](../_assets/4.서보보드/axis_lock3.png)
 
                     (Figure 4.73 Axis Lock Setting Screen 3)
 
@@ -3290,21 +3420,21 @@ The load estimation procedure is as follows:
 
         System -> 6. Auto Calibration -> 4. Load Estimation
 
-![](../_assets/4.서보보드/부하추정1.png)
+![](../_assets/4.서보보드/estimation1.png)
 
                     (Figure 4.77 Load Estimation 1)
 
-![](../_assets/4.서보보드/부하추정2.png)
+![](../_assets/4.서보보드/estimation2.png)
 
                     (Figure 4.78 Load Estimation 2)
 
-![](../_assets/4.서보보드/부하추정3.png)
+![](../_assets/4.서보보드/estimation3.png)
 
                     (Figure 4.79 Load Estimation 3)
 
  * Use the load estimation function to select the tool number to save after estimation.
 
-![](../_assets/4.서보보드/부하추정4.png)
+![](../_assets/4.서보보드/estimation4.png)
 
                     (Figure 4.80 Load Estimation 4)
 
@@ -3312,19 +3442,19 @@ The load estimation procedure is as follows:
 
     Press the Motor On switch, hold the deadman switch, and then click "Normal Operation."
 
-![](../_assets/4.서보보드/부하추정5.png)
+![](../_assets/4.서보보드/estimation5.png)
 
                     (Figure 4.81 Load Estimation 5)
 
 * Once the load estimation operation is complete, the estimated results will be displayed on the screen.
 
-![](../_assets/4.서보보드/부하추정6.png)
+![](../_assets/4.서보보드/estimation6.png)
 
                     (Figure 4.82 Load Estimation 6)
 
 (2)	Verify that the robot model is configured correctly.
 
-![](../_assets/4.서보보드/로봇모델확인.png)
+![](../_assets/4.서보보드/robot_model.png)
 
                     (Figure 4.83 Checking Robot Model)
 
@@ -3350,14 +3480,14 @@ Normally, at low temperatures (encoder at 5°C or below), the friction component
 
 (1)	Operate the robot at low speed (playback speed of 30% or less) until the encoder temperature reaches a normal level (approximately 15°C or higher), then restart at normal speed.
 
-![](../_assets/4.서보보드/엔코더온도및재생속도.png)
+![](../_assets/4.서보보드/enc_tmp2.png)
 
                     (Figure 4.84 Encoder Temperature Check Screen)
 
 
 (2)	Verify that the robot model is configured correctly.
 
-![](../_assets/4.서보보드/로봇모델확인.png)
+![](../_assets/4.서보보드/robot_model.png)
 
                     (Figure 4.85 Checking Robot Model)
 
@@ -3399,21 +3529,21 @@ The load estimation procedure is as follows:
 
         System -> 6. Auto Calibration -> 4. Load Estimation
 
-![](../_assets/4.서보보드/부하추정1.png)
+![](../_assets/4.서보보드/estimation1.png)
 
                     (Figure 4.86 Load Estimation 1)
 
-![](../_assets/4.서보보드/부하추정2.png)
+![](../_assets/4.서보보드/estimation2.png)
 
                     (Figure 4.87 Load Estimation 2)
 
-![](../_assets/4.서보보드/부하추정3.png)
+![](../_assets/4.서보보드/estimation3.png)
 
                     (Figure 4.88 Load Estimation 3)
 
  * Use the load estimation function to select the tool number to save after estimation.
 
-![](../_assets/4.서보보드/부하추정4.png)
+![](../_assets/4.서보보드/estimation4.png)
 
                     (Figure 4.89 Load Estimation 4)
 
@@ -3421,13 +3551,13 @@ The load estimation procedure is as follows:
 
     Press the Motor On switch, hold the deadman switch, and then click "Normal Operation."
 
-![](../_assets/4.서보보드/부하추정5.png)
+![](../_assets/4.서보보드/estimation5.png)
 
                     (Figure 4.90 Load Estimation 5)
 
 * Once the load estimation operation is complete, the estimated results will be displayed on the screen.
 
-![](../_assets/4.서보보드/부하추정6.png)
+![](../_assets/4.서보보드/estimation6.png)
 
                     (Figure 4.91 Load Estimation 6)
 
@@ -3446,15 +3576,15 @@ After performing an Axis Lock on all axes except the one you wish to check, repe
     The procedure for using the Axis Lock function is as follows:
         System -> 5. Initialization -> 9. Axis Lock Setting -> OK -> Individual Axis Lock
 
-![](../_assets/4.서보보드/축잠금1.png)
+![](../_assets/4.서보보드/axis_lock1.png)
 
                     (Figure 4.92 Axis Lock Setting Screen 1)
 
-![](../_assets/4.서보보드/축잠금2.png)
+![](../_assets/4.서보보드/axis_lock2.png)
 
                     (Figure 4.93 Axis Lock Setting Screen 2)
 
-![](../_assets/4.서보보드/축잠금3.png)
+![](../_assets/4.서보보드/axis_lock3.png)
 
                     (Figure 4.94 Axis Lock Setting Screen 3)
 
@@ -3543,15 +3673,15 @@ After performing an Axis Lock on all axes except the one you wish to check, repe
 
         System -> 5. Initialization -> 9. Axis Lock Setting -> OK -> Individual Axis Lock
 
-![](../_assets/4.서보보드/축잠금1.png)
+![](../_assets/4.서보보드/axis_lock1.png)
 
                     (Figure 4.101 Axis Lock Setting Screen 1)
 
-![](../_assets/4.서보보드/축잠금2.png)
+![](../_assets/4.서보보드/axis_lock2.png)
 
                     (Figure 4.102 Axis Lock Setting Screen 2)
 
-![](../_assets/4.서보보드/축잠금3.png)
+![](../_assets/4.서보보드/axis_lock3.png)
 
                     (Figure 4.103 Axis Lock Setting Screen 3)
 
@@ -3609,21 +3739,21 @@ The load estimation procedure is as follows:
 
         System -> 6. Auto Calibration -> 4. Load Estimation
 
-![](../_assets/4.서보보드/부하추정1.png)
+![](../_assets/4.서보보드/estimation1.png)
 
                     (Figure 4.107 Load Estimation 1)
 
-![](../_assets/4.서보보드/부하추정2.png)
+![](../_assets/4.서보보드/estimation2.png)
 
                     (Figure 4.108 Load Estimation 2)
 
-![](../_assets/4.서보보드/부하추정3.png)
+![](../_assets/4.서보보드/estimation3.png)
 
                     (Figure 4.109 Load Estimation 3)
 
  * Use the load estimation function to select the tool number to save after estimation.
 
-![](../_assets/4.서보보드/부하추정4.png)
+![](../_assets/4.서보보드/estimation4.png)
 
                     (Figure 4.110 Load Estimation 4)
 
@@ -3631,13 +3761,13 @@ The load estimation procedure is as follows:
 
     Press the Motor On switch, hold the deadman switch, and then click "Normal Operation."
 
-![](../_assets/4.서보보드/부하추정5.png)
+![](../_assets/4.서보보드/estimation5.png)
 
                     (Figure 4.111 Load Estimation 5)
 
 * Once the load estimation operation is complete, the estimated results will be displayed on the screen.
 
-![](../_assets/4.서보보드/부하추정6.png)
+![](../_assets/4.서보보드/estimation6.png)
 
                     (Figure 4.112 Load Estimation 6)
 
@@ -3660,7 +3790,7 @@ Normally, at low temperatures (encoder at 5°C or below), the friction component
 
 (1)	Operate the robot at low speed (playback speed of 30% or less) until the encoder temperature reaches a normal level (approximately 15°C or higher), then restart at normal speed.
 
-![](../_assets/4.서보보드/엔코더온도및재생속도.png)
+![](../_assets/4.서보보드/enc_tmp2.png)
 
                     (Figure 4.113 Encoder Temperature Check Screen)
 
@@ -3710,7 +3840,7 @@ The procedure for backing up mainboard files to a USB memory device is as follow
                 
 When the USB is recognized by the TP, the following icon will appear at the top of the screen.
 
-![](../_assets/4.서보보드/USB인식.png)
+![](../_assets/4.서보보드/usb.png)
 
                     (Figure 4.115 TP USB Recognition)
 
@@ -3718,11 +3848,11 @@ To back up files, navigate to the following path:
 
             Service -> 5. File Management
 
-![](../_assets/4.서보보드/백업1.png)
+![](../_assets/4.서보보드/filemanage.png)
 
                     (Figure 4.116 Backup Step 1)
 
-![](../_assets/4.서보보드/백업2.png)
+![](../_assets/4.서보보드/filemanage2.png)
 
                     (Figure 4.117 Backup Step 2)
 
@@ -3785,7 +3915,7 @@ If the tool weight or inertia differs significantly from the values registered i
 
                 System -> 3. Robot Parameters -> Tool Data
 
-![](../_assets/4.서보보드/툴데이터.png)
+![](../_assets/4.서보보드/tool.png)
 
                     (Figure 4.120 Checking Tool Data)
 
@@ -3795,21 +3925,21 @@ To automatically set the tool weight or inertia, you can use the load estimation
 
         System -> 6. Auto Calibration -> 4. Load Estimation
 
-![](../_assets/4.서보보드/부하추정1.png)
+![](../_assets/4.서보보드/estimation1.png)
 
                     (Figure 4.121 Load Estimation 1)
 
-![](../_assets/4.서보보드/부하추정2.png)
+![](../_assets/4.서보보드/estimation2.png)
 
                     (Figure 4.122 Load Estimation 2)
 
-![](../_assets/4.서보보드/부하추정3.png)
+![](../_assets/4.서보보드/estimation3.png)
 
                     (Figure 4.123 Load Estimation 3)
 
  * Use the load estimation function to select the tool number to save after estimation.
 
-![](../_assets/4.서보보드/부하추정4.png)
+![](../_assets/4.서보보드/estimation4.png)
 
                     (Figure 4.124 Load Estimation 4)
 
@@ -3817,19 +3947,19 @@ To automatically set the tool weight or inertia, you can use the load estimation
 
     Press the Motor On switch, hold the deadman switch, and then click "Normal Operation."
 
-![](../_assets/4.서보보드/부하추정5.png)
+![](../_assets/4.서보보드/estimation5.png)
 
                     (Figure 4.125 Load Estimation 5)
 
 * Once the load estimation operation is complete, the estimated results will be displayed on the screen.
 
-![](../_assets/4.서보보드/부하추정6.png)
+![](../_assets/4.서보보드/estimation6.png)
 
                     (Figure 4.126 Load Estimation 6)
 
 (2)	Verify that the robot model is configured correctly.
 
-![](../_assets/4.서보보드/로봇모델확인.png)
+![](../_assets/4.서보보드/robot_model.png)
 
                     (Figure 4.127 Checking Robot Model)
 
@@ -3843,7 +3973,7 @@ The version of each module can be checked at the following path:
 
                 Service -> 7. System Diagnosis -> 1. System Version
 
-![](../_assets/4.서보보드/TP버전확인.png)
+![](../_assets/4.서보보드/version.png)
 
                     (Figure 4.128 Checking Module Version)
 
@@ -3862,7 +3992,7 @@ The motor torque may be insufficient if the maximum speed in the additional axis
 
                 System -> 3. Robot Parameters -> 34. Accel/Decel Parameters
 
-![](../_assets/4.서보보드/부가축가감속.png)
+![](../_assets/4.서보보드/acc.png)
 
                     (Figure 4.130 Checking Additional Axis Accel/Decel)
 
@@ -3901,7 +4031,7 @@ Current for driving the motor or drive unit is not being supplied. The current g
 
 Check whether the robot model registered on the TP screen matches the actually installed robot.
 
-![](../_assets/4.서보보드/로봇모델확인.png)
+![](../_assets/4.서보보드/robot_model.png)
 
                     (Figure 4.130 Checking Robot Model)
 
@@ -4014,7 +4144,7 @@ Current for driving the motor or drive unit is not being supplied. The current g
 
 Check whether the robot model registered on the TP screen matches the actually installed robot.
 
-![](../_assets/4.서보보드/로봇모델확인.png)
+![](../_assets/4.서보보드/robot_model.png)
 
                     (Figure 4.130 Checking Robot Model)
 
@@ -4130,7 +4260,7 @@ Check the saturated encoder temperature while running the Job program. The encod
 
     Engineering Mode -> Window Adjustment -> System Characteristics -> System Characteristics List - Motor/Encoder
 
-![](../_assets/4.서보보드/엔코더온도.png)
+![](../_assets/4.서보보드/enc_tmp.png)
 
     (Figure 4.37 Checking Encoder Temperature)
 
