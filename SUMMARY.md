@@ -2,6 +2,11 @@
 
 * [Hi6-N Controller Maintenance Manual – Troubleshooting](README.md)
 
+* [About the Manual](0-about-this-manual/README.md)
+  * [Precautions](0-about-this-manual/precautions.md)
+  * [Notation Convention](0-about-this-manual/notation.md)
+  * [Safety Cautions](0-about-this-manual/safety-notice.md)
+  
 * [1. Electrical Components](1-elec/README.md)
   * [1.1. Voltage Inspection 1 – Procedure for Checking Internal Three-Phase Voltage of the Hi6-N Controller](1-elec/VOLTAGE_1.md)
   * [1.2. Voltage Inspection 2 – Procedure for Checking Input Three-Phase Voltage of the Hi6-N Controller](1-elec/VOLTAGE_2.md)

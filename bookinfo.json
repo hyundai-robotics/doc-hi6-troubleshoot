@@ -1,11 +1,11 @@
 ﻿{
     "langCode": "en",
-    "series": "Hi6-N Controller",
-    "title": "Maintenance Manual – Troubleshooting",
+    "series": "Hi6 Controller",
+    "title": "Maintenance Manual - Troubleshooting",
     "publisher": "HD Hyundai Robotics",
     "tocTitle": "Contents",
     "tocTitleElements": "[ \"h1\", \"h2\" ]",
-    "docId": "HI6NTROUBLESHOOT_EN_001",
+    "docId": "HI6TROUBLESHOOT_EN_001",
     "references": [
         { "rpath" : "doc-hi6-n-maintenance/en" }
     ]
