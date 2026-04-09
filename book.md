@@ -1106,11 +1106,11 @@ If the error does not recur after replacing the servo drive unit, the original u
 
 ->	Servo Motor Replacement Inspection
 
-f the error does not recur after replacing the servo motor, the original motor is defective. Please replace the servo motor with a known functional unit. The figure below illustrates the location of each axis motor for the HS165 robot. For other robot models, please refer to the corresponding mechanical maintenance manual for replacement instructions.
+f the error does not recur after replacing the servo motor, the original motor is defective. Please replace the servo motor with a known functional unit. The figure below illustrates the location of each axis motor for the robot. For other robot models, please refer to the corresponding mechanical maintenance manual for replacement instructions.
 
 ![](../_assets/2.서보AMP/E02520/E02520_IPM폴트_HS165로봇.PNG)
 
-Figure 1.3 Motor Locations for Each Axis of the HS165 Robot
+Figure 1.3 Motor Locations for Each Axis of the Robot
 
 <br>
 
@@ -1235,7 +1235,7 @@ Inspect the condition of the internal wiring connected to the motor of the corre
 
 ![](../_assets/2.서보AMP/E02522/E02522_HS165_축별기내배선_점검위치.PNG)
 
-Figure 1.1 Internal Wiring Inspection Points for Each Axis of the HS165
+Figure 1.1 Internal Wiring Inspection Points for Each Axis of the Robot
 
 
 -> Verify the error by reducing the robot's playback speed
@@ -1409,10 +1409,10 @@ Check if the robot has physically moved outside its designated operating range. 
 The operating range varies depending on the robot model. Since the installation positions of the limit switches may also differ, please refer to the "Operating Range Limits" section in the maintenance manual for the specific robot model.
 
 ![](../_assets/3-Safety-io/E00002/그림1.jpg)<br>
-Figure 1 Example of hardware limit switch installation positions (HS165/HS200 Robot)
+Figure 1 Example of hardware limit switch installation positions
 
 ![](../_assets/3-Safety-io/E00002/그림2.png)<br>
-Figure 2 Example of hardware limit switch operating range (HS165/HS200 S Axis)
+Figure 2 Example of hardware limit switch operating range (S Axis)
 
 ### [Recovery procedure for operating range excursions]
 To move the robot while the hardware limit switch is engaged, you must follow the conditions and steps outlined below:
@@ -1776,11 +1776,11 @@ Accordingly, the installation position of the limit switches may also differ.
 Refer to the **“Operating Range Limitation”** section in the corresponding mechanical maintenance manual.
 
 ![](../_assets/3-Safety-io/E02200/그림2.png)<br>
-**Figure 2** Example of Hardware Limit Switch Installation Positions (HS165 / HS200)
+**Figure 2** Example of Hardware Limit Switch Installation Positions
 
 ![](../_assets/3-Safety-io/E02200/그림3.png)<br>
 **Figure 3** Example of Hardware Limit Switch Operating Range  
-(HS165 / HS200, S-axis)
+(S-axis)
 
 ### (2) Move the robot back into the operating range
 
@@ -2676,11 +2676,11 @@ If the error does not occur after replacing the servo board, the encoder receivi
     (Figure 4.11 T Controller Servo Board Replacement)
 
 (4)	Perform a replacement test of the motor (encoder). 
-If the error does not occur after replacing the servo motor, the servo motor is defective. Please replace the servo motor with a normal one. The figure below shows the positions of the motors for each axis of the HS165 robot; for other robots, please refer to the corresponding mechanical maintenance manual for replacement.
+If the error does not occur after replacing the servo motor, the servo motor is defective. Please replace the servo motor with a normal one. The figure below shows the positions of the motors for each axis of the robot; for other robots, please refer to the corresponding mechanical maintenance manual for replacement.
 
 ![](../_assets/4.서보보드/로봇_모터_위치.png)
 
-    (Figure 4.12 HS165 Robot Axis Motor Positions)
+    (Figure 4.12 Robot Axis Motor Positions)
 
 (5)	Inspect the communication status of the wiring after completing the measures.
 After the measures for the problematic part are completed, please refer to the "Encoder Communication Failure Count Display Function Manual" to check the communication status.
@@ -2771,11 +2771,11 @@ If the encoder wiring is not disconnected but there are issues such as poor cont
 
 (2)	Perform a replacement test of the motor (encoder). 
 
-If the error does not occur after replacing the servo motor, the servo motor is defective. Please replace the servo motor with a normal one. The figure below shows the positions of the motors for each axis of the HS165 robot; for other robots, please refer to the corresponding mechanical maintenance manual for replacement.
+If the error does not occur after replacing the servo motor, the servo motor is defective. Please replace the servo motor with a normal one. The figure below shows the positions of the motors for each axis of the robot; for other robots, please refer to the corresponding mechanical maintenance manual for replacement.
 
 ![](../_assets/4.서보보드/로봇_모터_위치.png)
 
-    (Figure 4.21 HS165 Robot Axis Motor Positions)
+    (Figure 4.21 Robot Axis Motor Positions)
 
 (3)	Perform a replacement test of the servo board. 
 
@@ -2974,11 +2974,11 @@ The error clearing is executed in the menu below.
 
 (3)	If the error persists, perform a replacement test of the motor (encoder). 
 
-If the error does not occur after replacing the servo motor, the servo motor is defective. Please replace the servo motor with a normal one. The figure below shows the positions of the motors for each axis of the HS165 robot; for other robots, please refer to the corresponding mechanical maintenance manual for replacement.
+If the error does not occur after replacing the servo motor, the servo motor is defective. Please replace the servo motor with a normal one. The figure below shows the positions of the motors for each axis of the robot; for other robots, please refer to the corresponding mechanical maintenance manual for replacement.
 
 ![](../_assets/4.서보보드/로봇_모터_위치.png)
 
-        (Figure 4.28 HS165 Robot Axis Motor Positions)
+        (Figure 4.28 Robot Axis Motor Positions)
 [__SOURCE](4-servo-board-part/E02461.md)
 # 4.9. E02461. (O Axis) Encoder Overspeed Error (OS Bit Detected)
 
@@ -3101,11 +3101,11 @@ Check the condition of the battery wiring connected from the encoder battery loc
 
 
 (4)	Perform a replacement test of the motor (encoder). <br>
-If the error persists when turning the main power OFF/ON after resetting the error, perform a motor (encoder) replacement test. If the error does not occur after replacement, the servo motor is defective. Please replace the servo motor with a normal one. The figure below shows the positions of the motors for each axis of the HS165 robot; for other robots, please refer to the corresponding mechanical maintenance manual for replacement.
+If the error persists when turning the main power OFF/ON after resetting the error, perform a motor (encoder) replacement test. If the error does not occur after replacement, the servo motor is defective. Please replace the servo motor with a normal one. The figure below shows the positions of the motors for each axis of the robot; for other robots, please refer to the corresponding mechanical maintenance manual for replacement.
 
 ![](../_assets/4.서보보드/로봇_모터_위치.png)
 
-                        (Figure 4.32 HS165 Robot Axis Motor Positions)
+                        (Figure 4.32 Robot Axis Motor Positions)
 
 
 [__SOURCE](4-servo-board-part/E02470.md)
@@ -4248,7 +4248,7 @@ The OH bit is set when the internal temperature of the encoder exceeds the allow
 
 ((1)	Perform a replacement test of the motor (encoder).
 
-If the error does not occur after replacing the servo motor, the servo motor is defective. Please replace the servo motor with a normal one. The figure below shows the positions of the motors for each axis of the HS165 robot; for other robots, please refer to the corresponding mechanical maintenance manual for replacement.
+If the error does not occur after replacing the servo motor, the servo motor is defective. Please replace the servo motor with a normal one. The figure below shows the positions of the motors for each axis of the robot; for other robots, please refer to the corresponding mechanical maintenance manual for replacement.
 
 ![](../_assets/4.서보보드/로봇_모터_위치.png)
 
