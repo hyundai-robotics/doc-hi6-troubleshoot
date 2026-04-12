@@ -1,31 +1,30 @@
-# 1.5. Adjustment Guidelines
+# 1.5. 调整指南
 
-This controller is fully adjusted at the factory prior to shipment and normally requires no additional adjustment. However, if components are replaced, certain adjustments may be required. This section explains the locations and procedures for those adjustments. Do not perform any adjustments unless absolutely necessary. Even if a problem occurs, do not make any adjustments unless the cause has been clearly identified, as improper adjustment may result in malfunction or damage.
+此控制器在出厂前已完全调整，通常不需要额外调整。但是，如果更换了组件，可能需要进行某些调整。本节说明了这些调整的位置和程序。除非绝对必要，请勿进行任何调整。即使出现问题，也请在明确确定原因后再进行调整，因为不当调整可能导致故障或损坏。
 
-### 1. Adjustment of Power System 
-If a fault occurs in the power system, or if the power supply configuration has been changed, measure each power supply voltage and adjust any values that deviate from the specified reference levels(Measurements must be taken using a digital voltmeter).
+### 1. 电源系统的调整 
+如果电源系统发生故障，或电源配置已更改，请测量每个电源电压，并调整任何偏离指定参考水平的值（测量必须使用数字电压表进行）。
 
-### 1.1. Adjustment of the Hi6-N Controller Power System
+### 1.1. Hi6-N 控制器电源系统的调整
 ![](../_assets/1.전장/조정요령/Hi6-N제어기%20전원%20기준치_en.PNG)<br>
-Figure 1. Reference Power Supply Voltage Levels of the Hi6-N Controller
+图 1. Hi6-N 控制器的参考电源电压水平
 
-(Note 1) If the measured value is outside the specified reference range, replace the PSM.<br>
-(Note 2) First, verify the reference value at the specified measurement point.
-Then, if possible, measure the voltage between the pins of the terminal block or connector closest to the robot encoder. At this point, the reference value must be DC 5.1V ± 0.1V.
+（注 1）如果测量值超出指定参考范围，请更换 PSM。<br>
+（注 2）首先在指定测量点验证参考值。
+然后，如果可能，请测量机器人编码器附近的端子块或连接器之间的电压。这时，参考值必须为 DC 5.1V ± 0.1V。
 
-### 1.2. Adjustment of the Hi6-T Controller Power System
+### 1.2. Hi6-T 控制器电源系统的调整
 
 ![](../_assets/1.전장/조정요령/Hi6-T제어기%20전원%20기준치_en.PNG)<br>
-Figure 2. Reference Power Supply Voltage Levels of the Hi6-T Controller
+图 2. Hi6-T 控制器的参考电源电压水平
 
-(Note 1) If the measured value is outside the specified reference range, replace the PSM.
-(Note 2) First, verify the reference value at the specified measurement point.
-Then, if possible, measure the voltage between the pins of the terminal block or connector closest to the robot encoder. At this point, the reference value must be DC 5.1V ± 0.1V.
+（注 1）如果测量值超出指定参考范围，请更换 PSM。
+（注 2）首先在指定测量点验证参考值。
+然后，如果可能，请测量机器人编码器附近的端子块或连接器之间的电压。这时，参考值必须为 DC 5.1V ± 0.1V。
 
-### 2. Transformer(TR2)
+### 2. 变压器 (TR2)
 {% hint style="warning" %}
-For the Hi6-N controller, the output voltage of the transformer(TR2) must be AC 220V. The secondary-side terminals are connected according to the power specifications of the internal components; do not touch or modify them under any circumstances.
+对于 Hi6-N 控制器，变压器（TR2）的输出电压必须为 AC 220V。次级端子根据内部组件的电源规格连接；在任何情况下请勿触摸或修改它们。
 {% endhint %}
 
-The input power supply for this controller must be AC 220V, 3-phases. Controllers with other voltage specifications are factory-adjusted prior to shipment; therefore, the transformer taps must not be changed without authorization from the manufacturer’s service personnel.
-
+该控制器的输入电源必须为 AC 220V，三相电源。具有其他电压规格的控制器会在出厂前进行调整；因此，未经制造商服务人员的授权，不得更改变压器抽头。

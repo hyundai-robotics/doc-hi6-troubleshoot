@@ -1,14 +1,13 @@
-﻿# About the Manual
+﻿# 关于手册
 
-This section describes the troubleshooting methods for each error code that may occur in the HD Hyundai Robotics' Hi6-N and Hi6-T controllers.
+本节描述了在 HD Hyundai Robotics 的 Hi6-N 和 Hi6-T 控制器中可能出现的每个错误代码的故障排除方法。
 
-The controller is designed with a primary focus on high precision and high-speed performance. In the event of a malfunction, the system is structured to allow easy identification of the cause and rapid recovery. Please ensure that you fully understand this manual and use it effectively for smooth and efficient troubleshooting.
+该控制器的设计主要侧重于高精度和高速性能。如果发生故障，系统结构便于快速识别原因和迅速恢复。请确保您充分理解本手册，并有效地使用它以实现顺利高效的故障排除。
 
+本手册不涵盖详细的应用功能，例如使用协作机器人进行直接教学、安全功能设置方法、点焊、弧焊、定位器同步功能和传感器同步功能。如需相关信息的详细情况，请参考协作机器人维护手册和各个应用功能手册。
 
-This manual does not cover detailed application functions, such as direct teaching using a collaborative robot, methods of setting safety functions, spot welding, arc welding, positioner sync function, and sensor sync function. For details on relevant information, refer to the collaborative robot maintenance manual and individual application function manuals.
+在使用产品之前，您必须充分理解手册的内容。此外，请将手册放在附近，以便在需要时可以随时参考。
 
-You must fully understand the contents of the manual before using the product. Moreover, keep the manual nearby so that you can refer to it whenever you need it.
+本手册可能作为已购买 HD Hyundai Robotics 产品的客户的参考资料，也可作为内部培训材料使用。
 
-This manual may be provided as reference material for customers who have purchased HD Hyundai Robotics products or may be used as internal training material.
-
-This manual has been created based on standard specifications, so some contents may differ depending on the model of the product you have purchased. In addition, the contents and specifications of this manual are subject to change without prior notice to improve the performance of the product, and HD Hyundai Robotics is not responsible for situations that could be caused by inaccuracies or typos in the manual. For detailed information on the revision of the manual, you need to visit our internet website [https://www.hd-hyundairobotics.com/en/main](https://www.hd-hyundairobotics.com/en/main).
+本手册是根据标准规格创建的，因此某些内容可能会根据您购买的产品型号有所不同。此外，本手册的内容和规格可能会在没有事先通知的情况下更改，以改善产品性能，HD Hyundai Robotics 对因手册中的不准确或错别字可能引发的情况不负责任。有关手册修订的详细信息，请访问我们的官方网站 [https://www.hd-hyundairobotics.com/en/main](https://www.hd-hyundairobotics.com/zh/main)。

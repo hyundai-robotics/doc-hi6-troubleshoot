@@ -1,18 +1,18 @@
-﻿# 1.1. Voltage Check1 - Hi6-N Controller Internal 3-Phase Voltage Check Procedure
+# 1.1. 电压检查1 - Hi6-N 控制器内部三相电压检查程序
 
-(1) Check the 3-phase power voltage inside the controller.
+(1) 检查控制器内部的三相电压。
 
-The power supply module(PSM) attached to the front of the controller is responsible for distributing and relaying various power sources. The 3-phase power is turned on and off via a magnetic switch within the power module. With the motor off, check that the voltage input to the power module is within a 10% tolerance of 220 V AC. If the measured voltage is outside the acceptable range, perform the following checks.
+附加在控制器前面的电源模块(PSM)负责分配和转发各种电源。三相电源通过电源模块中的磁开关打开和关闭。在电机停止的情况下，检查输入到电源模块的电压是否在220 V AC的10%公差范围内。如果测得的电压超出可接受范围，请执行以下检查。
 
 ![](../_assets/1.전장/전압점검/전압점검1_en.PNG)<br>
-Figure 1.1. 3-Phase Power Input to the Power Supply Module(PSM)
+图 1.1. 供电模块(PSM)的三相电源输入
 
 {% hint style="warning" %}
-Be careful when measuring high voltages as there is a possibility of short circuiting between surrounding components and phases.
+在测量高电压时要小心，因为周围组件和相之间可能会发生短路。
 {% endhint %}
 
-1) If the voltage on the controller nameplate is AC 220V<br>
-If the controller input voltage is AC 220V, the voltage input from the external power switch or terminal block and the voltage measured at the internal control module must be the same. If there is a difference, check the three-phase power wiring.
+1) 如果控制器铭牌上的电压为 AC 220V<br>
+如果控制器输入电压为 AC 220V，则外部电源开关或接线端子输入的电压和在内部控制模块测得的电压必须相同。如果有差异，请检查三相电源接线。
 
-2) If the voltage on the controller nameplate is not AC 220V<br>
-If the controller input power is not AC 220V, the built-in transformer converts the three-phase power to AC 220V and connects it to the control module. Check that the voltage measured at the control module is within a 10% tolerance of AC 220V. If the measured voltage is outside the tolerance range, check the connection between the input and output terminals of the built-in transformer. The primary terminal of the built-in transformer must be connected to the voltage indicated on the controller nameplate.
+2) 如果控制器铭牌上的电压不是 AC 220V<br>
+如果控制器输入电源不是 AC 220V，则内置变压器将三相电源转换为 AC 220V，并连接到控制模块。检查在控制模块测得的电压是否在 AC 220V的10%公差范围内。如果测得的电压超出公差范围，请检查内置变压器的输入和输出端子之间的连接。内置变压器的初级端子必须连接到控制器铭牌上指示的电压。

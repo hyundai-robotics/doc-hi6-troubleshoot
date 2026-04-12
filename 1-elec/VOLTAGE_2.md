@@ -1,17 +1,16 @@
-﻿# 1.2. Voltage Check2 – Hi6-N Controller 3-Phase Voltage Check Procedure
+﻿# 1.2. 电压检查2 – Hi6-N 控制器三相电压检查程序
 
-(1)	Check the voltage on the nameplate attached to the controller against the actual input voltage.
+(1) 检查附在控制器上的铭牌电压与实际输入电压是否匹配。
 
-Check that the voltage actually supplied to the controller is within the allowable range of the voltage printed on the nameplate. The allowable input voltage range is within 10% of the value printed on the nameplate and must be at least AC 198 V for AC 220 V. The figure below illustrates how to measure the controller's input voltage. If the measured voltage is outside the allowable range, inspect the power system.
+检查实际供给控制器的电压是否在铭牌上印刷的电压允许范围内。允许的输入电压范围在铭牌上印刷值的10%以内，对于AC 220 V，必须至少为AC 198 V。下图说明了如何测量控制器的输入电压。如果测得的电压超出了允许范围，请检查电源系统。
 
-* Measurement on the power line side of the front switch
+* 在前开关的电源线侧进行测量
 
 ![](../_assets/1.전장/전압점검/전압점검2.PNG)<br>
-(a) Hi6-N Controller
+(a) Hi6-N 控制器
 
-Figure 1.2. Measurement on the power line side of the power switch
+图 1.2. 在电源开关的电源线侧进行测量
 
 {% hint style="warning" %}
-Be careful when measuring high voltages, as there is a risk of short circuits in surrounding components and between phases.
+测量高电压时要小心，因为周围组件和相之间存在短路的风险。
 {% endhint %}
-

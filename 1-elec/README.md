@@ -1,1 +1,1 @@
-# 1. Electrical Components
+# 1. 电气组件

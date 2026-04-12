@@ -1,11 +1,11 @@
-﻿# 1.3. Voltage Check3 – Hi6-T Controller Input Single-Phase Voltage Check Procedure
+﻿# 1.3. 电压检测3 – Hi6-T 控制器输入单相电压检查步骤
 
-(1) Check the voltage on the nameplate attached to the controller against the actual input voltage.<br>
-Check that the voltage actually supplied to the controller is within the allowable range of the voltage indicated on the nameplate. The allowable input voltage range is within 10% of the value indicated on the nameplate and must be at least AC 198V for AC 220V. The figure below illustrates how to measure the controller's input voltage. If the measured voltage is outside the allowable range, inspect the power system.
+(1) 检查附加在控制器上的铭牌电压与实际输入电压的对比。<br>
+检查实际供给给控制器的电压是否在铭牌上指示的电压的允许范围内。允许的输入电压范围在铭牌指示值的10%以内，并且对于AC 220V，至少必须为AC 198V。下面的图示说明了如何测量控制器的输入电压。如果测量的电压超出允许范围，请检查电源系统。
 
 {% hint style="warning" %}
-Be careful when measuring high voltages, as there is a risk of short circuits between nearby components and phases.
+测量高电压时要小心，因为附近组件和相之间可能会发生短路的风险。
 {% endhint %}
 
 ![](../_assets/1.전장/전압점검/전압점검3_en.PNG)<br>
-Figure 1.3. H6-T15 Controller Single-Phase Power Input SMPS Terminal Block
+图 1.3. H6-T15 控制器单相电源输入SMPS接线端子块
